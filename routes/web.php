@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-//dd("hlo");
+
 
 
 Route::get('lang/{lang}', [\App\Http\Controllers\LanguageController::class,'swap'])->name('lang');
