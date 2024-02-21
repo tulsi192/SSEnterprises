@@ -48,9 +48,15 @@ class RoutesTableController extends Controller
             ->addColumn('Routecode', function ($route) {
                 return $route->Routecode;
             })
+            ->addColumn('supplier_name', function ($route) {
+                $supplierNames = $route->suppliers->pluck('name')->implode(', ');
+                return $supplierNames; // Assuming the 'Supplier' model has a 'name' attribute
+            })
             ->addColumn('created_at', function ($route) {
                 return Carbon::parse($route->created_at)->toDateString();
             })
+            
+            
             ->addColumn('actions', function ($route) {
                 return '<a href="' . route('biller.routes.index') . '?rel_type=2&rel_id=' . $route->id . '" class="btn btn-purple round" data-toggle="tooltip" data-placement="top" title="List"><i class="fa fa-list"></i></a> ' . $route->action_buttons;
             })

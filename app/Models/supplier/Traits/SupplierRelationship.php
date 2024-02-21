@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Models\supplier\Traits;
-
+use  App\Models\route\Route;
 use App\Models\transaction\Transaction;
 
 /**
@@ -18,7 +18,11 @@ trait SupplierRelationship
         {
              return $this->hasMany(Transaction::class,'payer_id')->where('relation_id','=',9)->orWhere('relation_id','=',22)->withoutGlobalScopes();
         }
-
+        
+        public function route()
+        {
+            return $this->belongsTo(Route::class, 'route_id')->withoutGlobalScopes();
+        }
             public function transactions()
     {
         return $this->hasMany('App\Models\transaction\Transaction','payer_id')->where('relation_id','=',9)->orWhere('relation_id','=',22)->withoutGlobalScopes();

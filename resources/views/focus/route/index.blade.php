@@ -39,8 +39,11 @@
                                             <th>#</th>
                                             <th>{{ trans('routes.name') }}</th>
                                             <th>{{ trans('routes.code') }}</th>
+                                            <th>{{ trans('routes.supplier') }}</th>
                                             <th>{{ trans('routes.created') }}</th>
+                                           
                                             <th>{{ trans('labels.general.actions') }}</th>
+                                           
                                         </tr>
                                         </thead>
 
@@ -96,7 +99,10 @@
                     {data: 'DT_Row_Index', name: 'id'},
                     {data: 'Routename', name: 'Routename'},
                     {data: 'Routecode', name: 'Routecode'},
+                    {data: 'supplier_name', name: 'supplier_name'}, 
                     {data: 'created_at', name: 'created_at'},
+                 
+                    
                     {data: 'actions', name: 'actions', searchable: false, sortable: false}
                 ],
                 order: [[0, "asc"]],
