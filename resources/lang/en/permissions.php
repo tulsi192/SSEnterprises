@@ -35,6 +35,12 @@ return [
 'quote-create'=>'Quote Create Permission',
 'quote-edit'=>'Quote Edit Permission',
 'quote-delete'=>'Quote Delete Permission',
+
+
+'manage-route'=>'Route View Permission',
+'create-route'=>'Route Create Permission',
+'edit-route'=>'Route Edit Permission',
+'delete-route'=>'Route Delete Permission',
 'purchaseorder-manage'=>'Purchase Order View Permission',
 'purchaseorder-data'=>'Purchase Order Create-Update-Delete Permission',
 'supplier-manage'=>'Suppliers View Permission',

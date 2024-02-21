@@ -2,6 +2,7 @@
 return [
 'pos'=>'POS',
 'sales'=>'Sales',
+'settings'=>'Settings',
 'stock'=>'Stock Manager',
 'crm'=>'CRM',
 'project_tasks'=>'Project & Tasks',

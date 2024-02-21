@@ -11,6 +11,14 @@
         Route::post('accounts/get', 'AccountsTableController')->name('accounts.get');
     });
 
+    Route::group(['namespace' => 'route'], function () {
+      
+        Route::resource('routes', 'RouteController');
+        Route::post('routes/get', 'RoutesTableController')->name('routes.get');
+        //For Datatable
+       
+    });
+
     Route::group(['namespace' => 'additional'], function () {
         Route::resource('additionals', 'AdditionalsController');
         //For Datatable

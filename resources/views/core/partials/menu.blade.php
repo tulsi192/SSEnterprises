@@ -244,6 +244,7 @@
                     </ul>
                 </li>
             @endif
+            
             @if (access()->allow('manage-customer') || access()->allow('manage-customergroup'))
                 <li class="dropdown nav-item" data-menu="dropdown"><a class="dropdown-toggle nav-link"
                         href="#" data-toggle="dropdown"><i
@@ -495,6 +496,40 @@
                     </ul>
                 </li>
             @endif
+            
+            @if (access()->allow('manage-route'))
+                <li class="dropdown nav-item" data-menu="dropdown"><a class="dropdown-toggle nav-link"
+                        href="#" data-toggle="dropdown"><i
+                            class="icon-settings"></i><span>{{ trans('features.settings') }}</span></a>
+                    <ul class="dropdown-menu">
+                        @permission('manage-route')
+                            <li class="dropdown dropdown-submenu" data-menu="dropdown-submenu"><a
+                                    class="dropdown-item dropdown-toggle" href="#" data-toggle="dropdown"><i
+                                        class="fa fa-road"></i> {{ trans('routes.route') }}
+                                </a>
+                                <ul class="dropdown-menu">
+
+                                    <li><a class="dropdown-item" href="{{ route('biller.routes.index') }}"
+                                            data-toggle="dropdown"> <i class="ft-list"></i>
+                                            {{ trans('routes.management') }}
+                                        </a>
+                                    </li>
+                                   
+                                    @permission('create-route')
+                                        <li><a class="dropdown-item" href="{{ route('biller.routes.create') }}"
+                                                data-toggle="dropdown"> <i class="fa fa-plus-circle"></i>
+                                                {{ trans('routes.create') }}
+                                            </a>
+                                        </li>
+                                    @endauth
+                                </ul>
+                            </li>
+                        @endauth
+                 
+                      
+                    </ul>
+                </li>
+            @endif
 
             @if (access()->allow('transaction-manage') || access()->allow('account-manage'))
                 <li class="dropdown nav-item" data-menu="dropdown"><a class="dropdown-toggle nav-link"
@@ -611,6 +646,9 @@
                     </ul> --}}
                 </li>
             @endif
+
+
+            
             @if (access()->allow('manage-hrm') || access()->allow('department-manage'))
                 <li class="dropdown nav-item" data-menu="dropdown"><a class="dropdown-toggle nav-link"
                         href="#" data-toggle="dropdown"><i

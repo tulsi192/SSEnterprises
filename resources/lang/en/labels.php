@@ -615,6 +615,18 @@ return [
         'createdat' => 'Created At',
       ],
     ],
+    'routes' => [
+      'create' => 'Create Route',
+      'edit' => 'Edit Route',
+      'management' => 'Route Management',
+      'title' => 'Routes',
+      'view' => 'View Route',
+      'table' => 
+      [
+        'id' => 'Id',
+        'createdat' => 'Created At',
+      ],
+    ],
     'events' => [
       'create' => 'Create Event',
       'edit' => 'Edit Event',
