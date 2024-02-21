@@ -28,6 +28,7 @@ class EditResponse implements Responsable
      */
     public function toResponse($request)
     {
+        
         return view('focus.suppliers.edit')->with([
             'suppliers' => $this->suppliers
         ]);

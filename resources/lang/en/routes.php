@@ -9,7 +9,7 @@ return[
 'code'=>'Route Code',
 'created'=>'Created_At',
 'all'=>'All',
-'supplier'=>'Supplier Name'
+'sales'=>'SalesPerson Name'
 
 
 

@@ -2,16 +2,17 @@
 
 namespace App\Models\route\Traits;
 
-use App\Models\route\Route;
-use App\Models\supplier\Supplier;
+use App\Models\hrm\Hrm;
+use App\Models\hrm\HrmMeta;
 
 /**
  * Class SupplierRelationship
  */
 trait RouteRelationship
 {
-    public function suppliers(){
-    return $this->hasMany(Supplier::class,'route_id');
-}
+    public function users()
+    {
+        return $this->hasManyThrough(Hrm::class, HrmMeta::class, 'route_id', 'id', 'id', 'user_id');
+    }
     
 }

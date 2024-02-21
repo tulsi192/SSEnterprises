@@ -17,7 +17,7 @@ class CreateResponse implements Responsable
      */
     public function toResponse($request)
     {
-        $routes=Route::all();
-        return view('focus.suppliers.create',compact('routes'));
+       
+        return view('focus.suppliers.create');
     }
 }

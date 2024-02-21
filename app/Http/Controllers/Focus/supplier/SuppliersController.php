@@ -19,7 +19,6 @@
 namespace App\Http\Controllers\Focus\supplier;
 
 use App\Http\Controllers\Controller;
-use App\Models\route\Route;
 use App\Http\Requests\Focus\purchaseorder\CreatePurchaseorderRequest;
 use App\Http\Requests\Focus\supplier\CreateSupplierRequest;
 use App\Http\Requests\Focus\supplier\DeleteSupplierRequest;
@@ -63,8 +62,6 @@ class SuppliersController extends Controller
      */
     public function index(ManageSupplierRequest $request)
     {
-
-        
         return new ViewResponse('focus.suppliers.index');
     }
 
@@ -76,8 +73,7 @@ class SuppliersController extends Controller
      */
     public function create(StoreSupplierRequest $request)
     {
-        $routes=Route::all();
-        return new CreateResponse('focus.suppliers.create',compact('routes'));
+        return new CreateResponse('focus.suppliers.create');
     }
 
     /**

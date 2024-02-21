@@ -151,12 +151,24 @@
             </div>
             <div class="tab-pane" id="tab3" role="tabpanel" aria-labelledby="base-tab3">
                 <div class='form-group'>
-                    {{ Form::label( 'department', trans('departments.department'),['class' => 'col-lg-2 control-label']) }}
+                    {{ Form::label('department', trans('departments.department'), ['class' => 'col-lg-2 control-label']) }}
                     <div class='col-lg-10'>
                         <select class="form-control" name="department_id" id="department">
-                            @foreach(@$departments AS $department)
-                                <option value="{{$department['id']}}"
-                                        @if(@$hrms->meta['id']==$department['id']) selected @endif>{{$department['name']}}</option>
+                            @foreach($departments as $department)
+                                <option value="{{ $department['id'] }}" {{ @$hrms->meta['id'] == $department['id'] ? 'selected' : '' }}>
+                                    {{ $department['name'] }}
+                                </option>
+                            @endforeach
+                        </select>
+                    </div>
+                </div>
+                
+                <div id="routeDropdown" class="form-group" style="display: none;">
+                    {{ Form::label('route', trans('routes.route'), ['class' => 'col-lg-2 control-label']) }}
+                    <div class='col-lg-10'>
+                        <select class="form-control" name="route_id" id="route">
+                            @foreach($routes as $route)
+                                <option value="{{ $route['id'] }}">{{ $route['Routename'] }}</option>
                             @endforeach
                         </select>
                     </div>
@@ -199,6 +211,16 @@
 @section('after-scripts')
     {{ Html::script('focus/js/jquery.password-validation.js') }}
     <script>
+         $(document).ready(function () {
+        $('#department').change(function () {
+            var selectedDepartmentId = $(this).val();
+            if (selectedDepartmentId == 2) {
+                $('#routeDropdown').show();
+            } else {
+                $('#routeDropdown').hide();
+            }
+        });
+    });
         $(document).ready(function () {
             $("#u_password").passwordValidation({
                 minLength: 6,
@@ -275,4 +297,5 @@
         @if(isset($hrms->role['id']))  fresh_permission({{$hrms->role['id']}});
         @else fresh_permission(2); @endif
     </script>
+    
 @endsection

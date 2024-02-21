@@ -39,7 +39,7 @@
 
                                     <div class="form-group">
                                         {{-- Including Form blade file --}}
-                                        @include("focus.suppliers.form",['routes'=>$routes])
+                                        @include("focus.suppliers.form")
                                         <div class="edit-form-btn">
                                             {{ link_to_route('biller.suppliers.index', trans('buttons.general.cancel'), [], ['class' => 'btn btn-danger btn-md']) }}
                                             {{ Form::submit(trans('buttons.general.crud.create'), ['class' => 'btn btn-primary btn-md']) }}

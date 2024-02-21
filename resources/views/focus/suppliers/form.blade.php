@@ -76,17 +76,6 @@
                         {{ Form::text('taxid', null, ['class' => 'form-control box-size', 'placeholder' => trans('customers.taxid')]) }}
                     </div>
                 </div>
-                <div class='form-group'>
-                    {{ Form::label( 'route_id', trans('routes.name'),['class' => 'col-12 control-label']) }}
-                    <div class="col-lg-10">
-                        <select name="route_id" class='col form-control'>
-                            @foreach($routes as $route)
-                            <option  class='col form-control'>{{trans('routes.all')}}</option>
-                                <option value="{{$route['id']}}" class='col form-control'>{{$route['Routename']}}</option>
-                            @endforeach
-                        </select>
-                    </div>
-                </div>
 
 
             </div>
@@ -105,12 +94,6 @@
                         {{ Form::text('custom1', null, ['class' => 'form-control box-size', 'placeholder' => trans('customers.custom1')]) }}
                     </div>
                 </div>
-
-
-            
-                    
-                
-                
 
                 <div class='form-group hide_picture'>
                     {{ Form::label( 'picture', trans('customers.picture'),['class' => 'col-lg-2 control-label']) }}

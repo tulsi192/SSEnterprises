@@ -48,9 +48,9 @@ class RoutesTableController extends Controller
             ->addColumn('Routecode', function ($route) {
                 return $route->Routecode;
             })
-            ->addColumn('supplier_name', function ($route) {
-                $supplierNames = $route->suppliers->pluck('name')->implode(', ');
-                return $supplierNames; // Assuming the 'Supplier' model has a 'name' attribute
+            ->addColumn('sales_name', function ($route) {
+                $sales_name = $route->users->pluck('first_name')->implode(', ');
+                return $sales_name; // Assuming the 'Supplier' model has a 'name' attribute
             })
             ->addColumn('created_at', function ($route) {
                 return Carbon::parse($route->created_at)->toDateString();
