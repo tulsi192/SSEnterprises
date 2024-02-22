@@ -524,6 +524,27 @@
                                     @endauth
                                 </ul>
                             </li>
+                            <li class="dropdown dropdown-submenu" data-menu="dropdown-submenu"><a
+                                class="dropdown-item dropdown-toggle" href="#" data-toggle="dropdown"><i
+                                    class="fa fa-money"></i> {{ trans('incomes.income') }}
+                            </a>
+                            <ul class="dropdown-menu">
+
+                                <li><a class="dropdown-item" href="{{ route('biller.incomes.index') }}"
+                                        data-toggle="dropdown"> <i class="ft-list"></i>
+                                        {{ trans('incomes.management') }}
+                                    </a>
+                                </li>
+                               
+                                @permission('create-route')
+                                    <li><a class="dropdown-item" href="{{ route('biller.incomes.create') }}"
+                                            data-toggle="dropdown"> <i class="fa fa-plus-circle"></i>
+                                            {{ trans('incomes.create') }}
+                                        </a>
+                                    </li>
+                                @endauth
+                            </ul>
+                        </li>
                         @endauth
                  
                       
@@ -568,6 +589,20 @@
                                     class="dropdown-item dropdown-toggle" href="#" data-toggle="dropdown"><i
                                         class="fa fa-hdd-o"></i> {{ trans('labels.backend.transactions.management') }}
                                 </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="{{ route('biller.transactions.index') }}"
+                                            data-toggle="dropdown"> <i class="ft-list"></i>
+                                            {{ trans('labels.backend.transactions.management') }}
+                                        </a>
+                                    </li>
+                                    @permission('transaction-data')
+                                        <li><a class="dropdown-item" href="{{ route('biller.transactions.create') }}"
+                                                data-toggle="dropdown"> <i class="fa fa-plus-circle"></i>
+                                                {{ trans('labels.backend.transactions.create') }}
+                                            </a>
+                                        </li>
+                                    @endauth
+                                </ul>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="{{ route('biller.transactions.index') }}"
                                             data-toggle="dropdown"> <i class="ft-list"></i>

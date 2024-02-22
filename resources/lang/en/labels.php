@@ -627,6 +627,18 @@ return [
         'createdat' => 'Created At',
       ],
     ],
+    'incomes' => [
+      'create' => 'Create Income',
+      'edit' => 'Edit Income',
+      'management' => 'Income Management',
+      'title' => 'Income',
+      'view' => 'View Income',
+      'table' => 
+      [
+        'id' => 'Id',
+        'createdat' => 'Created At',
+      ],
+    ],
     'events' => [
       'create' => 'Create Event',
       'edit' => 'Edit Event',

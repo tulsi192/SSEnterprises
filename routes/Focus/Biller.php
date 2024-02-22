@@ -19,6 +19,15 @@
        
     });
 
+
+    Route::group(['namespace' => 'income'], function () {
+      
+        Route::resource('incomes', 'IncomeController');
+        Route::post('incomes/get', 'IncomesTableController')->name('incomes.get');
+        //For Datatable
+       
+    });
+
     Route::group(['namespace' => 'additional'], function () {
         Route::resource('additionals', 'AdditionalsController');
         //For Datatable
