@@ -19,6 +19,7 @@ class CreateResponse implements Responsable
     public function toResponse($request)
     {
         $input = $request->only(['sub','p']);
+     
         if (isset($input['sub'])) {
             $last_invoice = Invoice::orderBy('id', 'desc')->where('i_class', '>', 1)->first();
         } else {
