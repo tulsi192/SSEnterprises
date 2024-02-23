@@ -2,7 +2,7 @@
     <div class="row">
         {{ Form::label('warehouse', trans('Warehouse'), ['class' => 'col-lg-3 control-label']) }}
         {{ Form::label('Allocation type', trans('Allocation type'), ['class' => 'col-lg-2 control-label']) }}
-        {{ Form::label('Additional bill', trans('Additional Bill'), ['class' => 'col-lg-2 control-label']) }}
+        {{ Form::label('Addition', trans('Additional Bill'), ['class' => 'col-lg-2 control-label']) }}
         {{ Form::label('add bill', trans('Add Bills'), ['class' => 'col-lg-2 control-label']) }}
         {{ Form::label('routebill', trans('Route Bills'), ['class' => 'col-lg-3 control-label']) }}
     </div>
@@ -33,12 +33,12 @@
             </div>
             <div class='col-lg-2'>
                 <p>selecting bills:</p>
-                <select class="form-control" name="bill_id" id="AdditionalBill">
+                <select class="form-control" name="bill_id" id="Addition">
                     @foreach ($bills as $bill)
                         <option value="{{ $bill['id'] }}">{{ $bill['id'] }}{{ $bill['name'] }}</option>
                     @endforeach
                 </select>
-                <a href="#" class="add-bill btn btn-primary">Add</a>
+                <a href="#" class="add-bill btn btn-primary">Add bill</a>
             </div>
             
             
@@ -115,7 +115,7 @@
         </div>
     </div>
 
-    <table class="table">
+    <table class="table" id="biiltable">
         <thead>
             <tr>
                 <th>S. No.</th>
@@ -123,7 +123,7 @@
                 <th>Date</th>
                 <th>Retailer Name</th>
                 <th>Amount</th>
-                <th>Sale Return</th>
+               
                 <th>Past Coll.</th>
                 <th>CD</th>
                 <th>Pending Amount</th>
@@ -132,22 +132,7 @@
             </tr>
         </thead>
         <tbody class="billTable tbody">
-            <tr>
-                <td>1</td>
-                <td>1001</td>
-                <td>2024-02-25</td>
-                <td>Retailer 1</td>
-                <td>$100.00</td>
-                <td>$10.00</td>
-                <td>$20.00</td>
-                <td>$5.00</td>
-                <td>$75.00</td>
-                <td>$25.00</td>
-                <td>
-                    <button class="btn btn-danger btn-sm">x</button>
-                </td>
-            </tr>
-            <!-- Add more rows as needed -->
+            <!-- Rows will be dynamically added here -->
         </tbody>
     </table>
     
@@ -188,48 +173,76 @@
                 .remove(); // Remove the parent element containing the selected route
                 });
             });
+
+
+
             $(document).ready(function() {
-    // Event listener for the "add" link
-    $('.add-bill').click(function(event) {
-        event.preventDefault();
 
-        // Get the selected bill ID
-        var selectedBillId = $('#AdditionalBill').val();
 
-        // Make an AJAX request to retrieve the bill details
+
+                function updateSerialNumbers() {
+        $('.billTable tbody tr').each(function(index) {
+            $(this).find('td:first').text(index + 1);
+        });
+    }
+                $('.billTable').on('click', '.btn-danger', function(e) {
+        e.preventDefault();
+        
+        // Find the parent <tr> element and remove it
+        $(this).closest('tr').remove();
+        updateSerialNumbers();
+    });
+                let i=1
+                
+    $('.add-bill').click(function(e) {
+        e.preventDefault();
+        var selectedBillId = $('#Addition').val();
+        
+        // Fetch relevant bill data using AJAX
         $.ajax({
-            url: '/bills/' + selectedBillId,
+            url: '/bills/' + selectedBillId, // Route that returns bill details
             type: 'GET',
-            dataType: 'json',
-            success: function(response) {
-                // Append the retrieved bill details to the table
-                $('.billTable tbody').append(
-                    '<tr>' +
-                        '<td>' + response.serialNumber + '</td>' + 
-                        '<td>' + response.billNumber + '</td>' + 
-                        '<td>' + response.date + '</td>' + 
-                        '<td>' + response.retailerName + '</td>' + 
-                        '<td>' + response.amount + '</td>' + 
-                        '<td>' + response.saleReturn + '</td>' + 
-                        '<td>' + response.pastCollection + '</td>' + 
-                        '<td>' + response.cd + '</td>' + 
-                        '<td>' + response.pendingAmount + '</td>' + 
-                        '<td>' + response.todaysCollection + '</td>' + 
-                        '<td><button class="btn btn-danger btn-sm remove-bill">Remove</button></td>' + 
-                    '</tr>'
-                );
+            success: function(data) {
+              
+
+                // Constructing the new row
+                var newRow = "<tr>" +
+
+
+
+                   
+                 
+             
+                    "<td></td>" + 
+                    "<td>" + data[0]?.id + "</td>" +
+                    "<td>"+ data[0]?.invoicedate +"</td>" +
+                    "<td>"+ data[0]?.name +"</td>" +
+                    "<td>"+ data[0]?.total +"</td>" +
+                 
+                    "<td>" + (data[0]?.pastcollection ?? 0) + "</td>"+
+                    "<td>" + (data[0]?.cd ?? 0) + "</td>"+
+                    "<td>" + (data[0]?.total - data[0]?.pamnt ?? 0) + "</td>" +
+                    "<td>" + (data[0]?.todays ?? 0) + "</td>"+
+                    "<td><button class='btn btn-danger btn-sm '>x</button></td>" +
+                    "</tr>";
+
+                // Appending the new row to the table body
+                $('.billTable').append(newRow);
+                updateSerialNumbers();
             },
             error: function(xhr, status, error) {
-                console.error(error); // Handle errors if any
+                // Handle errors
+                console.error(xhr.responseText);
             }
         });
     });
-
-    // Event listener for the "remove" button within table rows
-    $(document).on('click', '.remove-bill', function() {
-        $(this).closest('tr').remove(); // Remove the entire row when the remove button is clicked
-    });
 });
+
+
+
+
+
+
   
       
         </script>

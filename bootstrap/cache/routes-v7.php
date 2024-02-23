@@ -582,7 +582,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::pY7SCKIYPWLf4Tfu',
+            '_route' => 'generated::O3vCZUODK6NcTRA9',
           ),
           1 => NULL,
           2 => 
@@ -602,7 +602,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::CNE1arNlXyhljWEk',
+            '_route' => 'generated::4zLsW8eMnWwKLprw',
           ),
           1 => NULL,
           2 => 
@@ -5591,7 +5591,7 @@ app('router')->setCompiledRoutes(
     ),
     2 => 
     array (
-      0 => '{^(?|/o(?|auth/(?|tokens/([^/]++)(*:35)|clients/([^/]++)(?|(*:61))|personal\\-access\\-tokens/([^/]++)(*:102))|rders/(?|([^/]++)(?|(*:131)|/edit(*:144)|(*:152))|get(*:164)))|/lang/([^/]++)(*:188)|/d(?|ir/([^/]++)(*:212)|epartments/(?|([^/]++)(?|(*:245)|/edit(*:258)|(*:266))|get(*:278))|raft_view/([^/]++)(*:305)|uplicate/([^/]++)(*:330))|/a(?|ccounts/(?|balancesheet/([^/]++)(*:376)|([^/]++)(?|(*:395)|/edit(*:408)|(*:416))|get(*:428))|llocations/([^/]++)(?|(*:459)|/edit(*:472)|(*:480))|dditionals/(?|([^/]++)(?|(*:514)|/edit(*:527)|(*:535))|get(*:547))|pp/password/reset/([^/]++)(*:582))|/r(?|o(?|utes/(?|([^/]++)(?|(*:619)|/edit(*:632)|(*:640))|get(*:652))|le/(?|([^/]++)(?|/edit(*:683)|(*:691))|get(*:703)))|eports/(?|s(?|tatement/(?|([^/]++)(*:747)|generate(?|/([^/]++)(*:775)|_market/([^/]++)(*:799))|tax/([^/]++)(*:820)|stock/([^/]++)(*:842))|ummary/([^/]++)(?|(*:869)))|chart/([^/]++)(?|(*:896))))|/b(?|ills/([^/]++)(*:925)|anks/(?|([^/]++)(?|(*:952)|/edit(*:965)|(*:973))|get(*:985)))|/i(?|n(?|comes/(?|([^/]++)(?|(*:1024)|/edit(*:1038)|(*:1047))|get(*:1060))|voices/(?|([^/]++)(?|(*:1091)|/edit(*:1105)|(*:1114))|get(*:1127)|print_document/([^/]++)/([^/]++)(*:1168)))|mport(?|(?:/([^/]++))?(?|(*:1204))|_process(?:/([^/]++))?(*:1236)))|/m(?|arkets/([^/]++)(?|(*:1270)|/edit(?|(*:1287)|s(*:1297))|(*:1307))|iscs/(?|([^/]++)(?|(*:1336)|/edit(*:1350)|(*:1359))|get(*:1372))|essage/(?|([^/]++)(?|(*:1403))|destroy(*:1420)))|/c(?|u(?|rrencies/(?|([^/]++)(?|(*:1463)|/edit(*:1477)|(*:1486))|get(*:1499))|stom(?|er(?|groups/(?|([^/]++)(?|(*:1542)|/edit(*:1556)|(*:1565))|get(*:1578))|s/(?|([^/]++)(?|(*:1604)|/edit(*:1618)|(*:1627))|get(*:1640)))|fields/(?|([^/]++)(?|(*:1672)|/edit(*:1686)|(*:1695))|get(*:1708))))|r(?|on/([^/]++)(*:1735)|m/(?|p(?|assword/reset/([^/]++)(*:1775)|rojects/explore/([^/]++)(*:1808))|account/verify/([^/]++)(*:1841)|invoices/([^/]++)(?|(*:1870)|/edit(*:1884)|(*:1893))|quotes/(?|approve(?:/([^/]++))?(*:1934)|([^/]++)(?|(*:1954)|/edit(*:1968)|(*:1977))))))|/events/([^/]++)(?|(*:2010)|/edit(*:2024)|(*:2033))|/notes/(?|([^/]++)(?|(*:2064)|/edit(*:2078)|(*:2087))|get(*:2100))|/p(?|r(?|efixes/(?|([^/]++)(?|(*:2140)|/edit(*:2154)|(*:2163))|get(*:2176))|o(?|duct(?|categories/(?|([^/]++)(?|(*:2222)|/edit(*:2236)|(*:2245))|get(*:2258))|variables/(?|([^/]++)(?|(*:2292)|/edit(*:2306)|(*:2315))|get(*:2328))|s/(?|search/([^/]++)(*:2358)|pos/([^/]++)(*:2379)|([^/]++)(?|(*:2399)|/edit(*:2413)|(*:2422))))|jects/(?|([^/]++)(?|(*:2454)|/edit(*:2468)|(*:2477))|get(*:2490))|cess_card/([^/]++)/([^/]++)/([^/]++)/([^/]++)/([^/]++)(*:2554))|int_(?|bill/([^/]++)/([^/]++)/([^/]++)/([^/]++)(*:2611)|compact/([^/]++)/([^/]++)/([^/]++)/([^/]++)(*:2663)|payslip/([^/]++)/([^/]++)/([^/]++)(*:2706)))|urchaseorders/(?|([^/]++)(?|(*:2745)|/edit(*:2759)|(*:2768))|get(*:2781))|ay(?|pal_capture/([^/]++)/capture(*:2824)|_card/([^/]++)/([^/]++)/([^/]++)(*:2865)))|/quotes/(?|([^/]++)(?|(*:2898)|/edit(*:2912)|(*:2921))|get(*:2934))|/t(?|e(?|mplates/(?|([^/]++)(?|(*:2975)|/edit(*:2989)|(*:2998))|get(*:3011))|rms/(?|([^/]++)(?|(*:3039)|/edit(*:3053)|(*:3062))|get(*:3075)))|ransaction(?|categories/(?|([^/]++)(?|(*:3124)|/edit(*:3138)|(*:3147))|get(*:3160))|s/(?|([^/]++)(?|(*:3186)|/edit(*:3200)|(*:3209))|get(*:3222)))|asks/(?|([^/]++)(?|(*:3252)|/edit(*:3266)|(*:3275))|get(*:3288)))|/usergatewayentries/(?|([^/]++)(?|(*:3333)|/edit(*:3347)|(*:3356))|get(*:3369))|/warehouses/(?|([^/]++)(?|(*:3405)|/edit(*:3419)|(*:3428))|get(*:3441))|/hrms/(?|([^/]++)(?|(*:3471)|/edit(*:3485)|(*:3494))|get(*:3507))|/s(?|ample/([^/]++)(*:3536)|uppliers/(?|([^/]++)(?|(*:3568)|/edit(*:3582)|(*:3591))|get(*:3604)))|/view_b(?|ill/([^/]++)/([^/]++)/([^/]++)/([^/]++)(*:3664)|ank/([^/]++)/([^/]++)/([^/]++)(*:3703)))/?$}sDu',
+      0 => '{^(?|/o(?|auth/(?|tokens/([^/]++)(*:35)|clients/([^/]++)(?|(*:61))|personal\\-access\\-tokens/([^/]++)(*:102))|rders/(?|([^/]++)(?|(*:131)|/edit(*:144)|(*:152))|get(*:164)))|/b(?|ills/([^/]++)(*:192)|anks/(?|([^/]++)(?|(*:219)|/edit(*:232)|(*:240))|get(*:252)))|/lang/([^/]++)(*:276)|/d(?|ir/([^/]++)(*:300)|epartments/(?|([^/]++)(?|(*:333)|/edit(*:346)|(*:354))|get(*:366))|raft_view/([^/]++)(*:393)|uplicate/([^/]++)(*:418))|/a(?|ccounts/(?|balancesheet/([^/]++)(*:464)|([^/]++)(?|(*:483)|/edit(*:496)|(*:504))|get(*:516))|llocations/([^/]++)(?|(*:547)|/edit(*:560)|(*:568))|dditionals/(?|([^/]++)(?|(*:602)|/edit(*:615)|(*:623))|get(*:635))|pp/password/reset/([^/]++)(*:670))|/r(?|o(?|utes/(?|([^/]++)(?|(*:707)|/edit(*:720)|(*:728))|get(*:740))|le/(?|([^/]++)(?|/edit(*:771)|(*:779))|get(*:791)))|eports/(?|s(?|tatement/(?|([^/]++)(*:835)|generate(?|/([^/]++)(*:863)|_market/([^/]++)(*:887))|tax/([^/]++)(*:908)|stock/([^/]++)(*:930))|ummary/([^/]++)(?|(*:957)))|chart/([^/]++)(?|(*:984))))|/get\\-bill\\-details/([^/]++)(*:1023)|/i(?|n(?|comes/(?|([^/]++)(?|(*:1061)|/edit(*:1075)|(*:1084))|get(*:1097))|voices/(?|([^/]++)(?|(*:1128)|/edit(*:1142)|(*:1151))|get(*:1164)|print_document/([^/]++)/([^/]++)(*:1205)))|mport(?|(?:/([^/]++))?(?|(*:1241))|_process(?:/([^/]++))?(*:1273)))|/m(?|arkets/([^/]++)(?|(*:1307)|/edit(?|(*:1324)|s(*:1334))|(*:1344))|iscs/(?|([^/]++)(?|(*:1373)|/edit(*:1387)|(*:1396))|get(*:1409))|essage/(?|([^/]++)(?|(*:1440))|destroy(*:1457)))|/c(?|u(?|rrencies/(?|([^/]++)(?|(*:1500)|/edit(*:1514)|(*:1523))|get(*:1536))|stom(?|er(?|groups/(?|([^/]++)(?|(*:1579)|/edit(*:1593)|(*:1602))|get(*:1615))|s/(?|([^/]++)(?|(*:1641)|/edit(*:1655)|(*:1664))|get(*:1677)))|fields/(?|([^/]++)(?|(*:1709)|/edit(*:1723)|(*:1732))|get(*:1745))))|r(?|on/([^/]++)(*:1772)|m/(?|p(?|assword/reset/([^/]++)(*:1812)|rojects/explore/([^/]++)(*:1845))|account/verify/([^/]++)(*:1878)|invoices/([^/]++)(?|(*:1907)|/edit(*:1921)|(*:1930))|quotes/(?|approve(?:/([^/]++))?(*:1971)|([^/]++)(?|(*:1991)|/edit(*:2005)|(*:2014))))))|/events/([^/]++)(?|(*:2047)|/edit(*:2061)|(*:2070))|/notes/(?|([^/]++)(?|(*:2101)|/edit(*:2115)|(*:2124))|get(*:2137))|/p(?|r(?|efixes/(?|([^/]++)(?|(*:2177)|/edit(*:2191)|(*:2200))|get(*:2213))|o(?|duct(?|categories/(?|([^/]++)(?|(*:2259)|/edit(*:2273)|(*:2282))|get(*:2295))|variables/(?|([^/]++)(?|(*:2329)|/edit(*:2343)|(*:2352))|get(*:2365))|s/(?|search/([^/]++)(*:2395)|pos/([^/]++)(*:2416)|([^/]++)(?|(*:2436)|/edit(*:2450)|(*:2459))))|jects/(?|([^/]++)(?|(*:2491)|/edit(*:2505)|(*:2514))|get(*:2527))|cess_card/([^/]++)/([^/]++)/([^/]++)/([^/]++)/([^/]++)(*:2591))|int_(?|bill/([^/]++)/([^/]++)/([^/]++)/([^/]++)(*:2648)|compact/([^/]++)/([^/]++)/([^/]++)/([^/]++)(*:2700)|payslip/([^/]++)/([^/]++)/([^/]++)(*:2743)))|urchaseorders/(?|([^/]++)(?|(*:2782)|/edit(*:2796)|(*:2805))|get(*:2818))|ay(?|pal_capture/([^/]++)/capture(*:2861)|_card/([^/]++)/([^/]++)/([^/]++)(*:2902)))|/quotes/(?|([^/]++)(?|(*:2935)|/edit(*:2949)|(*:2958))|get(*:2971))|/t(?|e(?|mplates/(?|([^/]++)(?|(*:3012)|/edit(*:3026)|(*:3035))|get(*:3048))|rms/(?|([^/]++)(?|(*:3076)|/edit(*:3090)|(*:3099))|get(*:3112)))|ransaction(?|categories/(?|([^/]++)(?|(*:3161)|/edit(*:3175)|(*:3184))|get(*:3197))|s/(?|([^/]++)(?|(*:3223)|/edit(*:3237)|(*:3246))|get(*:3259)))|asks/(?|([^/]++)(?|(*:3289)|/edit(*:3303)|(*:3312))|get(*:3325)))|/usergatewayentries/(?|([^/]++)(?|(*:3370)|/edit(*:3384)|(*:3393))|get(*:3406))|/warehouses/(?|([^/]++)(?|(*:3442)|/edit(*:3456)|(*:3465))|get(*:3478))|/hrms/(?|([^/]++)(?|(*:3508)|/edit(*:3522)|(*:3531))|get(*:3544))|/s(?|ample/([^/]++)(*:3573)|uppliers/(?|([^/]++)(?|(*:3605)|/edit(*:3619)|(*:3628))|get(*:3641)))|/view_b(?|ill/([^/]++)/([^/]++)/([^/]++)/([^/]++)(*:3701)|ank/([^/]++)/([^/]++)/([^/]++)(*:3740)))/?$}sDu',
     ),
     3 => 
     array (
@@ -5789,168 +5789,13 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      188 => 
+      192 => 
       array (
         0 => 
         array (
           0 => 
           array (
-            '_route' => 'lang',
-          ),
-          1 => 
-          array (
-            0 => 'lang',
-          ),
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => true,
-          6 => NULL,
-        ),
-      ),
-      212 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'direction',
-          ),
-          1 => 
-          array (
-            0 => 'lang',
-          ),
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => true,
-          6 => NULL,
-        ),
-      ),
-      245 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'biller.departments.show',
-          ),
-          1 => 
-          array (
-            0 => 'department',
-          ),
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => true,
-          6 => NULL,
-        ),
-      ),
-      258 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'biller.departments.edit',
-          ),
-          1 => 
-          array (
-            0 => 'department',
-          ),
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
-      266 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'biller.departments.update',
-          ),
-          1 => 
-          array (
-            0 => 'department',
-          ),
-          2 => 
-          array (
-            'PUT' => 0,
-            'PATCH' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => true,
-          6 => NULL,
-        ),
-        1 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'biller.departments.destroy',
-          ),
-          1 => 
-          array (
-            0 => 'department',
-          ),
-          2 => 
-          array (
-            'DELETE' => 0,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => true,
-          6 => NULL,
-        ),
-      ),
-      278 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'biller.departments.get',
-          ),
-          1 => 
-          array (
-          ),
-          2 => 
-          array (
-            'POST' => 0,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
-      305 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'biller.invoices.draft_view',
+            '_route' => 'generated::uWnnQYiLCxGM1IDU',
           ),
           1 => 
           array (
@@ -5967,794 +5812,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      330 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'biller.invoices.duplicate_invoice',
-          ),
-          1 => 
-          array (
-            0 => 'id',
-          ),
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => true,
-          6 => NULL,
-        ),
-      ),
-      376 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'biller.accounts.balance_sheet',
-          ),
-          1 => 
-          array (
-            0 => 'type',
-          ),
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => true,
-          6 => NULL,
-        ),
-      ),
-      395 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'biller.accounts.show',
-          ),
-          1 => 
-          array (
-            0 => 'account',
-          ),
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => true,
-          6 => NULL,
-        ),
-      ),
-      408 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'biller.accounts.edit',
-          ),
-          1 => 
-          array (
-            0 => 'account',
-          ),
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
-      416 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'biller.accounts.update',
-          ),
-          1 => 
-          array (
-            0 => 'account',
-          ),
-          2 => 
-          array (
-            'PUT' => 0,
-            'PATCH' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => true,
-          6 => NULL,
-        ),
-        1 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'biller.accounts.destroy',
-          ),
-          1 => 
-          array (
-            0 => 'account',
-          ),
-          2 => 
-          array (
-            'DELETE' => 0,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => true,
-          6 => NULL,
-        ),
-      ),
-      428 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'biller.accounts.get',
-          ),
-          1 => 
-          array (
-          ),
-          2 => 
-          array (
-            'POST' => 0,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
-      459 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'biller.allocations.show',
-          ),
-          1 => 
-          array (
-            0 => 'allocation',
-          ),
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => true,
-          6 => NULL,
-        ),
-      ),
-      472 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'biller.allocations.edit',
-          ),
-          1 => 
-          array (
-            0 => 'allocation',
-          ),
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
-      480 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'biller.allocations.update',
-          ),
-          1 => 
-          array (
-            0 => 'allocation',
-          ),
-          2 => 
-          array (
-            'PUT' => 0,
-            'PATCH' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => true,
-          6 => NULL,
-        ),
-        1 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'biller.allocations.destroy',
-          ),
-          1 => 
-          array (
-            0 => 'allocation',
-          ),
-          2 => 
-          array (
-            'DELETE' => 0,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => true,
-          6 => NULL,
-        ),
-      ),
-      514 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'biller.additionals.show',
-          ),
-          1 => 
-          array (
-            0 => 'additional',
-          ),
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => true,
-          6 => NULL,
-        ),
-      ),
-      527 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'biller.additionals.edit',
-          ),
-          1 => 
-          array (
-            0 => 'additional',
-          ),
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
-      535 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'biller.additionals.update',
-          ),
-          1 => 
-          array (
-            0 => 'additional',
-          ),
-          2 => 
-          array (
-            'PUT' => 0,
-            'PATCH' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => true,
-          6 => NULL,
-        ),
-        1 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'biller.additionals.destroy',
-          ),
-          1 => 
-          array (
-            0 => 'additional',
-          ),
-          2 => 
-          array (
-            'DELETE' => 0,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => true,
-          6 => NULL,
-        ),
-      ),
-      547 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'biller.additionals.get',
-          ),
-          1 => 
-          array (
-          ),
-          2 => 
-          array (
-            'POST' => 0,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
-      582 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'frontend.auth.password.reset.form',
-          ),
-          1 => 
-          array (
-            0 => 'token',
-          ),
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => true,
-          6 => NULL,
-        ),
-      ),
-      619 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'biller.routes.show',
-          ),
-          1 => 
-          array (
-            0 => 'route',
-          ),
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => true,
-          6 => NULL,
-        ),
-      ),
-      632 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'biller.routes.edit',
-          ),
-          1 => 
-          array (
-            0 => 'route',
-          ),
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
-      640 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'biller.routes.update',
-          ),
-          1 => 
-          array (
-            0 => 'route',
-          ),
-          2 => 
-          array (
-            'PUT' => 0,
-            'PATCH' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => true,
-          6 => NULL,
-        ),
-        1 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'biller.routes.destroy',
-          ),
-          1 => 
-          array (
-            0 => 'route',
-          ),
-          2 => 
-          array (
-            'DELETE' => 0,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => true,
-          6 => NULL,
-        ),
-      ),
-      652 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'biller.routes.get',
-          ),
-          1 => 
-          array (
-          ),
-          2 => 
-          array (
-            'POST' => 0,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
-      683 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'biller.role.edit',
-          ),
-          1 => 
-          array (
-            0 => 'role',
-          ),
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
-      691 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'biller.role.update',
-          ),
-          1 => 
-          array (
-            0 => 'role',
-          ),
-          2 => 
-          array (
-            'PUT' => 0,
-            'PATCH' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => true,
-          6 => NULL,
-        ),
-        1 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'biller.role.destroy',
-          ),
-          1 => 
-          array (
-            0 => 'role',
-          ),
-          2 => 
-          array (
-            'DELETE' => 0,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => true,
-          6 => NULL,
-        ),
-      ),
-      703 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'biller.role.get',
-          ),
-          1 => 
-          array (
-          ),
-          2 => 
-          array (
-            'POST' => 0,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
-      747 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'biller.reports.statements',
-          ),
-          1 => 
-          array (
-            0 => 'section',
-          ),
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => true,
-          6 => NULL,
-        ),
-      ),
-      775 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'biller.reports.generate_statement',
-          ),
-          1 => 
-          array (
-            0 => 'section',
-          ),
-          2 => 
-          array (
-            'POST' => 0,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => true,
-          6 => NULL,
-        ),
-      ),
-      799 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'biller.reports.generate_market_statement',
-          ),
-          1 => 
-          array (
-            0 => 'section',
-          ),
-          2 => 
-          array (
-            'POST' => 0,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => true,
-          6 => NULL,
-        ),
-      ),
-      820 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'biller.reports.generate_tax_statement',
-          ),
-          1 => 
-          array (
-            0 => 'section',
-          ),
-          2 => 
-          array (
-            'POST' => 0,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => true,
-          6 => NULL,
-        ),
-      ),
-      842 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'biller.reports.generate_stock_statement',
-          ),
-          1 => 
-          array (
-            0 => 'section',
-          ),
-          2 => 
-          array (
-            'POST' => 0,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => true,
-          6 => NULL,
-        ),
-      ),
-      869 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'biller.reports.summary',
-          ),
-          1 => 
-          array (
-            0 => 'section',
-          ),
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => true,
-          6 => NULL,
-        ),
-        1 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'biller.reports.summary_post',
-          ),
-          1 => 
-          array (
-            0 => 'section',
-          ),
-          2 => 
-          array (
-            'POST' => 0,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => true,
-          6 => NULL,
-        ),
-      ),
-      896 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'biller.reports.charts',
-          ),
-          1 => 
-          array (
-            0 => 'section',
-          ),
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => true,
-          6 => NULL,
-        ),
-        1 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'biller.reports.charts_post',
-          ),
-          1 => 
-          array (
-            0 => 'section',
-          ),
-          2 => 
-          array (
-            'POST' => 0,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => true,
-          6 => NULL,
-        ),
-      ),
-      925 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'biller.addbill',
-          ),
-          1 => 
-          array (
-            0 => 'id',
-          ),
-          2 => 
-          array (
-            'POST' => 0,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => true,
-          6 => NULL,
-        ),
-      ),
-      952 => 
+      219 => 
       array (
         0 => 
         array (
@@ -6777,7 +5835,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      965 => 
+      232 => 
       array (
         0 => 
         array (
@@ -6800,7 +5858,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      973 => 
+      240 => 
       array (
         0 => 
         array (
@@ -6842,7 +5900,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      985 => 
+      252 => 
       array (
         0 => 
         array (
@@ -6863,7 +5921,973 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1024 => 
+      276 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'lang',
+          ),
+          1 => 
+          array (
+            0 => 'lang',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      300 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'direction',
+          ),
+          1 => 
+          array (
+            0 => 'lang',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      333 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'biller.departments.show',
+          ),
+          1 => 
+          array (
+            0 => 'department',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      346 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'biller.departments.edit',
+          ),
+          1 => 
+          array (
+            0 => 'department',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      354 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'biller.departments.update',
+          ),
+          1 => 
+          array (
+            0 => 'department',
+          ),
+          2 => 
+          array (
+            'PUT' => 0,
+            'PATCH' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'biller.departments.destroy',
+          ),
+          1 => 
+          array (
+            0 => 'department',
+          ),
+          2 => 
+          array (
+            'DELETE' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      366 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'biller.departments.get',
+          ),
+          1 => 
+          array (
+          ),
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      393 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'biller.invoices.draft_view',
+          ),
+          1 => 
+          array (
+            0 => 'id',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      418 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'biller.invoices.duplicate_invoice',
+          ),
+          1 => 
+          array (
+            0 => 'id',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      464 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'biller.accounts.balance_sheet',
+          ),
+          1 => 
+          array (
+            0 => 'type',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      483 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'biller.accounts.show',
+          ),
+          1 => 
+          array (
+            0 => 'account',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      496 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'biller.accounts.edit',
+          ),
+          1 => 
+          array (
+            0 => 'account',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      504 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'biller.accounts.update',
+          ),
+          1 => 
+          array (
+            0 => 'account',
+          ),
+          2 => 
+          array (
+            'PUT' => 0,
+            'PATCH' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'biller.accounts.destroy',
+          ),
+          1 => 
+          array (
+            0 => 'account',
+          ),
+          2 => 
+          array (
+            'DELETE' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      516 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'biller.accounts.get',
+          ),
+          1 => 
+          array (
+          ),
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      547 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'biller.allocations.show',
+          ),
+          1 => 
+          array (
+            0 => 'allocation',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      560 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'biller.allocations.edit',
+          ),
+          1 => 
+          array (
+            0 => 'allocation',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      568 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'biller.allocations.update',
+          ),
+          1 => 
+          array (
+            0 => 'allocation',
+          ),
+          2 => 
+          array (
+            'PUT' => 0,
+            'PATCH' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'biller.allocations.destroy',
+          ),
+          1 => 
+          array (
+            0 => 'allocation',
+          ),
+          2 => 
+          array (
+            'DELETE' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      602 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'biller.additionals.show',
+          ),
+          1 => 
+          array (
+            0 => 'additional',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      615 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'biller.additionals.edit',
+          ),
+          1 => 
+          array (
+            0 => 'additional',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      623 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'biller.additionals.update',
+          ),
+          1 => 
+          array (
+            0 => 'additional',
+          ),
+          2 => 
+          array (
+            'PUT' => 0,
+            'PATCH' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'biller.additionals.destroy',
+          ),
+          1 => 
+          array (
+            0 => 'additional',
+          ),
+          2 => 
+          array (
+            'DELETE' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      635 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'biller.additionals.get',
+          ),
+          1 => 
+          array (
+          ),
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      670 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'frontend.auth.password.reset.form',
+          ),
+          1 => 
+          array (
+            0 => 'token',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      707 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'biller.routes.show',
+          ),
+          1 => 
+          array (
+            0 => 'route',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      720 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'biller.routes.edit',
+          ),
+          1 => 
+          array (
+            0 => 'route',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      728 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'biller.routes.update',
+          ),
+          1 => 
+          array (
+            0 => 'route',
+          ),
+          2 => 
+          array (
+            'PUT' => 0,
+            'PATCH' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'biller.routes.destroy',
+          ),
+          1 => 
+          array (
+            0 => 'route',
+          ),
+          2 => 
+          array (
+            'DELETE' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      740 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'biller.routes.get',
+          ),
+          1 => 
+          array (
+          ),
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      771 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'biller.role.edit',
+          ),
+          1 => 
+          array (
+            0 => 'role',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      779 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'biller.role.update',
+          ),
+          1 => 
+          array (
+            0 => 'role',
+          ),
+          2 => 
+          array (
+            'PUT' => 0,
+            'PATCH' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'biller.role.destroy',
+          ),
+          1 => 
+          array (
+            0 => 'role',
+          ),
+          2 => 
+          array (
+            'DELETE' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      791 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'biller.role.get',
+          ),
+          1 => 
+          array (
+          ),
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      835 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'biller.reports.statements',
+          ),
+          1 => 
+          array (
+            0 => 'section',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      863 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'biller.reports.generate_statement',
+          ),
+          1 => 
+          array (
+            0 => 'section',
+          ),
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      887 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'biller.reports.generate_market_statement',
+          ),
+          1 => 
+          array (
+            0 => 'section',
+          ),
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      908 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'biller.reports.generate_tax_statement',
+          ),
+          1 => 
+          array (
+            0 => 'section',
+          ),
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      930 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'biller.reports.generate_stock_statement',
+          ),
+          1 => 
+          array (
+            0 => 'section',
+          ),
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      957 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'biller.reports.summary',
+          ),
+          1 => 
+          array (
+            0 => 'section',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'biller.reports.summary_post',
+          ),
+          1 => 
+          array (
+            0 => 'section',
+          ),
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      984 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'biller.reports.charts',
+          ),
+          1 => 
+          array (
+            0 => 'section',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'biller.reports.charts_post',
+          ),
+          1 => 
+          array (
+            0 => 'section',
+          ),
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      1023 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'biller.addbill',
+          ),
+          1 => 
+          array (
+            0 => 'id',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      1061 => 
       array (
         0 => 
         array (
@@ -6886,7 +6910,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1038 => 
+      1075 => 
       array (
         0 => 
         array (
@@ -6909,7 +6933,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1047 => 
+      1084 => 
       array (
         0 => 
         array (
@@ -6951,7 +6975,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1060 => 
+      1097 => 
       array (
         0 => 
         array (
@@ -6972,7 +6996,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1091 => 
+      1128 => 
       array (
         0 => 
         array (
@@ -6995,7 +7019,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1105 => 
+      1142 => 
       array (
         0 => 
         array (
@@ -7018,7 +7042,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1114 => 
+      1151 => 
       array (
         0 => 
         array (
@@ -7060,7 +7084,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1127 => 
+      1164 => 
       array (
         0 => 
         array (
@@ -7081,7 +7105,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1168 => 
+      1205 => 
       array (
         0 => 
         array (
@@ -7105,7 +7129,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1204 => 
+      1241 => 
       array (
         0 => 
         array (
@@ -7149,7 +7173,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1236 => 
+      1273 => 
       array (
         0 => 
         array (
@@ -7172,7 +7196,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1270 => 
+      1307 => 
       array (
         0 => 
         array (
@@ -7195,7 +7219,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1287 => 
+      1324 => 
       array (
         0 => 
         array (
@@ -7218,7 +7242,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1297 => 
+      1334 => 
       array (
         0 => 
         array (
@@ -7241,7 +7265,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1307 => 
+      1344 => 
       array (
         0 => 
         array (
@@ -7283,7 +7307,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1336 => 
+      1373 => 
       array (
         0 => 
         array (
@@ -7306,7 +7330,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1350 => 
+      1387 => 
       array (
         0 => 
         array (
@@ -7329,7 +7353,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1359 => 
+      1396 => 
       array (
         0 => 
         array (
@@ -7371,7 +7395,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1372 => 
+      1409 => 
       array (
         0 => 
         array (
@@ -7392,7 +7416,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1403 => 
+      1440 => 
       array (
         0 => 
         array (
@@ -7434,7 +7458,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1420 => 
+      1457 => 
       array (
         0 => 
         array (
@@ -7455,7 +7479,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1463 => 
+      1500 => 
       array (
         0 => 
         array (
@@ -7478,7 +7502,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1477 => 
+      1514 => 
       array (
         0 => 
         array (
@@ -7501,7 +7525,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1486 => 
+      1523 => 
       array (
         0 => 
         array (
@@ -7543,7 +7567,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1499 => 
+      1536 => 
       array (
         0 => 
         array (
@@ -7564,7 +7588,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1542 => 
+      1579 => 
       array (
         0 => 
         array (
@@ -7587,7 +7611,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1556 => 
+      1593 => 
       array (
         0 => 
         array (
@@ -7610,7 +7634,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1565 => 
+      1602 => 
       array (
         0 => 
         array (
@@ -7652,7 +7676,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1578 => 
+      1615 => 
       array (
         0 => 
         array (
@@ -7673,7 +7697,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1604 => 
+      1641 => 
       array (
         0 => 
         array (
@@ -7696,7 +7720,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1618 => 
+      1655 => 
       array (
         0 => 
         array (
@@ -7719,7 +7743,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1627 => 
+      1664 => 
       array (
         0 => 
         array (
@@ -7761,7 +7785,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1640 => 
+      1677 => 
       array (
         0 => 
         array (
@@ -7782,7 +7806,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1672 => 
+      1709 => 
       array (
         0 => 
         array (
@@ -7805,7 +7829,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1686 => 
+      1723 => 
       array (
         0 => 
         array (
@@ -7828,7 +7852,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1695 => 
+      1732 => 
       array (
         0 => 
         array (
@@ -7870,7 +7894,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1708 => 
+      1745 => 
       array (
         0 => 
         array (
@@ -7891,7 +7915,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1735 => 
+      1772 => 
       array (
         0 => 
         array (
@@ -7914,7 +7938,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1775 => 
+      1812 => 
       array (
         0 => 
         array (
@@ -7937,7 +7961,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1808 => 
+      1845 => 
       array (
         0 => 
         array (
@@ -7960,7 +7984,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1841 => 
+      1878 => 
       array (
         0 => 
         array (
@@ -7983,7 +8007,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1870 => 
+      1907 => 
       array (
         0 => 
         array (
@@ -8006,7 +8030,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1884 => 
+      1921 => 
       array (
         0 => 
         array (
@@ -8029,7 +8053,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1893 => 
+      1930 => 
       array (
         0 => 
         array (
@@ -8071,7 +8095,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1934 => 
+      1971 => 
       array (
         0 => 
         array (
@@ -8095,7 +8119,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1954 => 
+      1991 => 
       array (
         0 => 
         array (
@@ -8118,7 +8142,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1968 => 
+      2005 => 
       array (
         0 => 
         array (
@@ -8141,7 +8165,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      1977 => 
+      2014 => 
       array (
         0 => 
         array (
@@ -8183,7 +8207,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      2010 => 
+      2047 => 
       array (
         0 => 
         array (
@@ -8206,7 +8230,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      2024 => 
+      2061 => 
       array (
         0 => 
         array (
@@ -8229,7 +8253,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      2033 => 
+      2070 => 
       array (
         0 => 
         array (
@@ -8271,7 +8295,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      2064 => 
+      2101 => 
       array (
         0 => 
         array (
@@ -8294,7 +8318,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      2078 => 
+      2115 => 
       array (
         0 => 
         array (
@@ -8317,7 +8341,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      2087 => 
+      2124 => 
       array (
         0 => 
         array (
@@ -8359,7 +8383,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      2100 => 
+      2137 => 
       array (
         0 => 
         array (
@@ -8380,7 +8404,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      2140 => 
+      2177 => 
       array (
         0 => 
         array (
@@ -8403,7 +8427,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      2154 => 
+      2191 => 
       array (
         0 => 
         array (
@@ -8426,7 +8450,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      2163 => 
+      2200 => 
       array (
         0 => 
         array (
@@ -8468,7 +8492,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      2176 => 
+      2213 => 
       array (
         0 => 
         array (
@@ -8489,7 +8513,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      2222 => 
+      2259 => 
       array (
         0 => 
         array (
@@ -8512,7 +8536,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      2236 => 
+      2273 => 
       array (
         0 => 
         array (
@@ -8535,7 +8559,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      2245 => 
+      2282 => 
       array (
         0 => 
         array (
@@ -8577,7 +8601,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      2258 => 
+      2295 => 
       array (
         0 => 
         array (
@@ -8598,7 +8622,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      2292 => 
+      2329 => 
       array (
         0 => 
         array (
@@ -8621,7 +8645,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      2306 => 
+      2343 => 
       array (
         0 => 
         array (
@@ -8644,7 +8668,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      2315 => 
+      2352 => 
       array (
         0 => 
         array (
@@ -8686,7 +8710,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      2328 => 
+      2365 => 
       array (
         0 => 
         array (
@@ -8707,7 +8731,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      2358 => 
+      2395 => 
       array (
         0 => 
         array (
@@ -8729,7 +8753,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      2379 => 
+      2416 => 
       array (
         0 => 
         array (
@@ -8751,7 +8775,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      2399 => 
+      2436 => 
       array (
         0 => 
         array (
@@ -8774,7 +8798,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      2413 => 
+      2450 => 
       array (
         0 => 
         array (
@@ -8797,7 +8821,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      2422 => 
+      2459 => 
       array (
         0 => 
         array (
@@ -8839,7 +8863,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      2454 => 
+      2491 => 
       array (
         0 => 
         array (
@@ -8862,7 +8886,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      2468 => 
+      2505 => 
       array (
         0 => 
         array (
@@ -8885,7 +8909,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      2477 => 
+      2514 => 
       array (
         0 => 
         array (
@@ -8927,7 +8951,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      2490 => 
+      2527 => 
       array (
         0 => 
         array (
@@ -8948,7 +8972,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      2554 => 
+      2591 => 
       array (
         0 => 
         array (
@@ -8974,7 +8998,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      2611 => 
+      2648 => 
       array (
         0 => 
         array (
@@ -9000,7 +9024,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      2663 => 
+      2700 => 
       array (
         0 => 
         array (
@@ -9026,7 +9050,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      2706 => 
+      2743 => 
       array (
         0 => 
         array (
@@ -9051,7 +9075,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      2745 => 
+      2782 => 
       array (
         0 => 
         array (
@@ -9074,7 +9098,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      2759 => 
+      2796 => 
       array (
         0 => 
         array (
@@ -9097,7 +9121,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      2768 => 
+      2805 => 
       array (
         0 => 
         array (
@@ -9139,7 +9163,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      2781 => 
+      2818 => 
       array (
         0 => 
         array (
@@ -9160,7 +9184,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      2824 => 
+      2861 => 
       array (
         0 => 
         array (
@@ -9183,7 +9207,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      2865 => 
+      2902 => 
       array (
         0 => 
         array (
@@ -9208,7 +9232,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      2898 => 
+      2935 => 
       array (
         0 => 
         array (
@@ -9231,7 +9255,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      2912 => 
+      2949 => 
       array (
         0 => 
         array (
@@ -9254,7 +9278,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      2921 => 
+      2958 => 
       array (
         0 => 
         array (
@@ -9296,7 +9320,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      2934 => 
+      2971 => 
       array (
         0 => 
         array (
@@ -9317,7 +9341,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      2975 => 
+      3012 => 
       array (
         0 => 
         array (
@@ -9340,7 +9364,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      2989 => 
+      3026 => 
       array (
         0 => 
         array (
@@ -9363,7 +9387,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      2998 => 
+      3035 => 
       array (
         0 => 
         array (
@@ -9405,7 +9429,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      3011 => 
+      3048 => 
       array (
         0 => 
         array (
@@ -9426,7 +9450,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      3039 => 
+      3076 => 
       array (
         0 => 
         array (
@@ -9449,7 +9473,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      3053 => 
+      3090 => 
       array (
         0 => 
         array (
@@ -9472,7 +9496,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      3062 => 
+      3099 => 
       array (
         0 => 
         array (
@@ -9514,7 +9538,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      3075 => 
+      3112 => 
       array (
         0 => 
         array (
@@ -9535,7 +9559,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      3124 => 
+      3161 => 
       array (
         0 => 
         array (
@@ -9558,7 +9582,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      3138 => 
+      3175 => 
       array (
         0 => 
         array (
@@ -9581,7 +9605,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      3147 => 
+      3184 => 
       array (
         0 => 
         array (
@@ -9623,7 +9647,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      3160 => 
+      3197 => 
       array (
         0 => 
         array (
@@ -9644,7 +9668,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      3186 => 
+      3223 => 
       array (
         0 => 
         array (
@@ -9667,7 +9691,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      3200 => 
+      3237 => 
       array (
         0 => 
         array (
@@ -9690,7 +9714,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      3209 => 
+      3246 => 
       array (
         0 => 
         array (
@@ -9732,7 +9756,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      3222 => 
+      3259 => 
       array (
         0 => 
         array (
@@ -9753,7 +9777,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      3252 => 
+      3289 => 
       array (
         0 => 
         array (
@@ -9776,7 +9800,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      3266 => 
+      3303 => 
       array (
         0 => 
         array (
@@ -9799,7 +9823,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      3275 => 
+      3312 => 
       array (
         0 => 
         array (
@@ -9841,7 +9865,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      3288 => 
+      3325 => 
       array (
         0 => 
         array (
@@ -9862,7 +9886,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      3333 => 
+      3370 => 
       array (
         0 => 
         array (
@@ -9885,7 +9909,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      3347 => 
+      3384 => 
       array (
         0 => 
         array (
@@ -9908,7 +9932,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      3356 => 
+      3393 => 
       array (
         0 => 
         array (
@@ -9950,7 +9974,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      3369 => 
+      3406 => 
       array (
         0 => 
         array (
@@ -9971,7 +9995,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      3405 => 
+      3442 => 
       array (
         0 => 
         array (
@@ -9994,7 +10018,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      3419 => 
+      3456 => 
       array (
         0 => 
         array (
@@ -10017,7 +10041,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      3428 => 
+      3465 => 
       array (
         0 => 
         array (
@@ -10059,7 +10083,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      3441 => 
+      3478 => 
       array (
         0 => 
         array (
@@ -10080,7 +10104,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      3471 => 
+      3508 => 
       array (
         0 => 
         array (
@@ -10103,7 +10127,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      3485 => 
+      3522 => 
       array (
         0 => 
         array (
@@ -10126,7 +10150,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      3494 => 
+      3531 => 
       array (
         0 => 
         array (
@@ -10168,7 +10192,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      3507 => 
+      3544 => 
       array (
         0 => 
         array (
@@ -10189,7 +10213,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      3536 => 
+      3573 => 
       array (
         0 => 
         array (
@@ -10212,7 +10236,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      3568 => 
+      3605 => 
       array (
         0 => 
         array (
@@ -10235,7 +10259,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      3582 => 
+      3619 => 
       array (
         0 => 
         array (
@@ -10258,7 +10282,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      3591 => 
+      3628 => 
       array (
         0 => 
         array (
@@ -10300,7 +10324,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      3604 => 
+      3641 => 
       array (
         0 => 
         array (
@@ -10321,7 +10345,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      3664 => 
+      3701 => 
       array (
         0 => 
         array (
@@ -10347,7 +10371,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      3703 => 
+      3740 => 
       array (
         0 => 
         array (
@@ -11611,7 +11635,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::pY7SCKIYPWLf4Tfu' => 
+    'generated::O3vCZUODK6NcTRA9' => 
     array (
       'methods' => 
       array (
@@ -11633,7 +11657,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::pY7SCKIYPWLf4Tfu',
+        'as' => 'generated::O3vCZUODK6NcTRA9',
       ),
       'fallback' => false,
       'defaults' => 
@@ -11649,7 +11673,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::CNE1arNlXyhljWEk' => 
+    'generated::4zLsW8eMnWwKLprw' => 
     array (
       'methods' => 
       array (
@@ -11672,7 +11696,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::CNE1arNlXyhljWEk',
+        'as' => 'generated::4zLsW8eMnWwKLprw',
       ),
       'fallback' => false,
       'defaults' => 
@@ -11710,6 +11734,43 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'generated::uWnnQYiLCxGM1IDU' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'bills/{id}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\Http\\Controllers\\Focus\\allocation\\AllocationController@billshow',
+        'controller' => 'App\\Http\\Controllers\\Focus\\allocation\\AllocationController@billshow',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'generated::uWnnQYiLCxGM1IDU',
       ),
       'fallback' => false,
       'defaults' => 
@@ -12707,9 +12768,10 @@ app('router')->setCompiledRoutes(
     array (
       'methods' => 
       array (
-        0 => 'POST',
+        0 => 'GET',
+        1 => 'HEAD',
       ),
-      'uri' => 'bills/{id}',
+      'uri' => 'get-bill-details/{id}',
       'action' => 
       array (
         'middleware' => 
@@ -12717,8 +12779,8 @@ app('router')->setCompiledRoutes(
           0 => 'web',
           1 => 'biller',
         ),
-        'uses' => 'App\\Http\\Controllers\\Focus\\allocation\\AllocationController@billshow',
-        'controller' => 'App\\Http\\Controllers\\Focus\\allocation\\AllocationController@billshow',
+        'uses' => 'App\\Http\\Controllers\\Focus\\allocation\\AllocationController@billShow',
+        'controller' => 'App\\Http\\Controllers\\Focus\\allocation\\AllocationController@billShow',
         'as' => 'biller.addbill',
         'namespace' => 'App\\Http\\Controllers\\Focus\\allocation',
         'prefix' => '',

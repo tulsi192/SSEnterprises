@@ -22,7 +22,7 @@
     Route::group(['namespace' => 'allocation'], function () {
       
         Route::resource('allocations', 'AllocationController');
-        Route::get('bills/{id}', 'AllocationController@billShow')->name('addbill');
+        Route::get('/get-bill-details/{id}', 'AllocationController@billShow')->name('addbill');
         // Route::post('routes/get', 'RoutesTableController')->name('routes.get');
         //For Datatable
        

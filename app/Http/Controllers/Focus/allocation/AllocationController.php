@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Focus\allocation;
 use App\Repositories\Focus\allocation\openallocation\AllocationRepository;
 use App\Models\allocation\openallocation\Allocation;
 use Illuminate\Support\Facades\DB;
-
+use App\Models\customer\Customer;
 use App\Http\Controllers\Controller;
 use App\Http\Responses\Focus\allocation\openallocation\CreateResponse;
 use Illuminate\Http\Request;
@@ -125,8 +125,16 @@ class AllocationController extends Controller
     }
 
     public function billshow($id){
-        $bill = DB::table('hrm_metas');
+        
+        $billIds= DB::table('invoices')
+        ->where('customer_id', $id)
+        ->where('status', '!=', 'paid')
+        ->join('customers', 'invoices.customer_id', '=', 'customers.id')
+        ->select('customers.name','invoices.*')
+        ->get();
+      
+  
+        return response()->json($billIds);
 
-        return response()->json($bill); // Return the bill details as JSON
     }
 }
