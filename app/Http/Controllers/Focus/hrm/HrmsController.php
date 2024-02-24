@@ -9,8 +9,9 @@ use App\Models\Access\Permission\PermissionRole;
 use App\Models\Access\Permission\PermissionUser;
 use App\Models\Access\Role\Role;
 use App\Models\account\Account;
+use App\Models\route\Route;
 use App\Models\Company\ConfigMeta;
-use App\Models\department\Department;
+
 use App\Models\employee\RoleUser;
 use App\Models\hrm\Attendance;
 use App\Models\hrm\Hrm;
@@ -71,6 +72,7 @@ class HrmsController extends Controller
      */
     public function create(ManageHrmRequest $request)
     {
+       
         return new CreateResponse('focus.hrms.create');
     }
 
@@ -87,7 +89,7 @@ class HrmsController extends Controller
         //Input received from the request
         $input['employee'] = $request->only(['first_name', 'last_name', 'email', 'picture', 'signature', 'password', 'role']);
         $input['profile'] = $request->only(['contact', 'company', 'address_1', 'city', 'state', 'country', 'tax_id', 'postal']);
-        $input['meta'] = $request->only(['department_id', 'salary', 'hra', 'entry_time', 'exit_time', 'sales_commission']);
+        $input['meta'] = $request->only(['department_id', 'salary', 'hra', 'entry_time', 'exit_time', 'sales_commission','route_id']);
         $input['permission'] = $request->only(['permission']);
         $input['employee']['ins'] = auth()->user()->ins;
 
@@ -176,7 +178,7 @@ class HrmsController extends Controller
             ]);
         }
         $input['profile'] = $request->only(['contact', 'company', 'address_1', 'city', 'state', 'country', 'tax_id', 'postal']);
-        $input['meta'] = $request->only(['salary', 'hra', 'entry_time', 'exit_time', 'commission', 'department_id']);
+        $input['meta'] = $request->only(['salary', 'hra', 'entry_time', 'exit_time', 'commission', 'department_id','route_id']);
         $input['employee']['ins'] = auth()->user()->ins;
         $input['permission'] = $request->only(['permission']);
 

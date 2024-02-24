@@ -11,6 +11,32 @@
         Route::post('accounts/get', 'AccountsTableController')->name('accounts.get');
     });
 
+    Route::group(['namespace' => 'route'], function () {
+      
+        Route::resource('routes', 'RouteController');
+        Route::post('routes/get', 'RoutesTableController')->name('routes.get');
+        //For Datatable
+       
+    });
+    
+    Route::group(['namespace' => 'allocation'], function () {
+      
+        Route::resource('allocations', 'AllocationController');
+        Route::get('/get-bill-details/{id}', 'AllocationController@billShow')->name('addbill');
+        // Route::post('routes/get', 'RoutesTableController')->name('routes.get');
+        //For Datatable
+       
+    }); 
+
+
+    Route::group(['namespace' => 'income'], function () {
+      
+        Route::resource('incomes', 'IncomeController');
+        Route::post('incomes/get', 'IncomesTableController')->name('incomes.get');
+        //For Datatable
+       
+    });
+
     Route::group(['namespace' => 'additional'], function () {
         Route::resource('additionals', 'AdditionalsController');
         //For Datatable

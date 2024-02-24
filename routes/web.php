@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Focus\allocation\AllocationController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/bills/{id}', [AllocationController::class, 'billshow']);
 
 
 Route::get('lang/{lang}', [\App\Http\Controllers\LanguageController::class,'swap'])->name('lang');

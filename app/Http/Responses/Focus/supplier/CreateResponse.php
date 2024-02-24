@@ -1,11 +1,13 @@
 <?php
 
 namespace App\Http\Responses\Focus\supplier;
+use App\Models\route\Route;
 
 use Illuminate\Contracts\Support\Responsable;
 
 class CreateResponse implements Responsable
 {
+   
     /**
      * To Response
      *
@@ -15,6 +17,7 @@ class CreateResponse implements Responsable
      */
     public function toResponse($request)
     {
+       
         return view('focus.suppliers.create');
     }
 }

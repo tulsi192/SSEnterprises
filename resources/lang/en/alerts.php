@@ -165,6 +165,16 @@ return [
       'deleted' => 'The Department was successfully deleted.',
       'updated' => 'The Department was successfully updated.',
     ],
+    'routes' => [
+      'created' => 'The Routes was successfully created.',
+      'deleted' => 'The Routes was successfully deleted.',
+      'updated' => 'The Routes was successfully updated.',
+    ],
+    'incomes' => [
+      'created' => 'The Income was successfully created.',
+      'deleted' => 'The Income was successfully deleted.',
+      'updated' => 'The Income was successfully updated.',
+    ],
     'quotes' => [
       'created' => 'The Quote was successfully created.',
       'deleted' => 'The Quote was successfully deleted.',

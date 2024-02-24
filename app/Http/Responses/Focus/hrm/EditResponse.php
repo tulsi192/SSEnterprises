@@ -7,6 +7,7 @@ use App\Models\Access\Permission\PermissionUser;
 use App\Models\Access\Role\Role;
 use App\Models\department\Department;
 use App\Models\hrm\HrmMeta;
+use App\Models\route\route;
 use Illuminate\Contracts\Support\Responsable;
 
 class EditResponse implements Responsable
@@ -33,6 +34,7 @@ class EditResponse implements Responsable
      */
     public function toResponse($request)
     {
+        $routes=Route::all();
         $roles=Role::where('status','<',1)->where(function ($query) {
         $query->where('ins', '=', auth()->user()->ins)->orWhereNull('ins');})->get();
         $hrms = $this->hrms;
@@ -43,7 +45,7 @@ class EditResponse implements Responsable
             return $q->where('role_id','=',$emp_role);
         })->get()->toArray();
         $permissions=PermissionUser::all()->keyBy('id')->where('user_id','=',$general['create'])->toArray();
-        return view('focus.hrms.edit',compact('hrms','roles','general','permissions_all','permissions','departments'));
+        return view('focus.hrms.edit',compact('hrms','roles','general','permissions_all','permissions','departments','routes'));
 
     }
 }
