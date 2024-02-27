@@ -42,12 +42,32 @@ class AllocationRepository extends BaseRepository
     public function create(array $input)
     {
         $input = array_map( 'strip_tags', $input);
+        $allocationNumber = $this->generateUniqueAllocationNumber();
+
+        // Assign the allocation number to the input array
+        $input['allocation_number'] = $allocationNumber;
+        
         if (Allocation::create($input)) {
             return true;
         }
         throw new GeneralException(trans('exceptions.backend.departments.create_error'));
     }
-
+    private function generateUniqueAllocationNumber()
+    {
+        // Generate a random 4-digit number
+        $allocationNumber = mt_rand(1000, 9999);
+    
+        // Check if the number already exists in the database
+        $existingAllocation = Allocation::where('allocation_number', $allocationNumber)->first();
+    
+        // If the number already exists, regenerate a new number until it's unique
+        while ($existingAllocation) {
+            $allocationNumber = mt_rand(1000, 9999);
+            $existingAllocation = Allocation::where('allocation_number', $allocationNumber)->first();
+        }
+    
+        return $allocationNumber;
+    }
     /**
      * For updating the respective Model in storage
      *

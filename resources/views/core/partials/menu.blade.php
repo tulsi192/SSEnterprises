@@ -497,12 +497,12 @@
                 </li>
             @endif
             
-            @if (access()->allow('manage-route'))
+            @if (access()->allow('manage-allocation'))
                 <li class="dropdown nav-item" data-menu="dropdown"><a class="dropdown-toggle nav-link"
                         href="#" data-toggle="dropdown"><i
                             class="icon-settings"></i><span>{{ trans('Allocations') }}</span></a>
                     <ul class="dropdown-menu">
-                        @permission('manage-route')
+                        @permission('manage-allocation')
                             <li class="dropdown dropdown-submenu" data-menu="dropdown-submenu"><a
                                     class="dropdown-item dropdown-toggle" href="#" data-toggle="dropdown"><i
                                         class="fa fa-road"></i> {{ trans('Open allocation') }}
@@ -515,7 +515,7 @@
                                         </a>
                                     </li>
                                    
-                                    @permission('create-route')
+                                    @permission('create-allocation')
                                         <li><a class="dropdown-item" href="{{ route('biller.allocations.create') }}"
                                                 data-toggle="dropdown"> <i class="fa fa-plus-circle"></i>
                                                 {{ trans('Open Allocation create') }}

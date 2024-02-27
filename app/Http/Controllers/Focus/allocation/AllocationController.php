@@ -40,6 +40,7 @@ class AllocationController extends Controller
     public function index(ManageAllocationRequest $request)
     { return new ViewResponse('focus.allocations.openallocation.index');//
     }
+ 
 
     /**
      * Show the form for creating a new resource.
@@ -63,13 +64,29 @@ class AllocationController extends Controller
     public function store(CreateAllocationRequest $request)
     {
         //Input received from the request
+        
         $input = $request->except(['_token', 'ins']);
         $input['ins'] = auth()->user()->ins;
+        $selectedRoutes = $request->input('selectedRoutes');
+        
+    
+
+        // Display the selected routes data
+     
+
+
+        // Loop through each selected route ID
+        // foreach ($selectedRoutes as $routeId) {
+        //     // Process each route ID as needed
+        //     // For example, you can save it to the database
+        //    dd($routeId);
+        // }
+
    
         //Create the model using repository create method
         $this->repository->create($input);
         //return with successfull message
-        return new RedirectResponse(route('biller.allocations.index'), ['flash_success' => trans('alerts.backend.routes.created')]);
+        return new RedirectResponse(route('biller.allocations.index'), ['flash_success' => trans('alerts.backend.allocation.created')]);
     }
 
     /**

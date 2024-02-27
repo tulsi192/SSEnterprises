@@ -20,6 +20,7 @@ Route::get('/', function () {
 Route::get('/bills/{id}', [AllocationController::class, 'billshow']);
 
 
+
 Route::get('lang/{lang}', [\App\Http\Controllers\LanguageController::class,'swap'])->name('lang');
 Route::get('dir/{lang}', [\App\Http\Controllers\LanguageController::class,'direction'])->name('direction');
 

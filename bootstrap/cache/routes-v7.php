@@ -582,7 +582,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::O3vCZUODK6NcTRA9',
+            '_route' => 'generated::wO2RjSYWMrjAKPXP',
           ),
           1 => NULL,
           2 => 
@@ -602,7 +602,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::4zLsW8eMnWwKLprw',
+            '_route' => 'generated::mcsNxGz3r4srOhLp',
           ),
           1 => NULL,
           2 => 
@@ -629,6 +629,25 @@ app('router')->setCompiledRoutes(
           array (
             'GET' => 0,
             'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/allocation' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'generated::nAvnpmI8UIPjG1pn',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'POST' => 0,
           ),
           3 => NULL,
           4 => false,
@@ -5795,7 +5814,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::uWnnQYiLCxGM1IDU',
+            '_route' => 'generated::d5pof6lbsPb1db5I',
           ),
           1 => 
           array (
@@ -11635,7 +11654,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::O3vCZUODK6NcTRA9' => 
+    'generated::wO2RjSYWMrjAKPXP' => 
     array (
       'methods' => 
       array (
@@ -11657,7 +11676,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::O3vCZUODK6NcTRA9',
+        'as' => 'generated::wO2RjSYWMrjAKPXP',
       ),
       'fallback' => false,
       'defaults' => 
@@ -11673,7 +11692,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::4zLsW8eMnWwKLprw' => 
+    'generated::mcsNxGz3r4srOhLp' => 
     array (
       'methods' => 
       array (
@@ -11696,7 +11715,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::4zLsW8eMnWwKLprw',
+        'as' => 'generated::mcsNxGz3r4srOhLp',
       ),
       'fallback' => false,
       'defaults' => 
@@ -11749,7 +11768,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::uWnnQYiLCxGM1IDU' => 
+    'generated::d5pof6lbsPb1db5I' => 
     array (
       'methods' => 
       array (
@@ -11770,7 +11789,43 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::uWnnQYiLCxGM1IDU',
+        'as' => 'generated::d5pof6lbsPb1db5I',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'generated::nAvnpmI8UIPjG1pn' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'allocation',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\Http\\Controllers\\Focus\\allocation\\AllocationController@billshow123',
+        'controller' => 'App\\Http\\Controllers\\Focus\\allocation\\AllocationController@billshow123',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'generated::nAvnpmI8UIPjG1pn',
       ),
       'fallback' => false,
       'defaults' => 

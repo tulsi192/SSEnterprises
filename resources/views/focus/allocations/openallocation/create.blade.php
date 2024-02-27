@@ -21,7 +21,7 @@
                     <div class="media width-250 float-right">
 
                         <div class="media-body media-right text-right">
-                            @include('focus.route.partials.routes-header-buttons')
+                            @include('focus.allocations.openallocation.partials.allocations-header-buttons')
                         </div>
                     </div>
                 </div>
@@ -34,7 +34,7 @@
                             <div class="card-content">
 
                                 <div class="card-body">
-                                    {{ Form::open(['route' => 'biller.routes.store', 'class' => 'form-horizontal', 'role' => 'form', 'method' => 'post', 'id' => 'create-route']) }}
+                                    {{ Form::open(['route' => 'biller.allocations.store', 'class' => 'form-horizontal', 'role' => 'form', 'method' => 'post', 'id' => 'create-route']) }}
 
 
                                     <div class="form-group">
@@ -42,7 +42,7 @@
                                         @include("focus.allocations.openallocation.form")
                                         <div class="edit-form-btn">
                                             {{ link_to_route('biller.routes.index', trans('buttons.general.cancel'), [], ['class' => 'btn btn-danger btn-md']) }}
-                                            {{ Form::submit(trans('buttons.general.crud.create'), ['class' => 'btn btn-primary btn-md']) }}
+                                            {{ Form::submit(trans('buttons.general.crud.create'), ['class' => 'btn btn-primary btn-md','id'=>'formsubmit']) }}
                                             <div class="clearfix"></div>
                                         </div><!--edit-form-btn-->
                                     </div><!-- form-group -->

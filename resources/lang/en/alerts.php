@@ -170,6 +170,11 @@ return [
       'deleted' => 'The Routes was successfully deleted.',
       'updated' => 'The Routes was successfully updated.',
     ],
+    'allocations' => [
+      'created' => 'The Allocations was successfully created.',
+      'deleted' => 'The Allocations was successfully deleted.',
+      'updated' => 'The Allocations was successfully updated.',
+    ],
     'incomes' => [
       'created' => 'The Income was successfully created.',
       'deleted' => 'The Income was successfully deleted.',

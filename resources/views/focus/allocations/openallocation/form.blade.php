@@ -1,6 +1,7 @@
 <div class='form-group'>
     <div class="row">
         {{ Form::label('warehouse', trans('Warehouse'), ['class' => 'col-lg-3 control-label']) }}
+      
         {{ Form::label('Allocation type', trans('Allocation type'), ['class' => 'col-lg-2 control-label']) }}
         {{ Form::label('Addition', trans('Additional Bill'), ['class' => 'col-lg-2 control-label']) }}
         {{ Form::label('add bill', trans('Add Bills'), ['class' => 'col-lg-2 control-label']) }}
@@ -86,7 +87,7 @@
                 </div>
                 <div class='col-lg-2'>
                     <P>Route Code:</P>
-                    <select class="form-control" name="route_id" id="route">
+                    <select class="form-control" name="route_id" id="route" multiple="multiple">
                         @foreach ($routes as $route)
                             <option value="{{ $route['id'] }}">{{ $route['id'] }}{{ $route['Routecode'] }}</option>
                         @endforeach
@@ -115,7 +116,7 @@
         </div>
     </div>
 
-    <table class="table" id="biiltable">
+    <table  id="biiltable">
         <thead>
             <tr>
                 <th>S. No.</th>
@@ -154,7 +155,10 @@
                     event.preventDefault();
                     var targetId = $(this).data('target');
                     var selectedRoute = $('#' + targetId + ' option:selected').text();
+                    
                     addSelectedRoute(selectedRoute); // Add the selected route to the list
+
+                    
                 });
                 // Event listener for click events on the remove-route button
                 $(document).on('click', '.remove-route', function() {
@@ -175,63 +179,47 @@
             });
 
 
+           $(document).ready(function() {
+    let i = 1; // Initialize serial number
 
-            $(document).ready(function() {
-
-
-
-                function updateSerialNumbers() {
+    function updateSerialNumbers() {
         $('.billTable tbody tr').each(function(index) {
-            $(this).find('td:first').text(index + 1);
+            $(this).find('td:first').text(i++);
         });
     }
-                $('.billTable').on('click', '.btn-danger', function(e) {
+
+    $('.billTable').on('click', '.btn-danger', function(e) {
         e.preventDefault();
-        
-        // Find the parent <tr> element and remove it
         $(this).closest('tr').remove();
-        updateSerialNumbers();
+        updateSerialNumbers(); // Update serial numbers after removal
     });
-                let i=1
-                
+
     $('.add-bill').click(function(e) {
         e.preventDefault();
         var selectedBillId = $('#Addition').val();
         
         // Fetch relevant bill data using AJAX
         $.ajax({
-            url: '/bills/' + selectedBillId, // Route that returns bill details
+            url: '/bills/' + selectedBillId,
             type: 'GET',
             success: function(data) {
-              
-
-                // Constructing the new row
                 var newRow = "<tr>" +
-
-
-
-                   
-                 
-             
-                    "<td></td>" + 
+                    "<td>" + i + "</td>" + // Use current serial number
                     "<td>" + data[0]?.id + "</td>" +
-                    "<td>"+ data[0]?.invoicedate +"</td>" +
-                    "<td>"+ data[0]?.name +"</td>" +
-                    "<td>"+ data[0]?.total +"</td>" +
-                 
-                    "<td>" + (data[0]?.pastcollection ?? 0) + "</td>"+
-                    "<td>" + (data[0]?.cd ?? 0) + "</td>"+
+                    "<td>" + data[0]?.invoicedate + "</td>" +
+                    "<td>" + data[0]?.name + "</td>" +
+                    "<td>" + data[0]?.total + "</td>" +
+                    "<td>" + (data[0]?.pastcollection ?? 0) + "</td>" +
+                    "<td>" + (data[0]?.cd ?? 0) + "</td>" +
                     "<td>" + (data[0]?.total - data[0]?.pamnt ?? 0) + "</td>" +
-                    "<td>" + (data[0]?.todays ?? 0) + "</td>"+
-                    "<td><button class='btn btn-danger btn-sm '>x</button></td>" +
+                    "<td>" + (data[0]?.todays ?? 0) + "</td>" +
+                    "<td><button class='btn btn-danger'>x</button></td>" +
                     "</tr>";
 
-                // Appending the new row to the table body
                 $('.billTable').append(newRow);
-                updateSerialNumbers();
+                i++; // Increment serial number for the next row
             },
             error: function(xhr, status, error) {
-                // Handle errors
                 console.error(xhr.responseText);
             }
         });
@@ -246,6 +234,42 @@
   
       
         </script>
-       
+       <script>
+ $(document).ready(function() {
+    $('.add-route').click(function(event) {
+        event.preventDefault();
+        
+        // Log a message to indicate that the click event is triggered
+        console.log('Add route button clicked');
+        
+        // Get an array of all selected values from the multi-select dropdown
+        var selectedRoutes = $('#route').find('option:selected').map(function() {
+            return $(this).val();
+        }).get();
+        
+        // Log the selected routes array to see its contents
+        console.log('Selected routes:', selectedRoutes);
+        
+        // Now you can use selectedRoutes array as needed, such as sending it to the server via AJAX
+        // Example AJAX request
+        $.ajax({
+            url: 'http://127.0.0.1:8000/allocations',
+            method: 'POST',
+            data: {
+                selectedRoutes: selectedRoutes
+            },
+            success: function(response) {
+                // Handle success response from the server
+                console.log('AJAX success:', response);
+            },
+            error: function(xhr, status, error) {
+                // Handle error response from the server
+                console.error('AJAX error:', xhr.responseText);
+            }
+        });
+    });
+});
+
+</script>
             
     @endsection
