@@ -2,6 +2,7 @@
 
 namespace App\Models\warehouse\Traits;
 
+use App\Models\allocation\openallocation\Allocation;
 use App\Models\product\Product;
 use App\Models\product\ProductVariation;
 use DB;
@@ -10,8 +11,12 @@ use DB;
  */
 trait WarehouseRelationship
 {
-     public function products()
+    public function products()
     {
-        return $this->hasMany(ProductVariation::class)->select([DB::raw('qty*price as total_value'),'qty']);
+        return $this->hasMany(ProductVariation::class)->select([DB::raw('qty*price as total_value'), 'qty']);
+    }
+    public function allocations()
+    {
+        return $this->hasMany(Allocation::class);
     }
 }

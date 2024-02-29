@@ -13,7 +13,7 @@ class CreateAllocationRequest extends FormRequest
      */
     public function authorize()
     {
-        return access()->allow('create-route');
+        return access()->allow('create-allocation');
     }
 
     /**
@@ -24,16 +24,14 @@ class CreateAllocationRequest extends FormRequest
     public function rules()
     {
         return [
-            //Put your rules for the request in here
-            //For Example : 'title' => 'required'
-            //Further, see the documentation : https://laravel.com/docs/5.4/validation#creating-form-requests
-        ];
+                //Put your rules for the request in here
+                //For Example : 'title' => 'required'
+                //Further, see the documentation : https://laravel.com/docs/5.4/validation#creating-form-requests
+            ];
     }
 
     public function messages()
     {
-        return [
-           
-        ];
+        return [];
     }
 }

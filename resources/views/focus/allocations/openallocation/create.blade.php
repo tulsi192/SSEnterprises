@@ -1,6 +1,6 @@
 @extends ('core.layouts.app')
 
-@section ('title', trans('labels.backend.routes.management') . ' | ' . trans('labels.backend.routes.create'))
+@section('title', trans('labels.backend.routes.management') . ' | ' . trans('labels.backend.routes.create'))
 
 @section('page-header')
     <h1>
@@ -39,10 +39,10 @@
 
                                     <div class="form-group">
                                         {{-- Including Form blade file --}}
-                                        @include("focus.allocations.openallocation.form")
+                                        @include('focus.allocations.openallocation.form')
                                         <div class="edit-form-btn">
                                             {{ link_to_route('biller.routes.index', trans('buttons.general.cancel'), [], ['class' => 'btn btn-danger btn-md']) }}
-                                            {{ Form::submit(trans('buttons.general.crud.create'), ['class' => 'btn btn-primary btn-md','id'=>'formsubmit']) }}
+                                            {{ Form::submit(trans('buttons.general.crud.create'), ['class' => 'btn btn-primary btn-md', 'id' => 'formsubmit']) }}
                                             <div class="clearfix"></div>
                                         </div><!--edit-form-btn-->
                                     </div><!-- form-group -->

@@ -27,9 +27,7 @@ class AllocationRepository extends BaseRepository
      */
     public function getForDataTable()
     {
-
-        return $this->query()
-            ->get(['id','Routename','Routecode','created_at']);
+        return $this->query()->get(['id', 'Routename', 'Routecode', 'created_at']);
     }
 
     /**
@@ -41,12 +39,17 @@ class AllocationRepository extends BaseRepository
      */
     public function create(array $input)
     {
-        $input = array_map( 'strip_tags', $input);
+        $input = array_map('strip_tags', $input);
+        foreach ($input as &$value) {
+            if (is_string($value)) {
+                $value = strip_tags($value);
+            }
+        }
         $allocationNumber = $this->generateUniqueAllocationNumber();
 
         // Assign the allocation number to the input array
         $input['allocation_number'] = $allocationNumber;
-        
+
         if (Allocation::create($input)) {
             return true;
         }
@@ -56,16 +59,16 @@ class AllocationRepository extends BaseRepository
     {
         // Generate a random 4-digit number
         $allocationNumber = mt_rand(1000, 9999);
-    
+
         // Check if the number already exists in the database
         $existingAllocation = Allocation::where('allocation_number', $allocationNumber)->first();
-    
+
         // If the number already exists, regenerate a new number until it's unique
         while ($existingAllocation) {
             $allocationNumber = mt_rand(1000, 9999);
             $existingAllocation = Allocation::where('allocation_number', $allocationNumber)->first();
         }
-    
+
         return $allocationNumber;
     }
     /**
@@ -78,9 +81,10 @@ class AllocationRepository extends BaseRepository
      */
     public function update(Allocation $allocation, array $input)
     {
-        $input = array_map( 'strip_tags', $input);
-    	if ($allocation->update($input))
+        $input = array_map('strip_tags', $input);
+        if ($allocation->update($input)) {
             return true;
+        }
 
         throw new GeneralException(trans('exceptions.backend.departments.update_error'));
     }

@@ -18,26 +18,24 @@ class CreateResponse implements Responsable
      */
     public function toResponse($request)
     {
-        $warehouses=Warehouse::all();
-        
-        $userIds = DB::table('hrm_metas')
-        ->where('department_id', '!=', 2)
-        ->pluck('user_id');
-        $billsIds=DB::table('invoices')
-        ->where('status', '!=','paid')
-        ->pluck('customer_id');
+        $warehouses = Warehouse::all();
 
+        $userIds = DB::table('hrm_metas')->where('department_id', '!=', 2)->pluck('user_id');
+        $billsIds = DB::table('invoices')->where('status', '!=', 'paid')->pluck('customer_id');
 
+        $billsIdsde = DB::table('invoices')->where('status', '!=', 'paid')->get();
 
-        $saleIds=DB::table('hrm_metas')
-        ->where('department_id', 2)
-        ->pluck('user_id');
+        $saleIds = DB::table('hrm_metas')->where('department_id', 2)->pluck('user_id');
 
-        $sellers=User::whereIn('id',$saleIds)->get();
-    
-    $employees = User::whereIn('id', $userIds)->get();
-    $bills = Customer::whereIn('id', $billsIds)->get();
-    $routes=Route::all();
-        return view('focus.allocations.openallocation.create',compact('warehouses','employees','bills','sellers','routes'));
+        $sellers = User::whereIn('id', $saleIds)->get();
+
+        $employees = DB::table('users')->whereIn('id', $userIds)->get();
+        $bills = DB::table('customers')->whereIn('id', $billsIds)->get();
+
+        $routes = DB::table('routes')->get();
+
+        // $routes=Route::pluck('id')->toArray();
+
+        return view('focus.allocations.openallocation.create', compact('warehouses', 'employees', 'bills', 'sellers', 'routes', 'billsIdsde'));
     }
 }

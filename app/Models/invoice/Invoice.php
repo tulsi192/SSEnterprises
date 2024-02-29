@@ -9,10 +9,7 @@ use App\Models\invoice\Traits\InvoiceRelationship;
 
 class Invoice extends Model
 {
-    use ModelTrait,
-        InvoiceAttribute,
-        InvoiceRelationship {
-    }
+    use ModelTrait, InvoiceAttribute, InvoiceRelationship {}
 
     /**
      * NOTE : If you want to implement Soft Deletes in this model,
@@ -29,34 +26,25 @@ class Invoice extends Model
      * Mass Assignable fields of model
      * @var array
      */
-    protected $fillable = [
-
-    ];
+    protected $fillable = [];
 
     /**
      * Default values for model fields
      * @var array
      */
-    protected $attributes = [
-
-    ];
+    protected $attributes = [];
 
     /**
      * Dates
      * @var array
      */
-    protected $dates = [
-        'created_at',
-        'updated_at'
-    ];
+    protected $dates = ['created_at', 'updated_at'];
 
     /**
      * Guarded fields of model
      * @var array
      */
-    protected $guarded = [
-        'id'
-    ];
+    protected $guarded = ['id'];
 
     /**
      * Constructor of Model
@@ -74,6 +62,4 @@ class Invoice extends Model
             $builder->where('ins', '=', auth()->user()->ins);
         });
     }
-
-
 }

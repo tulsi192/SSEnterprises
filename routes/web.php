@@ -17,18 +17,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/bills/{id}', [AllocationController::class, 'billshow']);
 
+Route::get('lang/{lang}', [\App\Http\Controllers\LanguageController::class, 'swap'])->name('lang');
+Route::get('dir/{lang}', [\App\Http\Controllers\LanguageController::class, 'direction'])->name('direction');
 
-
-Route::get('lang/{lang}', [\App\Http\Controllers\LanguageController::class,'swap'])->name('lang');
-Route::get('dir/{lang}', [\App\Http\Controllers\LanguageController::class,'direction'])->name('direction');
+Route::get('/bills/{selectedBillId}', [AllocationController::class, 'getBillById']);
 
 Route::group(['namespace' => '\App\Http\Controllers\Focus', 'as' => 'biller.', 'middleware' => 'biller'], function () {
-includeRouteFiles(__DIR__.'/Focus/');
+    includeRouteFiles(__DIR__ . '/Focus/');
 });
-includeRouteFiles(__DIR__.'/General/');
-
-
-
-
+includeRouteFiles(__DIR__ . '/General/');

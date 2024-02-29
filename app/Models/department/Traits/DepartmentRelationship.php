@@ -10,7 +10,7 @@ use App\Models\hrm\HrmMeta;
  */
 trait DepartmentRelationship
 {
-      public function users()
+    public function users()
     {
         return $this->hasManyThrough(Hrm::class, HrmMeta::class, 'department_id', 'id', 'id', 'user_id');
     }

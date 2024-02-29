@@ -582,7 +582,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::wO2RjSYWMrjAKPXP',
+            '_route' => 'generated::ZQSAstDdr2tmeiFS',
           ),
           1 => NULL,
           2 => 
@@ -602,7 +602,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::mcsNxGz3r4srOhLp',
+            '_route' => 'generated::4lbVdQnXx4rhw8Nd',
           ),
           1 => NULL,
           2 => 
@@ -629,25 +629,6 @@ app('router')->setCompiledRoutes(
           array (
             'GET' => 0,
             'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
-      '/allocation' => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'generated::nAvnpmI8UIPjG1pn',
-          ),
-          1 => NULL,
-          2 => 
-          array (
-            'POST' => 0,
           ),
           3 => NULL,
           4 => false,
@@ -5610,7 +5591,7 @@ app('router')->setCompiledRoutes(
     ),
     2 => 
     array (
-      0 => '{^(?|/o(?|auth/(?|tokens/([^/]++)(*:35)|clients/([^/]++)(?|(*:61))|personal\\-access\\-tokens/([^/]++)(*:102))|rders/(?|([^/]++)(?|(*:131)|/edit(*:144)|(*:152))|get(*:164)))|/b(?|ills/([^/]++)(*:192)|anks/(?|([^/]++)(?|(*:219)|/edit(*:232)|(*:240))|get(*:252)))|/lang/([^/]++)(*:276)|/d(?|ir/([^/]++)(*:300)|epartments/(?|([^/]++)(?|(*:333)|/edit(*:346)|(*:354))|get(*:366))|raft_view/([^/]++)(*:393)|uplicate/([^/]++)(*:418))|/a(?|ccounts/(?|balancesheet/([^/]++)(*:464)|([^/]++)(?|(*:483)|/edit(*:496)|(*:504))|get(*:516))|llocations/([^/]++)(?|(*:547)|/edit(*:560)|(*:568))|dditionals/(?|([^/]++)(?|(*:602)|/edit(*:615)|(*:623))|get(*:635))|pp/password/reset/([^/]++)(*:670))|/r(?|o(?|utes/(?|([^/]++)(?|(*:707)|/edit(*:720)|(*:728))|get(*:740))|le/(?|([^/]++)(?|/edit(*:771)|(*:779))|get(*:791)))|eports/(?|s(?|tatement/(?|([^/]++)(*:835)|generate(?|/([^/]++)(*:863)|_market/([^/]++)(*:887))|tax/([^/]++)(*:908)|stock/([^/]++)(*:930))|ummary/([^/]++)(?|(*:957)))|chart/([^/]++)(?|(*:984))))|/get\\-bill\\-details/([^/]++)(*:1023)|/i(?|n(?|comes/(?|([^/]++)(?|(*:1061)|/edit(*:1075)|(*:1084))|get(*:1097))|voices/(?|([^/]++)(?|(*:1128)|/edit(*:1142)|(*:1151))|get(*:1164)|print_document/([^/]++)/([^/]++)(*:1205)))|mport(?|(?:/([^/]++))?(?|(*:1241))|_process(?:/([^/]++))?(*:1273)))|/m(?|arkets/([^/]++)(?|(*:1307)|/edit(?|(*:1324)|s(*:1334))|(*:1344))|iscs/(?|([^/]++)(?|(*:1373)|/edit(*:1387)|(*:1396))|get(*:1409))|essage/(?|([^/]++)(?|(*:1440))|destroy(*:1457)))|/c(?|u(?|rrencies/(?|([^/]++)(?|(*:1500)|/edit(*:1514)|(*:1523))|get(*:1536))|stom(?|er(?|groups/(?|([^/]++)(?|(*:1579)|/edit(*:1593)|(*:1602))|get(*:1615))|s/(?|([^/]++)(?|(*:1641)|/edit(*:1655)|(*:1664))|get(*:1677)))|fields/(?|([^/]++)(?|(*:1709)|/edit(*:1723)|(*:1732))|get(*:1745))))|r(?|on/([^/]++)(*:1772)|m/(?|p(?|assword/reset/([^/]++)(*:1812)|rojects/explore/([^/]++)(*:1845))|account/verify/([^/]++)(*:1878)|invoices/([^/]++)(?|(*:1907)|/edit(*:1921)|(*:1930))|quotes/(?|approve(?:/([^/]++))?(*:1971)|([^/]++)(?|(*:1991)|/edit(*:2005)|(*:2014))))))|/events/([^/]++)(?|(*:2047)|/edit(*:2061)|(*:2070))|/notes/(?|([^/]++)(?|(*:2101)|/edit(*:2115)|(*:2124))|get(*:2137))|/p(?|r(?|efixes/(?|([^/]++)(?|(*:2177)|/edit(*:2191)|(*:2200))|get(*:2213))|o(?|duct(?|categories/(?|([^/]++)(?|(*:2259)|/edit(*:2273)|(*:2282))|get(*:2295))|variables/(?|([^/]++)(?|(*:2329)|/edit(*:2343)|(*:2352))|get(*:2365))|s/(?|search/([^/]++)(*:2395)|pos/([^/]++)(*:2416)|([^/]++)(?|(*:2436)|/edit(*:2450)|(*:2459))))|jects/(?|([^/]++)(?|(*:2491)|/edit(*:2505)|(*:2514))|get(*:2527))|cess_card/([^/]++)/([^/]++)/([^/]++)/([^/]++)/([^/]++)(*:2591))|int_(?|bill/([^/]++)/([^/]++)/([^/]++)/([^/]++)(*:2648)|compact/([^/]++)/([^/]++)/([^/]++)/([^/]++)(*:2700)|payslip/([^/]++)/([^/]++)/([^/]++)(*:2743)))|urchaseorders/(?|([^/]++)(?|(*:2782)|/edit(*:2796)|(*:2805))|get(*:2818))|ay(?|pal_capture/([^/]++)/capture(*:2861)|_card/([^/]++)/([^/]++)/([^/]++)(*:2902)))|/quotes/(?|([^/]++)(?|(*:2935)|/edit(*:2949)|(*:2958))|get(*:2971))|/t(?|e(?|mplates/(?|([^/]++)(?|(*:3012)|/edit(*:3026)|(*:3035))|get(*:3048))|rms/(?|([^/]++)(?|(*:3076)|/edit(*:3090)|(*:3099))|get(*:3112)))|ransaction(?|categories/(?|([^/]++)(?|(*:3161)|/edit(*:3175)|(*:3184))|get(*:3197))|s/(?|([^/]++)(?|(*:3223)|/edit(*:3237)|(*:3246))|get(*:3259)))|asks/(?|([^/]++)(?|(*:3289)|/edit(*:3303)|(*:3312))|get(*:3325)))|/usergatewayentries/(?|([^/]++)(?|(*:3370)|/edit(*:3384)|(*:3393))|get(*:3406))|/warehouses/(?|([^/]++)(?|(*:3442)|/edit(*:3456)|(*:3465))|get(*:3478))|/hrms/(?|([^/]++)(?|(*:3508)|/edit(*:3522)|(*:3531))|get(*:3544))|/s(?|ample/([^/]++)(*:3573)|uppliers/(?|([^/]++)(?|(*:3605)|/edit(*:3619)|(*:3628))|get(*:3641)))|/view_b(?|ill/([^/]++)/([^/]++)/([^/]++)/([^/]++)(*:3701)|ank/([^/]++)/([^/]++)/([^/]++)(*:3740)))/?$}sDu',
+      0 => '{^(?|/o(?|auth/(?|tokens/([^/]++)(*:35)|clients/([^/]++)(?|(*:61))|personal\\-access\\-tokens/([^/]++)(*:102))|rders/(?|([^/]++)(?|(*:131)|/edit(*:144)|(*:152))|get(*:164)))|/lang/([^/]++)(*:188)|/d(?|ir/([^/]++)(*:212)|epartments/(?|([^/]++)(?|(*:245)|/edit(*:258)|(*:266))|get(*:278))|raft_view/([^/]++)(*:305)|uplicate/([^/]++)(*:330))|/b(?|ills/([^/]++)(*:357)|anks/(?|([^/]++)(?|(*:384)|/edit(*:397)|(*:405))|get(*:417)))|/a(?|ccounts/(?|balancesheet/([^/]++)(*:464)|([^/]++)(?|(*:483)|/edit(*:496)|(*:504))|get(*:516))|llocations/([^/]++)(?|(*:547)|/edit(*:560)|(*:568))|dditionals/(?|([^/]++)(?|(*:602)|/edit(*:615)|(*:623))|get(*:635))|pp/password/reset/([^/]++)(*:670))|/r(?|o(?|utes/(?|([^/]++)(?|(*:707)|/edit(*:720)|(*:728))|get(*:740))|le/(?|([^/]++)(?|/edit(*:771)|(*:779))|get(*:791)))|eports/(?|s(?|tatement/(?|([^/]++)(*:835)|generate(?|/([^/]++)(*:863)|_market/([^/]++)(*:887))|tax/([^/]++)(*:908)|stock/([^/]++)(*:930))|ummary/([^/]++)(?|(*:957)))|chart/([^/]++)(?|(*:984))))|/get\\-bill\\-details/([^/]++)(*:1023)|/i(?|n(?|comes/(?|([^/]++)(?|(*:1061)|/edit(*:1075)|(*:1084))|get(*:1097))|voices/(?|([^/]++)(?|(*:1128)|/edit(*:1142)|(*:1151))|get(*:1164)|print_document/([^/]++)/([^/]++)(*:1205)))|mport(?|(?:/([^/]++))?(?|(*:1241))|_process(?:/([^/]++))?(*:1273)))|/m(?|arkets/([^/]++)(?|(*:1307)|/edit(?|(*:1324)|s(*:1334))|(*:1344))|iscs/(?|([^/]++)(?|(*:1373)|/edit(*:1387)|(*:1396))|get(*:1409))|essage/(?|([^/]++)(?|(*:1440))|destroy(*:1457)))|/c(?|u(?|rrencies/(?|([^/]++)(?|(*:1500)|/edit(*:1514)|(*:1523))|get(*:1536))|stom(?|er(?|groups/(?|([^/]++)(?|(*:1579)|/edit(*:1593)|(*:1602))|get(*:1615))|s/(?|([^/]++)(?|(*:1641)|/edit(*:1655)|(*:1664))|get(*:1677)))|fields/(?|([^/]++)(?|(*:1709)|/edit(*:1723)|(*:1732))|get(*:1745))))|r(?|on/([^/]++)(*:1772)|m/(?|p(?|assword/reset/([^/]++)(*:1812)|rojects/explore/([^/]++)(*:1845))|account/verify/([^/]++)(*:1878)|invoices/([^/]++)(?|(*:1907)|/edit(*:1921)|(*:1930))|quotes/(?|approve(?:/([^/]++))?(*:1971)|([^/]++)(?|(*:1991)|/edit(*:2005)|(*:2014))))))|/events/([^/]++)(?|(*:2047)|/edit(*:2061)|(*:2070))|/notes/(?|([^/]++)(?|(*:2101)|/edit(*:2115)|(*:2124))|get(*:2137))|/p(?|r(?|efixes/(?|([^/]++)(?|(*:2177)|/edit(*:2191)|(*:2200))|get(*:2213))|o(?|duct(?|categories/(?|([^/]++)(?|(*:2259)|/edit(*:2273)|(*:2282))|get(*:2295))|variables/(?|([^/]++)(?|(*:2329)|/edit(*:2343)|(*:2352))|get(*:2365))|s/(?|search/([^/]++)(*:2395)|pos/([^/]++)(*:2416)|([^/]++)(?|(*:2436)|/edit(*:2450)|(*:2459))))|jects/(?|([^/]++)(?|(*:2491)|/edit(*:2505)|(*:2514))|get(*:2527))|cess_card/([^/]++)/([^/]++)/([^/]++)/([^/]++)/([^/]++)(*:2591))|int_(?|bill/([^/]++)/([^/]++)/([^/]++)/([^/]++)(*:2648)|compact/([^/]++)/([^/]++)/([^/]++)/([^/]++)(*:2700)|payslip/([^/]++)/([^/]++)/([^/]++)(*:2743)))|urchaseorders/(?|([^/]++)(?|(*:2782)|/edit(*:2796)|(*:2805))|get(*:2818))|ay(?|pal_capture/([^/]++)/capture(*:2861)|_card/([^/]++)/([^/]++)/([^/]++)(*:2902)))|/quotes/(?|([^/]++)(?|(*:2935)|/edit(*:2949)|(*:2958))|get(*:2971))|/t(?|e(?|mplates/(?|([^/]++)(?|(*:3012)|/edit(*:3026)|(*:3035))|get(*:3048))|rms/(?|([^/]++)(?|(*:3076)|/edit(*:3090)|(*:3099))|get(*:3112)))|ransaction(?|categories/(?|([^/]++)(?|(*:3161)|/edit(*:3175)|(*:3184))|get(*:3197))|s/(?|([^/]++)(?|(*:3223)|/edit(*:3237)|(*:3246))|get(*:3259)))|asks/(?|([^/]++)(?|(*:3289)|/edit(*:3303)|(*:3312))|get(*:3325)))|/usergatewayentries/(?|([^/]++)(?|(*:3370)|/edit(*:3384)|(*:3393))|get(*:3406))|/warehouses/(?|([^/]++)(?|(*:3442)|/edit(*:3456)|(*:3465))|get(*:3478))|/hrms/(?|([^/]++)(?|(*:3508)|/edit(*:3522)|(*:3531))|get(*:3544))|/s(?|ample/([^/]++)(*:3573)|uppliers/(?|([^/]++)(?|(*:3605)|/edit(*:3619)|(*:3628))|get(*:3641)))|/view_b(?|ill/([^/]++)/([^/]++)/([^/]++)/([^/]++)(*:3701)|ank/([^/]++)/([^/]++)/([^/]++)(*:3740)))/?$}sDu',
     ),
     3 => 
     array (
@@ -5808,139 +5789,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      192 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'generated::d5pof6lbsPb1db5I',
-          ),
-          1 => 
-          array (
-            0 => 'id',
-          ),
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => true,
-          6 => NULL,
-        ),
-      ),
-      219 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'biller.banks.show',
-          ),
-          1 => 
-          array (
-            0 => 'bank',
-          ),
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => true,
-          6 => NULL,
-        ),
-      ),
-      232 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'biller.banks.edit',
-          ),
-          1 => 
-          array (
-            0 => 'bank',
-          ),
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
-      240 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'biller.banks.update',
-          ),
-          1 => 
-          array (
-            0 => 'bank',
-          ),
-          2 => 
-          array (
-            'PUT' => 0,
-            'PATCH' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => true,
-          6 => NULL,
-        ),
-        1 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'biller.banks.destroy',
-          ),
-          1 => 
-          array (
-            0 => 'bank',
-          ),
-          2 => 
-          array (
-            'DELETE' => 0,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => true,
-          6 => NULL,
-        ),
-      ),
-      252 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'biller.banks.get',
-          ),
-          1 => 
-          array (
-          ),
-          2 => 
-          array (
-            'POST' => 0,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
-      276 => 
+      188 => 
       array (
         0 => 
         array (
@@ -5963,7 +5812,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      300 => 
+      212 => 
       array (
         0 => 
         array (
@@ -5986,7 +5835,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      333 => 
+      245 => 
       array (
         0 => 
         array (
@@ -6009,7 +5858,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      346 => 
+      258 => 
       array (
         0 => 
         array (
@@ -6032,7 +5881,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      354 => 
+      266 => 
       array (
         0 => 
         array (
@@ -6074,7 +5923,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      366 => 
+      278 => 
       array (
         0 => 
         array (
@@ -6095,7 +5944,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      393 => 
+      305 => 
       array (
         0 => 
         array (
@@ -6118,7 +5967,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      418 => 
+      330 => 
       array (
         0 => 
         array (
@@ -6138,6 +5987,138 @@ app('router')->setCompiledRoutes(
           3 => NULL,
           4 => false,
           5 => true,
+          6 => NULL,
+        ),
+      ),
+      357 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'generated::5GJbiDoqPfhX9VWZ',
+          ),
+          1 => 
+          array (
+            0 => 'selectedBillId',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      384 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'biller.banks.show',
+          ),
+          1 => 
+          array (
+            0 => 'bank',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      397 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'biller.banks.edit',
+          ),
+          1 => 
+          array (
+            0 => 'bank',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      405 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'biller.banks.update',
+          ),
+          1 => 
+          array (
+            0 => 'bank',
+          ),
+          2 => 
+          array (
+            'PUT' => 0,
+            'PATCH' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'biller.banks.destroy',
+          ),
+          1 => 
+          array (
+            0 => 'bank',
+          ),
+          2 => 
+          array (
+            'DELETE' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      417 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'biller.banks.get',
+          ),
+          1 => 
+          array (
+          ),
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
           6 => NULL,
         ),
       ),
@@ -11654,7 +11635,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::wO2RjSYWMrjAKPXP' => 
+    'generated::ZQSAstDdr2tmeiFS' => 
     array (
       'methods' => 
       array (
@@ -11676,7 +11657,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::wO2RjSYWMrjAKPXP',
+        'as' => 'generated::ZQSAstDdr2tmeiFS',
       ),
       'fallback' => false,
       'defaults' => 
@@ -11692,7 +11673,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::mcsNxGz3r4srOhLp' => 
+    'generated::4lbVdQnXx4rhw8Nd' => 
     array (
       'methods' => 
       array (
@@ -11715,7 +11696,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::mcsNxGz3r4srOhLp',
+        'as' => 'generated::4lbVdQnXx4rhw8Nd',
       ),
       'fallback' => false,
       'defaults' => 
@@ -11753,79 +11734,6 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-      ),
-      'fallback' => false,
-      'defaults' => 
-      array (
-      ),
-      'wheres' => 
-      array (
-      ),
-      'bindingFields' => 
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-      'withTrashed' => false,
-    ),
-    'generated::d5pof6lbsPb1db5I' => 
-    array (
-      'methods' => 
-      array (
-        0 => 'GET',
-        1 => 'HEAD',
-      ),
-      'uri' => 'bills/{id}',
-      'action' => 
-      array (
-        'middleware' => 
-        array (
-          0 => 'web',
-        ),
-        'uses' => 'App\\Http\\Controllers\\Focus\\allocation\\AllocationController@billshow',
-        'controller' => 'App\\Http\\Controllers\\Focus\\allocation\\AllocationController@billshow',
-        'namespace' => NULL,
-        'prefix' => '',
-        'where' => 
-        array (
-        ),
-        'as' => 'generated::d5pof6lbsPb1db5I',
-      ),
-      'fallback' => false,
-      'defaults' => 
-      array (
-      ),
-      'wheres' => 
-      array (
-      ),
-      'bindingFields' => 
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-      'withTrashed' => false,
-    ),
-    'generated::nAvnpmI8UIPjG1pn' => 
-    array (
-      'methods' => 
-      array (
-        0 => 'POST',
-      ),
-      'uri' => 'allocation',
-      'action' => 
-      array (
-        'middleware' => 
-        array (
-          0 => 'web',
-        ),
-        'uses' => 'App\\Http\\Controllers\\Focus\\allocation\\AllocationController@billshow123',
-        'controller' => 'App\\Http\\Controllers\\Focus\\allocation\\AllocationController@billshow123',
-        'namespace' => NULL,
-        'prefix' => '',
-        'where' => 
-        array (
-        ),
-        'as' => 'generated::nAvnpmI8UIPjG1pn',
       ),
       'fallback' => false,
       'defaults' => 
@@ -11900,6 +11808,43 @@ app('router')->setCompiledRoutes(
         array (
         ),
         'as' => 'direction',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'generated::5GJbiDoqPfhX9VWZ' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'bills/{selectedBillId}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\Http\\Controllers\\Focus\\allocation\\AllocationController@getBillById',
+        'controller' => 'App\\Http\\Controllers\\Focus\\allocation\\AllocationController@getBillById',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'generated::5GJbiDoqPfhX9VWZ',
       ),
       'fallback' => false,
       'defaults' => 
