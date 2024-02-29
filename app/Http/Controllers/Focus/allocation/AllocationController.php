@@ -117,8 +117,10 @@ class AllocationController extends Controller
         $routeIdsString = implode(',', $numericKeys);
         $customer_ids = explode(',', $request['bill_ids']);
 
+
         $customerIds = Invoice::whereIn('customer_id', $customer_ids)->where('status', '!=', 'paid')->pluck('id')->toArray();
-        $invoiceids = implode(',', $customerIds);
+        $invoiceids = implode(',',$customer_ids);
+      
 
         // Now $routeIdsArray should contain string values
         $input['invoice_id'] = $request['bill_ids'];

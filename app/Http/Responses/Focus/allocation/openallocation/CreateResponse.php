@@ -32,6 +32,16 @@ class CreateResponse implements Responsable
         $employees = DB::table('users')->whereIn('id', $userIds)->get();
         $bills = DB::table('customers')->whereIn('id', $billsIds)->get();
 
+
+
+        $bills = DB::table('customers')
+   
+    ->join('invoices', 'customers.id', '=', 'invoices.customer_id')
+    ->where('status', '!=', 'paid')
+    ->select('customers.*', 'invoices.*')
+    ->get();
+
+
         $routes = DB::table('routes')->get();
 
         // $routes=Route::pluck('id')->toArray();

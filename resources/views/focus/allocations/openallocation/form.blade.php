@@ -152,10 +152,10 @@
                 <th>Retailer Name</th>
                 <th>Amount</th>
 
-                <th>Past Coll.</th>
-                <th>CD</th>
+                {{-- <th>Past Coll.</th>
+                <th>CD</th> --}}
                 <th>Pending Amount</th>
-                <th>Today's Coll.</th>
+                {{-- <th>Today's Coll.</th> --}}
                 <!-- Add other relevant columns here -->
             </tr>
         </thead>
@@ -222,7 +222,11 @@
                 @foreach ($bills as $bill)
                     billDetails['{{ $bill->id }}'] = {
                         id: '{{ $bill->id }}',
-                        name: '{{ $bill->name }}'
+                        invoicedate: '{{ $bill->invoicedate}}',
+                        name: '{{ $bill->name }}',
+                        total: '{{ round($bill->total) }}',
+                        pamnt: '{{round($bill->pamnt)}}',
+
                     };
                 @endforeach
 
@@ -235,12 +239,18 @@
                     selectedBillIds.forEach(function(selectedBillId) {
                         // Retrieve the details of the selected bill using the billDetails object
                         var selectedBillDetails = billDetails[selectedBillId];
-
+                   
                         if (selectedBillDetails) {
+                            var difference = selectedBillDetails.total - selectedBillDetails.pamnt;
+                            
                             // Create a new row element with bill details and a remove button
                             var newRow = '<tr>' +
                                 '<td>' + selectedBillDetails.id + '</td>' +
+                                '<td>' + selectedBillDetails.invoicedate + '</td>' +
                                 '<td>' + selectedBillDetails.name + '</td>' +
+                                '<td>' + selectedBillDetails.total + '</td>' +
+                                '<td>' + difference + '</td>' +
+                              
                                 '<td><button class="btn btn-danger btn-sm remove-bill">Remove</button></td>' +
                                 '</tr>';
 
