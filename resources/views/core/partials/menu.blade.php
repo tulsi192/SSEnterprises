@@ -599,6 +599,29 @@
                             @endauth
                         </ul>
                     </li>
+
+
+                    <li class="dropdown dropdown-submenu" data-menu="dropdown-submenu"><a
+                        class="dropdown-item dropdown-toggle" href="#" data-toggle="dropdown"><i
+                            class="fa fa-money"></i> {{ trans('expanses.expanse') }}
+                    </a>
+                    <ul class="dropdown-menu">
+
+                        <li><a class="dropdown-item" href="{{ route('biller.expanses.index') }}"
+                                data-toggle="dropdown"> <i class="ft-list"></i>
+                                {{ trans('expanses.management') }}
+                            </a>
+                        </li>
+                       
+                        @permission('create-route')
+                            <li><a class="dropdown-item" href="{{ route('biller.expanses.create') }}"
+                                    data-toggle="dropdown"> <i class="fa fa-plus-circle"></i>
+                                    {{ trans('expanses.create') }}
+                                </a>
+                            </li>
+                        @endauth
+                    </ul>
+                </li>
                     @endauth
              
                   

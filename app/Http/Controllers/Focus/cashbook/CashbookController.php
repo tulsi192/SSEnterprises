@@ -53,10 +53,6 @@ class CashbookController extends Controller
         return new CreateResponse('focus.cashbook.create');
     }
 
-
-
-
-
     /**
      * Store a newly created resource in storage.
      *
