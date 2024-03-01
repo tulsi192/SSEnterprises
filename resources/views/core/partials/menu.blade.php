@@ -676,65 +676,38 @@
                     </ul>
                 </li>
             @endif
-            @if (access()->allow('project-manage') || access()->allow('task-manage'))
-                <li class="dropdown nav-item" data-menu="dropdown"><a class="dropdown-toggle nav-link"
-                        href="#" data-toggle="dropdown"><i
-                            class="icon-briefcase"></i><span>{{ trans('Cash Book') }}</span></a>
-                    {{-- <ul class="dropdown-menu">
-                        @permission('project-manage')
-                            <li class="dropdown dropdown-submenu" data-menu="dropdown-submenu"><a class="dropdown-item"
-                                    href="{{ route('biller.projects.index') }}"><i class="ft-calendar"></i>
-                                    {{ trans('labels.backend.projects.management') }}</a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="{{ route('biller.projects.index') }}"
-                                            data-toggle="dropdown"> <i class="ft-list"></i>
-                                            {{ trans('projects.projects') }}
+            @if (access()->allow('transaction-manage'))
+            <li class="dropdown nav-item" data-menu="dropdown"><a class="dropdown-toggle nav-link"
+                    href="#" data-toggle="dropdown"><i
+                        class="icon-briefcase"></i><span>{{ trans('cashbooks.cashbook') }}</span></a>
+                <ul class="dropdown-menu">
+                    @permission('transaction-manage')
+                        <li class="dropdown dropdown-submenu" data-menu="dropdown-submenu"><a
+                                class="dropdown-item dropdown-toggle" href="#" data-toggle="dropdown"><i
+                                    class="fa fa-book"></i> {{ trans('labels.backend.cashbooks.management') }}
+                            </a>
+                            <ul class="dropdown-menu">
 
-                                        </a>
-                                    </li>
-
-                                </ul>
-                            </li>
-                        @endauth
-                        @permission('task-manage')
-                            <li class="dropdown dropdown-submenu" data-menu="dropdown-submenu"><a class="dropdown-item"
-                                    href="{{ route('biller.tasks.index') }}"><i class="icon-directions"></i>
-                                    {{ trans('labels.backend.tasks.management') }}</a>
-                            </li>
-                        @endauth
-                        @permission('misc-manage')
-                            <li class="dropdown dropdown-submenu" data-menu="dropdown-submenu"><a
-                                    class="dropdown-item dropdown-toggle" href="#" data-toggle="dropdown"><i
-                                        class="icon-tag"></i> {{ trans('tags.tag_status') }}</a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="{{ route('biller.miscs.index') }}?module=task"
-                                            data-toggle="dropdown"> <i class="fa fa-compass"></i>
-                                            {{ trans('tasks.status_management') }}
-                                        </a>
-                                    </li>
-                                    <li><a class="dropdown-item" href="{{ route('biller.miscs.create') }}?module=task"
+                                <li><a class="dropdown-item" href="{{ route('biller.cashbooks.index') }}"
+                                        data-toggle="dropdown"> <i class="ft-list"></i>
+                                        {{ trans('labels.backend.cashbooks.management') }}
+                                    </a>
+                                </li>
+                               
+                                @permission('transaction-manage')
+                                    <li><a class="dropdown-item" href="{{ route('biller.cashbooks.create') }}"
                                             data-toggle="dropdown"> <i class="fa fa-plus-circle"></i>
-                                            {{ trans('tags.new_status') }}
+                                            {{ trans('labels.backend.cashbooks.create') }}
                                         </a>
                                     </li>
-                                    <li><a class="dropdown-item" href="{{ route('biller.miscs.index') }}"
-                                            data-toggle="dropdown"> <i class="fa fa-tags"></i>
-                                            {{ trans('tags.tags') }}</a>
-                                    </li>
-                                    <li><a class="dropdown-item" href="{{ route('biller.miscs.create') }}"
-                                            data-toggle="dropdown"> <i class="fa fa-plus-circle"></i>
-                                            {{ trans('tags.new') }}
-                                        </a>
-                                    </li>
-
-
-                                </ul>
-                            </li>
-                        @endauth
-
-                    </ul> --}}
-                </li>
-            @endif
+                                @endauth
+                            </ul>
+                        </li>
+                    @endauth
+          
+                </ul>
+            </li>
+        @endif
 
 
             

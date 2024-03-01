@@ -18,7 +18,7 @@ class CreateResponse implements Responsable
      */
     public function toResponse($request)
     {
-        $warehouses = Warehouse::all();
+        $warehouses = Warehouse::all();  
 
         $userIds = DB::table('hrm_metas')->where('department_id', '!=', 2)->pluck('user_id');
         $billsIds = DB::table('invoices')->where('status', '!=', 'paid')->pluck('customer_id');
