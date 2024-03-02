@@ -243,56 +243,56 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>2000</td>
+                                <td class="denomination">2000</td>
                                 <td>0</td>
                                 <td> <input type="number" class="form-control denomination-input" id="" step="1"
                                         name="2000"></td>
                                 <td><span class="calculated-value"></span></td>
                             </tr>
                             <tr>
-                                <td>500</td>
+                                <td class="denomination">500</td>
                                 <td>255</td>
                                 <td> <input type="number" class="form-control denomination-input" id="" step="1"
                                         name="500"></td>
                                 <td><span class="calculated-value"></span></td>
                             </tr>
                             <tr>
-                                <td>200</td>
+                                <td class="denomination">200</td>
                                 <td>44</td>
                                 <td> <input type="number" class="form-control denomination-input" id="" step="1"
                                         name="200"></td>
                                 <td><span class="calculated-value" ></span></td>
                             </tr>
                             <tr>
-                                <td>100</td>
+                                <td class="denomination">100</td>
                                 <td>76</td>
                                 <td> <input type="number" class="form-control denomination-input" id="" step="1"
                                         name="100"></td>
                                 <td><span class="calculated-value"></span></td>
                             </tr>
                             <tr>
-                                <td>50</td>
+                                <td class="denomination">50</td>
                                 <td>33</td>
                                 <td> <input type="number" class="form-control denomination-input" id="" step="1"
                                         name="50"></td>
                                 <td><span class="calculated-value"></span></td>
                             </tr>
                             <tr>
-                                <td>20</td>
+                                <td class="denomination">20</td>
                                 <td>50</td>
                                 <td> <input type="number" class="form-control denomination-input" id="" step="1"
                                         name="20"></td>
                                 <td><span class="calculated-value"></span></td>
                             </tr>
                             <tr>
-                                <td>10</td>
+                                <td class="denomination">10</td>
                                 <td>77</td>
                                 <td> <input type="number" class="form-control denomination-input" id="" step="1"
                                         name="10"></td>
                                 <td><span class="calculated-value"></span></td>
                             </tr>
                             <tr>
-                                <td>Coins</td>
+                                <td class="denominationcoins">Coins</td>
                                 <td>116</td>
                                 <td><input type="number" class="form-control denomination-coins-input" id="" step="1"
                                         name="coins"></td>
@@ -302,10 +302,10 @@
 
                                 <td>total</td>
                                 {{-- <td>total</td> --}}
-                                <td class=""></td>
+                                <td id="denominationavailable"></td>
                                
-                                <td class="total-value"></td>
-                                <td class="total-value"></td>
+                                <td class="total-sum"></td>
+                                <td class="total-sum"></td>
                             </tr>
 
                         </tbody>
@@ -444,109 +444,104 @@
             });
         });
     </script>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const inputs = document.querySelectorAll('.denomination-input');
-        const totalElements = document.querySelectorAll('.total-value');
-        const coinsInput = document.querySelector('.denomination-coins-input');
-
-        // Add event listener to the coins input field
-        coinsInput.addEventListener('input', function() {
-            const coinsValue = parseInt(this.value);
-            const coinsCalculatedValueElement = this.parentElement.nextElementSibling.querySelector('.calculated-value');
-            
-            if (!this.value) {
-                coinsCalculatedValueElement.textContent = ''; // Reset content
-                coinsCalculatedValueElement.style.color = ''; // Reset color
-            } else {
-                coinsCalculatedValueElement.textContent = coinsValue; // Update content with coins value
-            }
-
-            // Calculate total sum for coins
-            let coinsTotalSum = isNaN(coinsValue) ? 0 : coinsValue;
-
-            // Update total elements for coins
-            totalElements.forEach(totalElement => {
-                totalElement.textContent = coinsTotalSum;
-            });
-
-            // Calculate total sum including coins
-            let totalSum = coinsTotalSum;
-            inputs.forEach(input => {
-                const inputValue = parseInt(input.value);
-                const denominationText = input.parentElement.previousElementSibling.textContent.trim();
-                const currentDenomination = denominationText.toLowerCase() === 'coins' ? 'Coins' : parseInt(denominationText);
-                if (!isNaN(inputValue) && currentDenomination !== 'Coins') {
-                    totalSum += inputValue * currentDenomination;
-                }
-            });
-
-            // Update total elements
-            totalElements.forEach(totalElement => {
-                totalElement.textContent = totalSum;
-            });
-        });
-
-        // Add event listener to other denomination input fields
-        inputs.forEach(input => {
-            input.addEventListener('input', function() {
-                const inputValue = parseInt(this.value);
-                const denominationText = this.parentElement.previousElementSibling.textContent.trim();
-                const denomination = denominationText.toLowerCase() === 'coins' ? 'Coins' : parseInt(denominationText);
-                const availableNotes = parseInt(this.parentElement.previousElementSibling.previousElementSibling.textContent);
-
-                let calculatedValue = denomination === 'Coins' ? inputValue : denomination * inputValue;
-                const calculatedValueElement = this.parentElement.nextElementSibling.querySelector('.calculated-value');
-                
-                // Check if the input value is empty
-                if (!this.value) {
-                    calculatedValue = '';
-                    calculatedValueElement.style.color = ''; // Reset color
-                }
-                // Check if the input value is greater than available notes
-                else if (inputValue > availableNotes) {
-                    calculatedValue = 'Not Available';
-                    calculatedValueElement.style.color = 'red'; // Apply red color
-                }
-                // Check if the calculated value is 0 or negative
-                else if (calculatedValue <= 0 || isNaN(calculatedValue)) {
-                    calculatedValue = 'Insufficient';
-                    calculatedValueElement.style.color = 'red'; // Apply red color
-                } else {
-                    calculatedValueElement.style.color = ''; // Reset color
-                }
-
-                calculatedValueElement.textContent = calculatedValue; // Update the content
-
-                // Calculate total sum including coins
-                let totalSum = parseInt(coinsInput.value) || 0;
-                inputs.forEach(input => {
-                    const inputValue = parseInt(input.value);
-                    const denominationText = input.parentElement.previousElementSibling.textContent.trim();
-                    const currentDenomination = denominationText.toLowerCase() === 'coins' ? 'Coins' : parseInt(denominationText);
-                    if (!isNaN(inputValue) && currentDenomination !== 'Coins') {
-                        totalSum += inputValue * currentDenomination;
-                    }
-                });
-
-                // Update total elements
-                totalElements.forEach(totalElement => {
-                    totalElement.textContent = totalSum;
-                });
-            });
-        });
+    // Add event listeners to all Transfer to Main Cash Book input fields
+    const transferInputs = document.querySelectorAll('.denomination-input, .denomination-coins-input');
+    transferInputs.forEach(input => {
+        input.addEventListener('input', updateCalculatedValue);
     });
+
+    // Function to update calculated value
+    function updateCalculatedValue() {
+        const isCoin = this.classList.contains('denomination-coins-input');
+        const denomination = isCoin ? 1 : parseInt(this.parentElement.previousElementSibling.previousElementSibling.textContent);
+        const availableNotes = isCoin ? parseInt(this.parentElement.previousElementSibling.textContent) : parseInt(this.parentElement.previousElementSibling.textContent);
+        const quantity = parseInt(this.value);
+        const calculatedValueElement = this.parentElement.nextElementSibling.querySelector('.calculated-value');
+        
+        // Check if input is a valid number
+        if (!isNaN(quantity)) {
+            if (quantity > availableNotes) {
+                calculatedValueElement.textContent = "Not available notes";
+                calculatedValueElement.style.color = "red"; // Apply red color directly
+            } else {
+                const calculatedValue = denomination * quantity;
+                calculatedValueElement.textContent = calculatedValue;
+                calculatedValueElement.style.color = "black"; // Reset color to black
+            }
+        } else {
+            calculatedValueElement.textContent = ""; // Clear the calculated value if input is invalid
+        }
+
+        // Update total sum
+        updateTotalSum();
+    }
+
+    // Function to update total sum
+    function updateTotalSum() {
+        const calculatedValues = document.querySelectorAll('.calculated-value');
+        let totalSum = 0;
+
+        calculatedValues.forEach(calculatedValue => {
+            if (calculatedValue.textContent !== "Not available notes" && calculatedValue.textContent !== "") {
+                totalSum += parseInt(calculatedValue.textContent);
+            }
+        });
+
+        // Update the content of the td elements with the class total-sum
+        const totalSumCells = document.querySelectorAll('.total-sum');
+        totalSumCells.forEach(cell => {
+            cell.textContent = totalSum;
+        });
+    }
 </script>
 
 
 
+<script>
+    window.onload = function() {
+        calculateTotal();
+        var inputs = document.querySelectorAll('.denomination-input');
+        inputs.forEach(function(input) {
+            input.addEventListener('input', calculateTotal);
+        });
+    };
 
+    function calculateTotal() {
+        var rows = document.querySelectorAll('.table tbody tr');
+        var total = 0;
+        rows.forEach(function(row) {
+            var denomination = parseInt(row.querySelector('.denomination').textContent);
+            var availableNotes = parseInt(row.querySelector('td:nth-child(2)').textContent);
+            var inputValue = parseInt(row.querySelector('.denomination-input').value);
+            
+            if (!isNaN(denomination) && !isNaN(availableNotes) && !isNaN(inputValue)) {
+                total += denomination * availableNotes * inputValue;
+            }
+        });
 
-
-
-
-
-
+        document.getElementById('denominationavailable').textContent = total;
+    }
+</script>
 
 
 
