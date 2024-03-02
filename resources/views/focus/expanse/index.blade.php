@@ -1,9 +1,9 @@
 @extends ('core.layouts.app')
 
-@section ('title', trans('labels.backend.incomes.management'))
+@section ('title', trans('labels.backend.expanses.management'))
 
 @section('page-header')
-    <h1>{{ trans('labels.backend.incomes.management') }}</h1>
+    <h1>{{ trans('labels.backend.expanses.management') }}</h1>
 @endsection
 
 @section('content')
@@ -11,14 +11,14 @@
         <div class="content-wrapper">
             <div class="content-header row">
                 <div class="content-header-left col-md-6 col-12 mb-2">
-                    <h4 class="content-header-title mb-0">{{ trans('incomes.management') }}</h4>
+                    <h4 class="content-header-title mb-0">{{ trans('expanses.management') }}</h4>
 
                 </div>
                 <div class="content-header-right col-md-6 col-12">
                     <div class="media width-250 float-right">
 
                         <div class="media-body media-right text-right">
-                            @include('focus.income.partials.incomes-header-buttons')
+                            @include('focus.expanse.partials.expanses-header-buttons')
                         </div>
                     </div>
                 </div>
@@ -31,15 +31,15 @@
                             <div class="card-content">
 
                                 <div class="card-body">
-                                    <table id="incomes-table"
+                                    <table id="expanses-table"
                                            class="table table-striped table-bordered zero-configuration" cellspacing="0"
                                            width="100%">
                                         <thead>
                                         <tr>
                                             <th>#</th>
-                                            <th>{{ trans('incomes.name') }}</th>
+                                            <th>{{ trans('expanses.name') }}</th>
                                            
-                                            <th>{{ trans('incomes.created') }}</th>
+                                            <th>{{ trans('expanses.created') }}</th>
                                            
                                             <th>{{ trans('labels.general.actions') }}</th>
                                            
@@ -83,7 +83,7 @@
                 }
             });
 
-            var dataTable = $('#incomes-table').dataTable({
+            var dataTable = $('#expanses-table').dataTable({
                 processing: true,
                 serverSide: true,
                 responsive: true,
@@ -91,12 +91,12 @@
                     @lang('datatable.strings')
                 },
                 ajax: {
-                    url: '{{ route("biller.incomes.get") }}',
+                    url: '{{ route("biller.expanses.get") }}',
                     type: 'post'
                 },
                 columns: [
                     {data: 'DT_Row_Index', name: 'id'},
-                    {data: 'Incomename', name: 'Incomename'},
+                    {data: 'Expansename', name: 'Expansename'},
                    
                     {data: 'created_at', name: 'created_at'},
                  
@@ -115,7 +115,7 @@
                     ]
                 }
             });
-            $('#incomes-table_wrapper').removeClass('form-inline');
+            $('#expanses-table_wrapper').removeClass('form-inline');
 
         }
     </script>

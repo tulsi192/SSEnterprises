@@ -9,7 +9,7 @@ class EditResponse implements Responsable
     /**
      * @var App\Models\expanse\Expanse
      */
-    protected $income;
+    protected $expanse;
 
     /**
      * @param App\Models\expanse\Expanse $expanse

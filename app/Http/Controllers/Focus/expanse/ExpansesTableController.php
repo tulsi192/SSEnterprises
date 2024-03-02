@@ -43,7 +43,7 @@ class ExpansesTableController extends Controller
             ->addIndexColumn()
             ->addColumn('Expansename', function ($expanse) {
                 //  return $department->name;
-                return '<a href="' . route('biller.expenses.index') . '?rel_type=2&rel_id=' . $expanse->id . '">' . $expanse->Expansename . '</a>';
+                return '<a href="' . route('biller.expanses.index') . '?rel_type=2&rel_id=' . $expanse->id . '">' . $expanse->Expansename . '</a>';
             })
           
             

@@ -40,7 +40,7 @@ Route::group(['namespace' => 'income'], function () {
 
 Route::group(['namespace' => 'expanse'], function () {
     Route::resource('expanses', 'ExpanseController');
-    Route::post('expanses/get', 'ExpansesTableController')->name('expenses.get');
+    Route::post('expanses/get', 'ExpansesTableController')->name('expanses.get');
     //For Datatable
 });
 

@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use App\Models\expanse\Traits\ExpanseAttribute;
 use App\Models\expanse\Traits\ExpanseRelationship;
 
-class Income extends Model
+class Expanse extends Model
 {
     use ModelTrait,
     ExpanseAttribute,

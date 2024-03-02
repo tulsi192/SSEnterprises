@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Focus\expanse;
 use App\Repositories\Focus\expanse\ExpanseRepository;
-use App\Models\income\Income;
+use App\Models\expanse\Expanse;
 use App\Http\Controllers\Controller;
 use App\Http\Responses\Focus\expanse\CreateResponse;
 use Illuminate\Http\Request;
@@ -36,7 +36,8 @@ class ExpanseController extends Controller
      * @return \App\Http\Responses\ViewResponse
      */
     public function index(ManageExpanseRequest $request)
-    { return new ViewResponse('focus.expanse.index');//
+    { 
+        return new ViewResponse('focus.expanse.index');//
     }
 
     /**
@@ -46,7 +47,7 @@ class ExpanseController extends Controller
      */
     public function create(CreateExpanseRequest $request)
     {
-        return new CreateResponse('focus.expance.create');
+        return new CreateResponse('focus.expanse.create');
   
     }
 

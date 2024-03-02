@@ -1,11 +1,11 @@
 @extends ('core.layouts.app')
 
-@section ('title', trans('labels.backend.incomes.management') . ' | ' . trans('labels.backend.incomes.edit'))
+@section ('title', trans('labels.backend.expanses.management') . ' | ' . trans('labels.backend.expanses.edit'))
 
 @section('page-header')
     <h1>
-        {{ trans('labels.backend.incomes.management') }}
-        <small>{{ trans('incomes.edit') }}</small>
+        {{ trans('labels.backend.expanses.management') }}
+        <small>{{ trans('expanses.edit') }}</small>
     </h1>
 @endsection
 
@@ -14,14 +14,14 @@
         <div class="content-wrapper">
             <div class="content-header row">
                 <div class="content-header-left col-md-6 col-12 mb-2">
-                    <h4 class="content-header-title mb-0">{{  trans('incomes.edit') }}</h4>
+                    <h4 class="content-header-title mb-0">{{  trans('expanses.edit') }}</h4>
 
                 </div>
                 <div class="content-header-right col-md-6 col-12">
                     <div class="media width-250 float-right">
 
                         <div class="media-body media-right text-right">
-                            @include('focus.income.partials.incomes-header-buttons')
+                            @include('focus.expanse.partials.expanses-header-buttons')
                         </div>
                     </div>
                 </div>
@@ -34,13 +34,13 @@
                             <div class="card-content">
 
                                 <div class="card-body">
-                                    {{ Form::model($income, ['route' => ['biller.incomes.update', $income], 'class' => 'form-horizontal', 'role' => 'form', 'method' => 'PATCH', 'id' => 'edit-income']) }}
+                                    {{ Form::model($expanse, ['route' => ['biller.expanses.update', $expanse], 'class' => 'form-horizontal', 'role' => 'form', 'method' => 'PATCH', 'id' => 'edit-expanse']) }}
 
                                     <div class="form-group">
                                         {{-- Including Form blade file --}}
-                                        @include("focus.income.form")
+                                        @include("focus.expanse.form")
                                         <div class="edit-form-btn">
-                                            {{ link_to_route('biller.incomes.index', trans('buttons.general.cancel'), [], ['class' => 'btn btn-danger btn-md']) }}
+                                            {{ link_to_route('biller.expanses.index', trans('buttons.general.cancel'), [], ['class' => 'btn btn-danger btn-md']) }}
                                             {{ Form::submit(trans('buttons.general.crud.update'), ['class' => 'btn btn-primary btn-md']) }}
                                             <div class="clearfix"></div>
                                         </div><!--edit-form-btn-->
