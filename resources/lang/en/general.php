@@ -106,6 +106,7 @@ return [
 'attachment'=>'Attachment',
 'allowed'=>'Allowed',
 'finance'=>'Finance',
+'Cheque'=>'Cheque/NEFT',
 'employee'=>'Employee',
 'generated_on'=>'Generated on',
 'yes'=>'Yes',

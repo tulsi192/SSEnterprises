@@ -433,6 +433,20 @@ return [
         'createdat' => 'Created At',
       ],
     ],
+
+
+    'cheque' => [
+      'create' => 'Create Cheque/NEFT',
+      'edit' => 'Edit Cheque/NEFT',
+      'management' => 'Cheque/NEFT Management',
+      'title' => 'Cheque/NEFT',
+      'view' => 'View Cheque/NEFT',
+      'table' => 
+      [
+        'id' => 'Id',
+        'createdat' => 'Created At',
+      ],
+    ],
     'templates' => [
       'create' => 'Create Template',
       'edit' => 'Edit Template',

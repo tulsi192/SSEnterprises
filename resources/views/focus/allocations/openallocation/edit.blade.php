@@ -34,13 +34,13 @@
                             <div class="card-content">
 
                                 <div class="card-body">
-                                    {{ Form::model($route, ['route' => ['biller.routes.update', $route], 'class' => 'form-horizontal', 'role' => 'form', 'method' => 'PATCH', 'id' => 'edit-route']) }}
+                                    {{ Form::model($allocation, ['route' => ['biller.allocations.update', $allocation], 'class' => 'form-horizontal', 'role' => 'form', 'method' => 'PATCH', 'id' => 'edit-allocation']) }}
 
                                     <div class="form-group">
                                         {{-- Including Form blade file --}}
-                                        @include("focus.route.form")
+                                        @include("focus.allocations.openallocation.form")
                                         <div class="edit-form-btn">
-                                            {{ link_to_route('biller.routes.index', trans('buttons.general.cancel'), [], ['class' => 'btn btn-danger btn-md']) }}
+                                            {{ link_to_route('biller.allocations.index', trans('buttons.general.cancel'), [], ['class' => 'btn btn-danger btn-md']) }}
                                             {{ Form::submit(trans('buttons.general.crud.update'), ['class' => 'btn btn-primary btn-md']) }}
                                             <div class="clearfix"></div>
                                         </div><!--edit-form-btn-->

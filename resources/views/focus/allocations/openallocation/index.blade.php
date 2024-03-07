@@ -31,33 +31,36 @@
                             <div class="card-content">
 
                                 <div class="card-body">
-                                    <table id="routes-table" class="table table-striped table-bordered zero-configuration"
+                                    <table id="allocations-table" class="table-bordered zero-configuration"
                                         cellspacing="0" width="100%">
                                         <thead>
 
                                             <tr>
                                                 <th>#</th>
-                                                <th>{{ trans('routes.allocationnumber') }}</th>
-                                                <th>{{ trans('routes.wharehouse') }}</th>
-                                                <th>{{ trans('routes.code') }}</th>
-                                                <th>{{ trans('routes.employee') }}</th>
-                                                <th>{{ trans('routes.sales') }}</th>
-
-
+                                                <th>{{ trans('Allocation_number') }}</th>
+                                                <th>{{ trans('Warehouse') }}</th>
+                                                <th>{{ trans('Route') }}</th>
+                                                <th>{{ trans('Employee') }}</th>
+                                                <th>{{ trans('Salesman') }}</th>
+                                                <th>{{ trans('No. of Bill') }}</th>
+                                                <th>{{ trans('Allocation amount') }}</th>
+                                                
                                                 <th>{{ trans('labels.general.actions') }}</th>
-
                                             </tr>
                                         </thead>
 
 
                                         <tbody>
 
-
-                                            @foreach ($allocation as $key => $allocations)
+                                            <tr>
+                                                <td colspan="100%" class="text-center text-success font-large-1"><i
+                                                            class="fa fa-spinner spinner"></i></td>
+                                            </tr>
+                                            {{-- @foreach ($allocation as $key => $allocations)
                                                 <tr>
                                                     <td>{{ $key + 1 }}</td>
-                                                    <td>{{ $allocations['allocation_number'] }}</td>
-                                                    <td>{{ optional($allocations['warehouse'])['title'] }}</td>
+                                                    <td>{{ $allocations->allocation_number }}</td>
+                                                    <td>{{ optional($allocations->warehouse)->title }}</td>
                                                     <td>
                                                         @foreach (explode(', ', $routeNames[$key]) as $name)
                                                             {{ $name }},
@@ -83,7 +86,8 @@
                                                         @endphp
                                                     </td>
                                                 </tr>
-                                            @endforeach
+                                            @endforeach --}}
+
 
 
 
@@ -105,9 +109,10 @@
     </div>
 @endsection
 
+
 @section('after-scripts')
     {{-- For DataTables --}}
-    {{-- {{ Html::script(mix('js/dataTable.js')) }}
+    {{ Html::script(mix('js/dataTable.js')) }}
     <script>
         $(function () {
             setTimeout(function () {
@@ -122,7 +127,7 @@
                 }
             });
 
-            var dataTable = $('#routes-table').dataTable({
+            var dataTable = $('#allocations-table').dataTable({
                 processing: true,
                 serverSide: true,
                 responsive: true,
@@ -130,15 +135,21 @@
                     @lang('datatable.strings')
                 },
                 ajax: {
-                    url: '{{ route("biller.routes.get") }}',
+                    url: '{{ route("biller.allocations.get") }}',
                     type: 'post'
                 },
                 columns: [
                     {data: 'DT_Row_Index', name: 'id'},
-                    {data: 'Routename', name: 'Routename'},
-                    {data: 'Routecode', name: 'Routecode'},
-                    {data: 'sales_name', name: 'sales_name'}, 
-                    {data: 'created_at', name: 'created_at'},
+                    {data: 'allocation_number', name: 'allocation_number'},  
+                    {data: 'warehouse', name: 'warehouse'},  
+                    {data: 'route_name', name: 'route_name'},
+                    {data: 'employee_name', name: 'employee_name'},
+                    {data: 'last_saler_name', name: 'last_saler_name'},
+                    {data: 'invoice_id', name: 'invoice_id'},
+                    {data: 'amount', name: 'amount'},
+                    
+                    // {data: 'sales_name', name: 'sales_name'}, 
+                  
                  
                     
                     {data: 'actions', name: 'actions', searchable: false, sortable: false}
@@ -155,8 +166,10 @@
                     ]
                 }
             });
-            $('#routes-table_wrapper').removeClass('form-inline');
+            $('#allocations-table_wrapper').removeClass('form-inline');
 
         }
-    </script> --}}
+        
+    </script>
+    
 @endsection

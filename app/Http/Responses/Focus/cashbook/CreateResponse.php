@@ -3,6 +3,7 @@
 namespace App\Http\Responses\Focus\cashbook;
 
 use App\Models\income\Income;
+use App\Models\expanse\Expanse;
 use App\Models\warehouse\Warehouse;
 use Illuminate\Contracts\Support\Responsable;
 use Illuminate\Support\Facades\DB;
@@ -19,9 +20,12 @@ class CreateResponse implements Responsable
     public function toResponse($request)
     {
         $warehouse=Warehouse::all();
+        $warehouseexpanse=Warehouse::all();
+    
         $income=Income::all();
+        $expanse=Expanse::all();
         $userIds = DB::table('hrm_metas')->where('department_id', '!=', 2)->pluck('user_id');
         $employee = DB::table('users')->whereIn('id', $userIds)->get();
-        return view('focus.cashbook.create',compact('warehouse','income','employee'));
+        return view('focus.cashbook.create',compact('warehouse','income','employee','expanse','warehouseexpanse'));
     }
 }

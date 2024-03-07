@@ -699,6 +699,40 @@
                     </ul>
                 </li>
             @endif
+
+            
+            @if (access()->allow('transaction-manage') || access()->allow('account-manage'))
+                <li class="dropdown nav-item" data-menu="dropdown"><a class="dropdown-toggle nav-link"
+                        href="#" data-toggle="dropdown"><i
+                            class="fas fa-exchange-alt"></i><span>{{ trans('general.Cheque') }}</span></a>
+                    <ul class="dropdown-menu">
+                        @permission('account-manage')
+                            <li class="dropdown dropdown-submenu" data-menu="dropdown-submenu"><a
+                                    class="dropdown-item dropdown-toggle" href="#" data-toggle="dropdown"><i
+                                        class="fa fa-book"></i> {{ trans('labels.backend.cheque.management') }}
+                                </a>
+                                <ul class="dropdown-menu">
+
+                                    <li><a class="dropdown-item" href="{{ route('biller.cheques.index') }}"
+                                            data-toggle="dropdown"> <i class="ft-list"></i>
+                                            {{ trans('labels.backend.cheque.management') }}
+                                        </a>
+                                    </li>
+                                    
+                                    @permission('account-data')
+                                        <li><a class="dropdown-item" href="{{ route('biller.cheques.create') }}"
+                                                data-toggle="dropdown"> <i class="fa fa-plus-circle"></i>
+                                                {{ trans('labels.backend.cheque.create') }}
+                                            </a>
+                                        </li>
+                                    @endauth
+                                </ul>
+                            </li>
+                        @endauth
+             
+                    </ul>
+                </li>
+            @endif
             @if (access()->allow('transaction-manage'))
             <li class="dropdown nav-item" data-menu="dropdown"><a class="dropdown-toggle nav-link"
                     href="#" data-toggle="dropdown"><i

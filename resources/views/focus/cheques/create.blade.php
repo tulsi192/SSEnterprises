@@ -1,11 +1,11 @@
 @extends ('core.layouts.app')
 
-@section ('title', trans('labels.backend.cashbooks.management') . ' | ' . trans('labels.backend.cashbooks.create'))
+@section ('title', trans('labels.backend.cheques.management') . ' | ' . trans('labels.backend.cheques.create'))
 
 @section('page-header')
     <h1>
-        {{ trans('labels.backend.cashbookd.management') }}
-        <small>{{ trans('labels.backend.cashbooks.create') }}</small>
+        {{ trans('labels.backend.cheques.management') }}
+        <small>{{ trans('labels.backend.cheques.create') }}</small>
     </h1>
 @endsection
 
@@ -14,37 +14,34 @@
         <div class="content-wrapper">
             <div class="content-header row">
                 <div class="content-header-left col-md-6 col-12 mb-2">
-                    <h4 class="content-header-title mb-0">{{ trans('day book') }}</h4>
-                    <h3>{{ date('l, F j, Y') }}</h3>
+                    <h4 class="content-header-title mb-0">{{ trans('labels.backend.cheques.create') }}</h4>
 
                 </div>
-
-    
                 <div class="content-header-right col-md-6 col-12">
-                    <div class="">
+                    <div class="media width-250 float-right">
 
-                        <div class="">
-                            @include('focus.cashbook.partials.cashbooks-header-buttons')
+                        <div class="media-body media-right text-right">
+                            @include('focus.cheques.partials.cheques-header-buttons')
                         </div>
                     </div>
                 </div>
             </div>
             <div class="content-body">
-                {{-- <div class="row">
+                <div class="row">
                     <div class="col-12">
                         <div class="card">
 
                             <div class="card-content">
 
                                 <div class="card-body">
-                                    {{ Form::open(['route' => 'biller.cashbooks.store', 'class' => 'form-horizontal', 'role' => 'form', 'method' => 'post', 'id' => 'create-cashbook']) }}
+                                    {{ Form::open(['route' => 'biller.cheques.store', 'class' => 'form-horizontal', 'role' => 'form', 'method' => 'post', 'id' => 'create-cheque']) }}
 
 
                                     <div class="form-group">
                                         {{-- Including Form blade file --}}
-                                        {{-- @include("focus.cashbook.form")
+                                        @include("focus.cheques.form")
                                         <div class="edit-form-btn">
-                                            {{ link_to_route('biller.cashbooks.index', trans('buttons.general.cancel'), [], ['class' => 'btn btn-danger btn-md']) }}
+                                            {{ link_to_route('biller.cheques.index', trans('buttons.general.cancel'), [], ['class' => 'btn btn-danger btn-md']) }}
                                             {{ Form::submit(trans('buttons.general.crud.create'), ['class' => 'btn btn-primary btn-md']) }}
                                             <div class="clearfix"></div>
                                         </div><!--edit-form-btn-->
@@ -57,8 +54,21 @@
                             </div>
                         </div>
                     </div>
-                </div> --}} 
+                </div>
             </div>
         </div>
     </div>
+@endsection
+@section('extra-scripts')
+   <script type="text/javascript">
+        $(function () {
+            $('[data-toggle="datepicker"]').datepicker({
+                autoHide: true,
+                format: '{{config('core.user_date_format')}}'
+            });
+            $('[data-toggle="datepicker"]').datepicker('setDate', '{{date(config('core.user_date_format'))}}');
+            editor();
+           
+        });
+   </script>
 @endsection

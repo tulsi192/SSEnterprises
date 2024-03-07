@@ -9,8 +9,12 @@ return[
 'code'=>'Route Code',
 'created'=>'Created_At',
 'all'=>'All',
-'sales'=>'SalesPerson Name'
-
+'sales'=>'Salesname',
+'allocationnumber'=>'Allocation Number',
+'wharehouse'=>'Warehouse',
+'employee'=>'Employee',
+'amount'=>'Allocation amount',
+'bills'=>'No. of Bills',
 
 
 ];

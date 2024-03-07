@@ -27,7 +27,8 @@ class AllocationRepository extends BaseRepository
      */
     public function getForDataTable()
     {
-        return $this->query()->get(['id', 'Routename', 'Routecode', 'created_at']);
+        return $this->query()
+        ->get(['id','allocation_number','warehouse_id','route_id','user_id','invoice_id']);
     }
 
     /**
@@ -74,7 +75,7 @@ class AllocationRepository extends BaseRepository
     /**
      * For updating the respective Model in storage
      *
-     * @param Route $route
+     * @param Allocation $allocation
      * @param  $input
      * @throws GeneralException
      * return bool

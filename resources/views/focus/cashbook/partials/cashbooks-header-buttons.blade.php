@@ -3,14 +3,14 @@
         <a href="#" class="btn btn-secondary" id="openModalTransfer"><i class="fa fa-book"></i>
             {{ trans('Transfer to main Cashbook') }}</a>
 
-        <a href="{{ route('biller.cashbooks.index') }}" class="btn btn-secondary"><i class="fa fa-exchange"></i>
+        <a href="#" class="btn btn-secondary" id="openModalExchange"><i class="fa fa-exchange"></i>
             {{ trans('Note Exchange') }}</a>
 
 
         <a href="#" class="btn btn-secondary" id="openModalIncome"><i class="fa fa-plus"></i>
             {{ trans('Add Income') }}</a>
 
-        <a href="{{ route('biller.cashbooks.index') }}" class="btn btn-secondary"><i class="fa fa-plus"></i>
+        <a href="#" class="btn btn-secondary" id="openModalExpanse"><i class="fa fa-plus"></i>
             {{ trans('Add Expanses') }}</a>
         <a href="{{ route('biller.cashbooks.index') }}" class="btn btn-secondary"><i
                 class="fa fa-arrow-circle-o-down"></i> {{ trans('Add Bank Deposite') }}</a>
@@ -213,6 +213,11 @@
         </div>
     </div>
 </div>
+
+<div class="modal fade" id="expanseModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+@include('focus.cashbook.expanse')
+</div>
 <div class="modal fade" id="transferModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
     <div class="modal-dialog modal-xl" role="document">
@@ -244,58 +249,58 @@
                         <tbody>
                             <tr>
                                 <td class="denomination">2000</td>
-                                <td>0</td>
-                                <td> <input type="number" class="form-control denomination-input" id="" step="1"
-                                        name="2000"></td>
+                                <td class="notes">0</td>
+                                <td> <input type="number" class="form-control denomination-input" id=""
+                                        step="1" name="2000"></td>
                                 <td><span class="calculated-value"></span></td>
                             </tr>
                             <tr>
                                 <td class="denomination">500</td>
-                                <td>255</td>
-                                <td> <input type="number" class="form-control denomination-input" id="" step="1"
-                                        name="500"></td>
+                                <td class="notes">255</td>
+                                <td> <input type="number" class="form-control denomination-input" id=""
+                                        step="1" name="500"></td>
                                 <td><span class="calculated-value"></span></td>
                             </tr>
                             <tr>
                                 <td class="denomination">200</td>
-                                <td>44</td>
-                                <td> <input type="number" class="form-control denomination-input" id="" step="1"
-                                        name="200"></td>
-                                <td><span class="calculated-value" ></span></td>
+                                <td class="notes">44</td>
+                                <td> <input type="number" class="form-control denomination-input" id=""
+                                        step="1" name="200"></td>
+                                <td><span class="calculated-value"></span></td>
                             </tr>
                             <tr>
                                 <td class="denomination">100</td>
-                                <td>76</td>
-                                <td> <input type="number" class="form-control denomination-input" id="" step="1"
-                                        name="100"></td>
+                                <td class="notes">76</td>
+                                <td> <input type="number" class="form-control denomination-input" id=""
+                                        step="1" name="100"></td>
                                 <td><span class="calculated-value"></span></td>
                             </tr>
                             <tr>
                                 <td class="denomination">50</td>
-                                <td>33</td>
-                                <td> <input type="number" class="form-control denomination-input" id="" step="1"
-                                        name="50"></td>
+                                <td class="notes">33</td>
+                                <td> <input type="number" class="form-control denomination-input" id=""
+                                        step="1" name="50"></td>
                                 <td><span class="calculated-value"></span></td>
                             </tr>
                             <tr>
                                 <td class="denomination">20</td>
-                                <td>50</td>
-                                <td> <input type="number" class="form-control denomination-input" id="" step="1"
-                                        name="20"></td>
+                                <td class="notes">50</td>
+                                <td> <input type="number" class="form-control denomination-input" id=""
+                                        step="1" name="20"></td>
                                 <td><span class="calculated-value"></span></td>
                             </tr>
                             <tr>
                                 <td class="denomination">10</td>
-                                <td>77</td>
-                                <td> <input type="number" class="form-control denomination-input" id="" step="1"
-                                        name="10"></td>
+                                <td class="notes">77</td>
+                                <td> <input type="number" class="form-control denomination-input" id=""
+                                        step="1" name="10"></td>
                                 <td><span class="calculated-value"></span></td>
                             </tr>
                             <tr>
                                 <td class="denominationcoins">Coins</td>
-                                <td>116</td>
-                                <td><input type="number" class="form-control denomination-coins-input" id="" step="1"
-                                        name="coins"></td>
+                                <td class="coins">116</td>
+                                <td><input type="number" class="form-control denomination-coins-input"
+                                        id="" step="1" name="coins"></td>
                                 <td><span class="calculated-value"></span></td>
                             </tr>
                             <tr>
@@ -303,7 +308,7 @@
                                 <td>total</td>
                                 {{-- <td>total</td> --}}
                                 <td id="denominationavailable"></td>
-                               
+
                                 <td class="total-sum"></td>
                                 <td class="total-sum"></td>
                             </tr>
@@ -331,14 +336,21 @@
     </div>
 </div>
 
+<div class="modal fade" id="exchangeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+    @include('focus.cashbook.exchangenotes');
+    </div>
+</div>
 
 @section('after-scripts')
     <script type="text/javascript">
         $(document).ready(function() {
-
+            $('#openModalExchange').click(function() {
+                $('#exchangeModal').modal('show'); // Show the modal when the button is clicked
+            });
         });
     </script>
-
 
 
 
@@ -358,12 +370,29 @@
         });
     </script>
     <script>
-        $(document).ready(function() {
-            $('#openModalTransfer').click(function() {
-                $('#transferModal').modal('show'); // Show the modal when the button is clicked
+  $(document).ready(function() {
+            $('#openModalExpanse').click(function() {
+                $('#expanseModal').modal('show'); // Show the modal when the button is clicked
             });
         });
     </script>
+    <script>
+        $(document).ready(function() {
+            $('#openModalTransfer').click(function() {
+                $('#transferModal').modal('show');
+                calculateTotal1(); // Show the modal when the button is clicked
+            });
+        });
+    </script>
+
+<script>
+    $(document).ready(function() {
+        $('#openModalExpanse').click(function() {
+            $('#expanseModal').modal('show');
+            calculateTotal1(); // Show the modal when the button is clicked
+        });
+    });
+</script>
     <script>
         // Get input and result elements
         // Get input and result elements
@@ -382,27 +411,27 @@
         // Function to calculate the total amount and update the difference
         function calculateTotal() {
             // Calculate the sum of all result values
-            let totalSum = 0;
+            let totalSum1 = 0;
             resultSpans.forEach(resultSpan => {
                 if (resultSpan.textContent.trim() !== '') {
-                    totalSum += parseInt(resultSpan.textContent);
+                    totalSum1 += parseInt(resultSpan.textContent);
                 }
             });
             // Display the total sum in the sumInput field
-            sumInput.value = totalSum;
+            sumInput.value = totalSum1;
 
             // Get the entered amount value
             const enteredAmount = parseInt(amountInput.value);
 
             // Calculate the difference between totalIncome and the total sum
-            const difference = enteredAmount - totalSum;
+            const difference = enteredAmount - totalSum1;
 
             // Display the difference in the differenceInput field
             differenceInput.value = difference.toFixed(2); // Display difference to two decimal places
             if (difference > 0) {
-                differenceInput.style.color = 'green'; // Excess amount, display in green
+                differenceInput.style.color = 'red'; // Excess amount, display in green
             } else if (difference < 0) {
-                differenceInput.style.color = 'red'; // Short amount, display in red
+                differenceInput.style.color = 'green'; // Short amount, display in red
             } else {
                 differenceInput.style.color = 'black'; // No difference, display in black
             }
@@ -447,8 +476,9 @@
 
 
 
-</body>
-</html>
+    </body>
+
+    </html>
 
 
 
@@ -463,85 +493,93 @@
 
 
 
-<script>
-    // Add event listeners to all Transfer to Main Cash Book input fields
-    const transferInputs = document.querySelectorAll('.denomination-input, .denomination-coins-input');
-    transferInputs.forEach(input => {
-        input.addEventListener('input', updateCalculatedValue);
-    });
+    <script>
+        // Add event listeners to all Transfer to Main Cash Book input fields
+        const transferInputs = document.querySelectorAll('.denomination-input, .denomination-coins-input');
+        transferInputs.forEach(input => {
+            input.addEventListener('input', updateCalculatedValue1);
+        });
 
-    // Function to update calculated value
-    function updateCalculatedValue() {
-        const isCoin = this.classList.contains('denomination-coins-input');
-        const denomination = isCoin ? 1 : parseInt(this.parentElement.previousElementSibling.previousElementSibling.textContent);
-        const availableNotes = isCoin ? parseInt(this.parentElement.previousElementSibling.textContent) : parseInt(this.parentElement.previousElementSibling.textContent);
-        const quantity = parseInt(this.value);
-        const calculatedValueElement = this.parentElement.nextElementSibling.querySelector('.calculated-value');
-        
-        // Check if input is a valid number
-        if (!isNaN(quantity)) {
-            if (quantity > availableNotes) {
-                calculatedValueElement.textContent = "Not available notes";
-                calculatedValueElement.style.color = "red"; // Apply red color directly
+        // Function to update calculated value
+        function updateCalculatedValue1() {
+            const isCoin = this.classList.contains('denomination-coins-input');
+            const denomination = isCoin ? 1 : parseInt(this.parentElement.previousElementSibling.previousElementSibling
+                .textContent);
+            const availableNotes = isCoin ? parseInt(this.parentElement.previousElementSibling.textContent) : parseInt(this
+                .parentElement.previousElementSibling.textContent);
+            const quantity = parseInt(this.value);
+            const calculatedValueElement = this.parentElement.nextElementSibling.querySelector('.calculated-value');
+
+            // Check if input is a valid number
+            if (!isNaN(quantity)) {
+                if (quantity > availableNotes) {
+                    calculatedValueElement.textContent = "Not available notes";
+                    calculatedValueElement.style.color = "red"; // Apply red color directly
+                } else {
+                    const calculatedValue = denomination * quantity;
+                    calculatedValueElement.textContent = calculatedValue;
+                    calculatedValueElement.style.color = "black"; // Reset color to black
+                }
             } else {
-                const calculatedValue = denomination * quantity;
-                calculatedValueElement.textContent = calculatedValue;
-                calculatedValueElement.style.color = "black"; // Reset color to black
+                calculatedValueElement.textContent = ""; // Clear the calculated value if input is invalid
             }
-        } else {
-            calculatedValueElement.textContent = ""; // Clear the calculated value if input is invalid
+
+            // Update total sum
+            updateTotalSum1();
         }
 
-        // Update total sum
-        updateTotalSum();
-    }
+        // Function to update total sum
+        function updateTotalSum1() {
+            const calculatedValues = document.querySelectorAll('.calculated-value');
+            let totalSum2 = 0;
 
-    // Function to update total sum
-    function updateTotalSum() {
-        const calculatedValues = document.querySelectorAll('.calculated-value');
-        let totalSum = 0;
+            calculatedValues.forEach(calculatedValue => {
+                if (calculatedValue.textContent !== "Not available notes" && calculatedValue.textContent !== "") {
+                    totalSum2 += parseInt(calculatedValue.textContent);
+                }
+            });
 
-        calculatedValues.forEach(calculatedValue => {
-            if (calculatedValue.textContent !== "Not available notes" && calculatedValue.textContent !== "") {
-                totalSum += parseInt(calculatedValue.textContent);
-            }
-        });
-
-        // Update the content of the td elements with the class total-sum
-        const totalSumCells = document.querySelectorAll('.total-sum');
-        totalSumCells.forEach(cell => {
-            cell.textContent = totalSum;
-        });
-    }
-</script>
+            // Update the content of the td elements with the class total-sum
+            const totalSumCells = document.querySelectorAll('.total-sum');
+            totalSumCells.forEach(cell => {
+                cell.textContent = totalSum2;
+            });
+        }
+    </script>
 
 
-
-<script>
-    window.onload = function() {
-        calculateTotal();
-        var inputs = document.querySelectorAll('.denomination-input');
-        inputs.forEach(function(input) {
-            input.addEventListener('input', calculateTotal);
-        });
-    };
-
-    function calculateTotal() {
+    <script>
+        function calculateTotal1() {
         var rows = document.querySelectorAll('.table tbody tr');
-        var total = 0;
-        rows.forEach(function(row) {
-            var denomination = parseInt(row.querySelector('.denomination').textContent);
-            var availableNotes = parseInt(row.querySelector('td:nth-child(2)').textContent);
-            var inputValue = parseInt(row.querySelector('.denomination-input').value);
-            
-            if (!isNaN(denomination) && !isNaN(availableNotes) && !isNaN(inputValue)) {
-                total += denomination * availableNotes * inputValue;
-            }
-        });
+        var totalSum3 = 0;
 
-        document.getElementById('denominationavailable').textContent = total;
+        rows.forEach(function(row) {
+            var denominationElement = row.querySelector('.denomination');
+            var notesElement = row.querySelector('.notes');
+
+            if (denominationElement && notesElement) {
+                var denomination = parseInt(denominationElement.textContent);
+                var availableNotes = parseInt(notesElement.textContent);
+
+                if (!isNaN(denomination) && !isNaN(availableNotes)) {
+                    totalSum3 += denomination * availableNotes;
+                   
+                }
+
+            }
+    
+        });
+        var coinsAvailableNotes = parseInt(document.querySelector('.coins').textContent);
+        totalSum3 += coinsAvailableNotes;
+
+        document.getElementById('denominationavailable').textContent = totalSum3;
+       
+        
     }
-</script>
+    </script>
+
+
+
 
 
 

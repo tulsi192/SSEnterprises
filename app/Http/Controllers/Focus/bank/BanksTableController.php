@@ -33,7 +33,7 @@ class BanksTableController extends Controller
      * This method return the data of the model
      * @param ManageBankRequest $request
      *
-     * @return mixed
+     * @return mixed  
      */
     public function __invoke(ManageCompanyRequest $request)
     {

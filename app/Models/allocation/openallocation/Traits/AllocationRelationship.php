@@ -13,8 +13,9 @@ trait AllocationRelationship
     {
         return $this->belongsTo(Warehouse::class);
     }
+
     // public function routes()
     // {
-    //     return $this->hasMany(Route::class);
+    //     return $this->belongsToMany(Route::class);
     // }
 }

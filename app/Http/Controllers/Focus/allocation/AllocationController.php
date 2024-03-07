@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Focus\allocation;
 use App\Models\department\Department;
 use App\Models\hrm\HrmMeta;
 use App\Models\invoice\Invoice;
+use App\Models\User;
 use App\Repositories\Focus\allocation\openallocation\AllocationRepository;
 use App\Models\allocation\openallocation\Allocation;
 use Illuminate\Support\Facades\DB;
@@ -44,36 +45,40 @@ class AllocationController extends Controller
      */
     public function index(ManageAllocationRequest $request)
     {
+  
+        return new ViewResponse('focus.allocations.openallocation.index');//
         // $allocation=Allocation::all();
-        $allocation = Allocation::with('warehouse')->get()->toArray();
+        // $perPage = $request->input('perPage', 10);
+        // $allocation = Allocation::with('warehouse')->paginate($perPage);
 
-        $routeIds = Allocation::pluck('route_id')->toArray();
-        $userIds = Allocation::pluck('user_id')->toArray();
+        // $routeIds = Allocation::pluck('route_id')->toArray();
+        // $userIds = Allocation::pluck('user_id')->toArray();
 
-        $routeNames = [];
-        $userNames = [];
+        // $routeNames = [];
+        // $userNames = [];
 
-        foreach ($routeIds as $ids) {
-            $idsArray = explode(',', $ids);
-            $names = DB::table('routes')->whereIn('id', $idsArray)->pluck('Routename')->implode(', ');
-            $routeNames[] = $names;
-        }
+        // foreach ($routeIds as $ids) {
+        //     $idsArray = explode(',', $ids);
+        //     $names = DB::table('routes')->whereIn('id', $idsArray)->pluck('Routename')->implode(', ');
+        //     $routeNames[] = $names;
+        // }
 
-        $routeNames;
+        // $routeNames;
 
-        foreach ($userIds as $ids) {
-            $idsArray = explode(',', $ids);
-            $names = DB::table('users')->whereIn('id', $idsArray)->pluck('first_name')->implode(', ');
-            $userNames[] = $names;
-        }
+        // foreach ($userIds as $ids) {
+        //     $idsArray = explode(',', $ids);
+        //     $names = DB::table('users')->whereIn('id', $idsArray)->pluck('first_name')->implode(', ');
+        //     $userNames[] = $names;
+        // }
 
-        $userNames;
+        // $userNames;
 
-        $userdepartment = Department::with('users')->get()->toArray();
+        // $userdepartment = Department::with('users')->get()->toArray();
 
         // Pass the concatenated route names to the Blade file
 
-        return new ViewResponse('focus.allocations.openallocation.index', compact('allocation', 'routeNames', 'userNames', 'userdepartment')); //
+        // return new ViewResponse('focus.allocations.openallocation.index', compact('allocation', 'routeNames', 'userNames', 'userdepartment')); //
+        
     }
 
     /**
@@ -200,7 +205,7 @@ class AllocationController extends Controller
         //Update the model using repository update method
         $this->repository->update($allocation, $input);
         //return with successfull message
-        return new RedirectResponse(route('biller.allocations.index'), ['flash_success' => trans('alerts.backend.routes.updated')]);
+        return new RedirectResponse(route('biller.allocations.index'), ['flash_success' => trans('alerts.backend.allocations.updated')]);
     }
 
     /**

@@ -27,7 +27,7 @@ Route::group(['namespace' => 'route'], function () {
 Route::group(['namespace' => 'allocation'], function () {
     Route::resource('allocations', 'AllocationController');
     Route::get('/get-bill-details/{id}', 'AllocationController@billShow')->name('addbill');
-    // Route::post('routes/get', 'RoutesTableController')->name('routes.get');
+    Route::post('allocations/get', 'AllocationsTableController')->name('allocations.get');
     //For Datatable
 });
 
@@ -62,6 +62,11 @@ Route::group(['namespace' => 'bank'], function () {
     Route::resource('banks', 'BanksController');
     //For Datatable
     Route::post('banks/get', 'BanksTableController')->name('banks.get');
+});
+Route::group(['namespace' => 'cheque'], function () {
+    Route::resource('cheques', 'ChequesController');
+    //For Datatable
+    Route::post('cheques/get', 'ChequesTableController')->name('cheques.get');
 });
 
 Route::group(['namespace' => 'currency'], function () {

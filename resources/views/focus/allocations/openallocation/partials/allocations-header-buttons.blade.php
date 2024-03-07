@@ -7,5 +7,6 @@
                     class="fa fa-plus-circle"></i> {{ trans('general.create') }}</a>
         @endauth
     </div>
+    
 </div>
-<div class="clearfix"></div>
+<div class="clearfix"></div>  
