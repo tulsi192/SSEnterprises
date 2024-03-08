@@ -27,11 +27,20 @@ class OutstandingBillsTableController extends Controller
         public function index(request $request)
         {
             if ($request->ajax()) {
-                $data = Invoice::where('status','!=','paid')->get();
+                $data = Invoice::where('status','!=','paid')->with('customer')->get();
                 return DataTables::of($data)
                 ->addIndexColumn()
                 ->addColumn('invoice date', function($row){
                     return $row->invoicedate;
+                })
+                ->addColumn('Retailer', function($row){
+                    return $row->customer->name;
+                })
+                ->addColumn('total', function($row){
+                    return $row->total;
+                })
+                ->addColumn('pending', function($row){
+                    return $row->total-$row->pamnt;
                 })
                 ->addColumn('action', function ($row) {
                     return '<button class="btn btn-info btn-sm view-button" data-id="' . $row->id . '">View</button>';

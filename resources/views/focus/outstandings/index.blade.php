@@ -39,6 +39,10 @@
                                             <th>#</th>
                                             <th>{{ trans('invoices.id') }}</th>
                                             <th>{{ trans('invoices.invoicedate') }}</th>
+                                            <th>{{ trans('invoices.retailer') }}</th>
+                                            <th>{{ trans('invoices.total') }}</th>
+                                            <th>{{ trans('invoices.Pendingamount') }}</th>
+                                           
 
                                             {{-- <th>{{ trans('routes.code') }}</th>
                                             <th>{{ trans('routes.sales') }}</th> --}}
@@ -101,8 +105,10 @@
                     {data: 'DT_Row_Index', name: 'id'},
                     {data: 'id', name: 'id'}, 
                     {data:'invoicedate',name:'invoicedate'},
-                    // {data: 'Routecode', name: 'Routecode'},
-                    // {data: 'sales_name', name: 'sales_name'}, 
+            
+                    {data:'Retailer',name:'Retailer'},
+                    {data:'total',name:'total'},
+                    {data:'pending',name:'pending'},
                     {data: 'created_at', name: 'created_at'},
                  
                     
