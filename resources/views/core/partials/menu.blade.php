@@ -1104,6 +1104,28 @@
                     </ul>
                 </li>
             @endauth
+            @if (access()->allow('note-manage') || access()->allow('manage-event'))
+            <li class="dropdown nav-item" data-menu="dropdown"><a class="dropdown-toggle nav-link"
+                    href="#" data-toggle="dropdown"><i
+                        class="icon-star"></i><span>{{ trans('general.detail') }}</span></a>
+                <ul class="dropdown-menu">
+                    @permission('note-manage')
+                        <li><a class="dropdown-item" href="{{ route('biller.outstandingbills.get') }}"
+                                data-toggle="dropdown"><i class="icon-note"></i> {{ trans('general.bill') }}</a>
+                        </li>
+                    @endauth
+                    {{-- @permission('manage-event')
+                        <li><a class="dropdown-item" href="{{ route('biller.events.index') }}"
+                                data-toggle="dropdown"><i class="icon-calendar"></i>
+                                {{ trans('features.calendar') }}</a>
+                        </li>
+                    @endauth --}}
+
+                </ul>
+            </li>
+        @endif
+
+            
         </ul>
     </div>
     <!-- /horizontal menu content-->

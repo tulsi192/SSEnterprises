@@ -37,6 +37,14 @@ Route::group(['namespace' => 'income'], function () {
     //For Datatable
 });
 
+Route::group(['namespace' => 'outstanding'], function () {
+    Route::get('outstandingbills/get', 'OutstandingBillsTableController@index')->name('outstandingbills.get');
+Route::post('outstandingbills/table', 'OutstandingBillsTableController@index')->name('outstandingbills.gettable');
+    // Route::post('outstandingbills/data', 'OutstandingBillsTableController@getTable')->name('outstandingbills.data');
+
+    //For Datatable
+});
+
 
 Route::group(['namespace' => 'expanse'], function () {
     Route::resource('expanses', 'ExpanseController');

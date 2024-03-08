@@ -143,4 +143,6 @@ return [
 'event'=>'Event',
 'notes'=>'Notes',
 'dashboard_title'=>'Business Dashboard Overview',
+'detail'=>'Outstanding Details',
+'bill'=>'Outstanding Bill',
 ];
