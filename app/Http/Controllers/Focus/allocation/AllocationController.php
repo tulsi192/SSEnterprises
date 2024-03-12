@@ -45,8 +45,7 @@ class AllocationController extends Controller
      */
     public function index(ManageAllocationRequest $request)
     {
-  
-        return new ViewResponse('focus.allocations.openallocation.index');//
+        return new ViewResponse('focus.allocations.openallocation.index'); //
         // $allocation=Allocation::all();
         // $perPage = $request->input('perPage', 10);
         // $allocation = Allocation::with('warehouse')->paginate($perPage);
@@ -78,7 +77,6 @@ class AllocationController extends Controller
         // Pass the concatenated route names to the Blade file
 
         // return new ViewResponse('focus.allocations.openallocation.index', compact('allocation', 'routeNames', 'userNames', 'userdepartment')); //
-        
     }
 
     /**
@@ -122,10 +120,8 @@ class AllocationController extends Controller
         $routeIdsString = implode(',', $numericKeys);
         $customer_ids = explode(',', $request['bill_ids']);
 
-
         $customerIds = Invoice::whereIn('customer_id', $customer_ids)->where('status', '!=', 'paid')->pluck('id')->toArray();
-        $invoiceids = implode(',',$customer_ids);
-      
+        $invoiceids = implode(',', $customer_ids);
 
         // Now $routeIdsArray should contain string values
         $input['invoice_id'] = $request['bill_ids'];
@@ -227,5 +223,54 @@ class AllocationController extends Controller
         $billIds = DB::table('invoices')->where('customer_id', $id)->where('status', '!=', 'paid')->join('customers', 'invoices.customer_id', '=', 'customers.id')->select('customers.name', 'invoices.*')->get();
 
         return response()->json($billIds);
+    }
+    public function filedstaff($id)
+    {
+        $allocationdata = Allocation::with('warehouse')->find($id);
+        $idsRoute = explode(',',  $allocationdata->route_id);
+                $route_name = DB::table('routes')->whereIn('id',  $idsRoute)->pluck('Routename');
+               
+
+        $idsArray = explode(',', $allocationdata->user_id);
+
+        // Retrieve the department with ID 1 and users whose IDs exist in $idsArray
+        $department = Department::where('departments.id', 1)
+            ->whereHas('users', function ($query) use ($idsArray) {
+                $query->whereIn('users.id', $idsArray);
+            })
+            ->first();
+
+        if ($department) {
+            // Filter the users to only those whose IDs exist in $idsArray
+            $filteredUsers = $department->users->whereIn('id', $idsArray);
+
+            // Retrieve usernames of filtered users
+            $usernames = $filteredUsers->pluck('first_name');
+        }
+
+
+
+        $idsinvoice = explode(',', $allocationdata->invoice_id);
+        if (empty($allocationdata->invoice_id) || count(array_filter($idsinvoice, 'strlen')) === 0) {
+            return 0;
+        }
+
+        $count = count($idsinvoice);
+
+
+
+        $idsArrayamount = explode(',', $allocationdata->invoice_id);
+        if (empty($allocationdata->invoice_id) || count(array_filter( $idsArrayamount, 'strlen')) === 0) {
+            return 0;
+        }
+        $total = Invoice::whereIn('id',  $idsArrayamount)->sum('total');
+        $pamount = Invoice::whereIn('id', $idsArrayamount)->sum('pamnt');
+        $amount = round($total - $pamount);
+
+        $invoicebillsdata = Invoice::with('customer')->whereIn('id', $idsArrayamount)->get();
+      
+  
+
+        return view('focus.allocations.openallocation.fieldstaff', compact('allocationdata', 'usernames','route_name','count','amount','invoicebillsdata'));
     }
 }

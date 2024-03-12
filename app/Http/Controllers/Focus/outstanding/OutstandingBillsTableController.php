@@ -27,7 +27,13 @@ class OutstandingBillsTableController extends Controller
         public function index(request $request)
         {
             if ($request->ajax()) {
-                $data = Invoice::where('status','!=','paid')->with('customer')->get();
+                $data = Invoice::where('status', '!=', 'paid')
+                ->whereIn('id', function ($query) {
+                    $query->select('invoice_id')
+                        ->from('allocations');
+                })
+                ->with('customer')
+                ->get();
                 return DataTables::of($data)
                 ->addIndexColumn()
                 ->addColumn('invoice date', function($row){

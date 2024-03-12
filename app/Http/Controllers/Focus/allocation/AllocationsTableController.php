@@ -130,7 +130,9 @@ class AllocationsTableController extends Controller
             })
 
             ->addColumn('actions', function ($allocation) {
-                return '<a href="' . route('biller.allocations.index') . '?rel_type=2&rel_id=' . $allocation->id . '" class="btn btn-purple round" data-toggle="tooltip" data-placement="top" title="List"><i class="fa fa-list"></i></a> ' . $allocation->action_buttons;
+                return '<a href="' . route('biller.allocations.fieldstaff', ['id' => $allocation->id]) . '" class="btn btn-purple round" data-toggle="tooltip" data-placement="top" title="List"><i class="">Fieldstaff</i></a> ' . $allocation->action_buttons;
+
+
             })
 
             ->make(true);

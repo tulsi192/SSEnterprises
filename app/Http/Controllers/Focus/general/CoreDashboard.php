@@ -173,7 +173,7 @@ class CoreDashboard extends Controller
                 (int)$expense
             ),
             'income_chart' => $income_chart,
-            'expense_chart' => $expense_chart,
+            'expense_chart' => $expense_chart,  
             'inv_exp' => array('income' => (int)$transactions_chart['income_total'], 'expense' => (int)$transactions_chart['expenses_total']),
             'sales' => $sales_chart,
         ));

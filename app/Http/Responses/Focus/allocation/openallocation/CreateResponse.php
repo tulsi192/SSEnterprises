@@ -30,17 +30,24 @@ class CreateResponse implements Responsable
         $sellers = User::whereIn('id', $saleIds)->get();
 
         $employees = DB::table('users')->whereIn('id', $userIds)->get();
-        $bills = DB::table('customers')->whereIn('id', $billsIds)->get();
+        // $bills = DB::table('customers')->whereIn('id', $billsIds)->get();
 
 
+        $bills1 = DB::table('customers as rose_c')
+        ->join('invoices as rose_i', 'rose_c.id', '=', 'rose_i.customer_id')
+        ->where('rose_i.status', '!=', 'paid')
+        ->get();
+    
+    // Filter out bills that are allocated elsewhere
+    $bills = $bills1->reject(function ($bill1) {
+        $bills = DB::table('allocations')
+            ->whereRaw("FIND_IN_SET(?, invoice_id)", [$bill1->id])
+            ->exists();
+    
+        return $bills;
 
-        $bills = DB::table('customers')
+    });
    
-    ->join('invoices', 'customers.id', '=', 'invoices.customer_id')
-    ->where('status', '!=', 'paid')
-    ->select('customers.*', 'invoices.*')
-    ->get();
-
 
         $routes = DB::table('routes')->get();
 
