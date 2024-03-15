@@ -121,6 +121,17 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class='col-lg-2'>
+                        <P>selecting salesman:</P>
+                        <select class="form-control" name="seller_id" id="routebill">
+                            @foreach ($sellers as $seller)
+                                <option value="{{ $seller['id'] }}">{{ $seller['first_name'] }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+
+                    
                     <div class="col-sm-6">
                         <div class='form-group'>
                             {{ Form::label( 'taxid', trans('customers.taxid'),['class' => 'col-lg-6 control-label']) }}

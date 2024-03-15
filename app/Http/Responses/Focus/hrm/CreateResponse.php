@@ -1,10 +1,13 @@
 <?php
 
 namespace App\Http\Responses\Focus\hrm;
-
+use Illuminate\Support\Facades\DB;
 use App\Models\Access\Role\Role;
 use App\Models\department\Department;
 use App\Models\route\route;
+use App\Models\User;
+use App\Models\warehouse\Warehouse;
+
 use Illuminate\Contracts\Support\Responsable;
 
 class CreateResponse implements Responsable
@@ -19,10 +22,14 @@ class CreateResponse implements Responsable
     public function toResponse($request)
     {
         $routes=Route::all();
+        $warehouses=Warehouse::all();
         $roles=Role::where('status','<',1)->where(function ($query) {
         $query->where('ins', '=', auth()->user()->ins)->orWhereNull('ins');})->get();
         $departments = Department::all();
         $general['create']=1;
-        return view('focus.hrms.create',compact('roles','general','departments','routes'));
+        $saleIds =DB::table('hrm_metas')->where('department_id', 2)->pluck('user_id');
+
+        $sellers = User::whereIn('id', $saleIds)->get();
+        return view('focus.hrms.create',compact('roles','general','departments','routes','warehouses','sellers'));
     }
 }

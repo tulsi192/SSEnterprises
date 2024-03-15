@@ -7,6 +7,7 @@ use App\Models\customergroup\Customergroup;
 use App\Models\customfield\Customfield;
 use Illuminate\Contracts\Support\Responsable;
 
+
 class CreateResponse implements Responsable
 {
     /**
@@ -20,6 +21,8 @@ class CreateResponse implements Responsable
     {
         $input = $request->only('rel_type', 'rel_id');
          $customergroups=Customergroup::all();
+        
+ 
          $customer='';
          if(isset($input['rel_id']))$customer=Customer::find($input['rel_id']);
           $fields=custom_fields(Customfield::where('module_id', '1')->get()->groupBy('field_type'));

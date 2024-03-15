@@ -31,58 +31,62 @@
 
 
 <script>
-   document.addEventListener('DOMContentLoaded', function() {
-    // Get all the buttons with class 'saveChequeBtn'
-    var saveChequeButtons = document.querySelectorAll('.saveChequeBtn');
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get all the buttons with class 'saveCashBtn'
+        var saveChequeButtons = document.querySelectorAll('.saveChequeBtn');
 
-    // Loop through each button
-    saveChequeButtons.forEach(function(button) {
-        // Check if the button already has the 'listener-attached' class
-        if (!button.classList.contains('listener-attached')) {
-            // Add event listener to the button
-            button.addEventListener('click', function() {
-                // Get the target invoice ID from the button's data-invoice attribute
-                var invoiceId = button.getAttribute('data-invoice');
-                
-                // Get the cheque amount from the corresponding input field
-                var chequeAmount = document.getElementById('chequeAmount_' + invoiceId).value;
-                
-                // Perform any action with the cheque amount here
-              
-                
-                // Close the modal after updating the entered amount
-             
-                // Get the <td> element where you want to display the status
-                var statusCell = document.getElementById('statusCell_' + invoiceId);
-                
+        // Loop through each button
+        saveChequeButtons.forEach(function(button) {
+            // Check if the button already has the 'listener-attached' class
+            if (!button.classList.contains('listener-attached')) {
+                // Add event listener to the button
+                button.addEventListener('click', function() {
+                    // Get the target invoice ID from the button's data-invoice attribute
+                    var invoiceId = button.getAttribute('data-invoice');
+                    
+                    // Get the cash amount from the corresponding input field
+                    var chequeAmount = parseFloat(document.getElementById('chequeAmount_' + invoiceId).value.trim());
 
-                // Update the inner HTML of the <td> element to append the status
-                if (statusCell) {
-                    // Check if the status cell already has content
-                    if (statusCell.innerHTML.trim() !== '') {
-                        // Append the status with a comma
-                        statusCell.innerHTML += ', Cheque'; // Update this with your desired status
-                    } else {
-                        // Set the status
-                        statusCell.innerHTML = 'Cheque'; // Update this with your desired status
+                    // Get the pending amount from the corresponding <td> element
+                    var pendingAmountCell = document.getElementById('pendingAmount_' + invoiceId);
+                    var pendingAmount = parseFloat(pendingAmountCell.textContent.trim());
+
+                    // Subtract the cash amount from the pending amount
+                    var updatedPendingAmount = pendingAmount - chequeAmount;
+
+                    // Update the inner HTML of the <td> element to display the updated pending amount
+                    pendingAmountCell.textContent = updatedPendingAmount.toFixed(2);
+
+                    // Update the status
+                    var statusCell = document.getElementById('statusCell_' + invoiceId);
+                    if (statusCell) {
+                        // Check if the status cell already has content
+                        if (statusCell.innerHTML.trim() !== '') {
+                            // Append the status with a comma
+                            statusCell.innerHTML += ', Cheque'; // Update this with your desired status
+                        } else {
+                            // Set the status
+                            statusCell.innerHTML = 'Cheque'; // Update this with your desired status
+                        }
                     }
-                }
-                
-                // Hide the modal
-                var chequeModal = document.getElementById('chequeModal_' + invoiceId);
-                if (chequeModal) {
-                    var bootstrapModal = new bootstrap.Modal(chequeModal);
-                    bootstrapModal.hide();
-                }
-            });
 
-            // Add a class to mark that the listener has been attached
-            button.classList.add('listener-attached');
-        }
+                    // Close the modal after updating the entered amount
+                    var chequeModal = document.getElementById('chequeModal_' + invoiceId);
+                    if (chequeModal) {
+                        var bootstrapModal = new bootstrap.Modal(chequeModal);
+                        bootstrapModal.hide();
+                    }
+
+                    // Perform any further actions here
+                });
+
+                // Add a class to mark that the listener has been attached
+                button.classList.add('listener-attached');
+            }
+        });
     });
-});
-
 </script>
+
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         // Get all input fields with class 'cashAmountInput'
@@ -108,33 +112,36 @@
         });
     });
 </script>
-
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        // Get all input fields with class 'cashAmountInput'
-        var chequeAmountInputs = document.querySelectorAll('.chequeAmountInput');
+        var saveChequeButtons = document.querySelectorAll('.saveChequeBtn');
 
-        // Loop through each input field
-        chequeAmountInputs.forEach(function(input) {
-            // Add event listener for 'input' event
-            input.addEventListener('input', function() {
-                // Get the entered cash amount
-                var chequeAmount = input.value;
+        saveChequeButtons.forEach(function(button) {
+            button.addEventListener('click', function() {
+                var invoiceId = this.dataset.invoice;
+                var chequeAmountInput = document.getElementById('chequeAmount_' + invoiceId);
+                var displayElement = document.getElementById('displayAmount_' + invoiceId);
+                
+                if (chequeAmountInput && displayElement && !button.clicked) {
+                    var newChequeAmount = parseFloat(chequeAmountInput.value.trim());
+                    var existingAmount = parseFloat(displayElement.textContent.trim()) || 0;
+                    var totalAmount = existingAmount + newChequeAmount;
+                    displayElement.textContent = totalAmount.toFixed(2);
+                    button.clicked = true; // Mark the button as clicked
 
-                // Get the ID of the corresponding display element
-                var displayElementId = 'displayAmount_' + input.id.split('_')[1];
-
-                // Get the display element
-                var displayElement = document.getElementById(displayElementId);
-
-                // Update the display element with the entered cash amount
-                if (displayElement) {
-                    displayElement.textContent =chequeAmount;
+                    console.log('Final Total amount:', totalAmount);
+                    // Perform further actions with the final total here
                 }
             });
         });
     });
 </script>
+
+
+
+
+
+
 
 
 

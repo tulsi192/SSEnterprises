@@ -23,7 +23,13 @@ Route::get('dir/{lang}', [\App\Http\Controllers\LanguageController::class, 'dire
 
 Route::get('/bills/{selectedBillId}', [AllocationController::class, 'getBillById']);
 
+
+Route::get('/get-salesmen-by-warehouse', [AllocationController::class, 'getSalesmenByWarehouse'])->name('getSalesmenByWarehouse');
+Route::get('/getRoutesBySalesman', [AllocationController::class, 'getRoutesBySalesman'])
+    ->name('getRoutesBySalesman');
+
 Route::group(['namespace' => '\App\Http\Controllers\Focus', 'as' => 'biller.', 'middleware' => 'biller'], function () {
     includeRouteFiles(__DIR__ . '/Focus/');
 });
 includeRouteFiles(__DIR__ . '/General/');
+

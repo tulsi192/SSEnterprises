@@ -84,13 +84,16 @@ class HrmsController extends Controller
      */
     public function store(ManageHrmRequest $request)
     {
-
+        $selectedRouteIds = $request->input('selected_route_ids');
+        $selectedRouteIdsArray = explode(',', $selectedRouteIds); // Split the string by comma to get an array of IDs
+        $selectedRouteIdsJson = json_encode($selectedRouteIdsArray); 
 
         //Input received from the request
         $input['employee'] = $request->only(['first_name', 'last_name', 'email', 'picture', 'signature', 'password', 'role']);
         $input['profile'] = $request->only(['contact', 'company', 'address_1', 'city', 'state', 'country', 'tax_id', 'postal']);
-        $input['meta'] = $request->only(['department_id', 'salary', 'hra', 'entry_time', 'exit_time', 'sales_commission','route_id']);
+        $input['meta'] = $request->only(['department_id', 'salary', 'hra', 'entry_time', 'exit_time', 'sales_commission','warehouse_id']);
         $input['permission'] = $request->only(['permission']);
+        $input['meta']['route_id'] = $selectedRouteIdsJson; 
         $input['employee']['ins'] = auth()->user()->ins;
 
         if (!empty($input['employee']['password'])) {

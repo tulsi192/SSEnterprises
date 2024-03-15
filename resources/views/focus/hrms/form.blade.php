@@ -163,16 +163,37 @@
                     </div>
                 </div>
                 
-                <div id="routeDropdown" class="form-group" style="display: none;">
-                    {{ Form::label('route', trans('routes.route'), ['class' => 'col-lg-2 control-label']) }}
-                    <div class='col-lg-10'>
-                        <select class="form-control" name="route_id" id="route">
-                            @foreach($routes as $route)
-                                <option value="{{ $route['id'] }}">{{ $route['Routename'] }}</option>
-                            @endforeach
-                        </select>
-                    </div>
-                </div>
+        <!-- Add this code to your Blade view -->
+        <div id="routeDropdown" class="form-group" style="display: none;">
+            {{ Form::label('route', trans('routes.route'), ['class' => 'col-lg-2 control-label']) }}
+            <div class='col-lg-10'>
+                <select class="form-control" name="route_id[]" id="route" multiple>
+                    @foreach($routes as $route)
+                        <option value="{{ $route['id'] }}">{{ $route['Routename'] }}</option>
+                    @endforeach
+                </select>
+            </div>
+        </div>
+        
+        <div id="selectedRoutes"></div>
+        
+        {{ Form::hidden('selected_route_ids', null, ['id' => 'selectedRouteIds']) }}
+
+
+
+
+        <div id="warehouseDropdown" class="form-group" style="display: none;">
+            {{ Form::label('warehouse', trans('warehouse'), ['class' => 'col-lg-2 control-label']) }}
+            <div class='col-lg-10'>
+                <select class="form-control" name="warehouse_id" id="warehouse" multiple>
+                    @foreach($warehouses as $warehouse)
+                        <option value="{{ $warehouse['id'] }}">{{ $warehouse['title'] }}</option>
+                    @endforeach
+                </select>
+            </div>
+        </div>
+        
+    
 
                 <div class='form-group'>
                     {{ Form::label( 'salary', trans('hrms.salary'),['class' => 'col-lg-2 control-label']) }}
@@ -211,16 +232,70 @@
 @section('after-scripts')
     {{ Html::script('focus/js/jquery.password-validation.js') }}
     <script>
-         $(document).ready(function () {
-        $('#department').change(function () {
-            var selectedDepartmentId = $(this).val();
-            if (selectedDepartmentId == 2) {
-                $('#routeDropdown').show();
-            } else {
-                $('#routeDropdown').hide();
+$(document).ready(function () {
+    // Function to update the hidden input field with selected route IDs
+    function updateSelectedRouteIds(selectedRoutes) {
+        var currentRoutes = $('#selectedRouteIds').val() || ''; // Get current route IDs or an empty string
+        var newRoutes = currentRoutes.split(',').concat(selectedRoutes.filter(route => !currentRoutes.includes(route)));
+        $('#selectedRouteIds').val(newRoutes.join(currentRoutes ? ',' : ''));
+    }
+
+    $('#department').change(function () {
+        var selectedDepartmentId = $(this).val();
+        if (selectedDepartmentId == 2) {
+            $('#routeDropdown').show();
+        } else {
+            $('#routeDropdown').hide();
+        }
+    });
+
+
+
+    $('#department').change(function () {
+        var selectedDepartmentId = $(this).val();
+        if (selectedDepartmentId == 2) {
+            $('#warehouseDropdown').show();
+        } else {
+            $('#warehouseDropdown').hide();
+        }
+    });
+
+    // Handle selection with cross sign
+    $('#route').change(function () {
+        var selectedRoutes = $(this).val();
+
+        // Append newly selected routes
+        $.each(selectedRoutes, function (index, value) {
+            var routeName = $('#route option[value="' + value + '"]').text().trim();
+            if (!$('.selected-route .route-name:contains("' + routeName + '")').length) {
+                $('#selectedRoutes').append('<div class="selected-route"><span class="route-name">' + routeName + '</span><span class="remove-route" data-id="' + value + '"> &times;</span></div>');
             }
         });
+
+        // Update the hidden input field with selected route IDs
+        updateSelectedRouteIds(selectedRoutes);
     });
+
+    // Remove selected route
+    $(document).on('click', '.remove-route', function () {
+        var routeId = $(this).data('id');
+        $('#route option[value="' + routeId + '"]').prop('selected', false);
+        $(this).parent().remove();
+
+        // Update the hidden input field after removal
+        var selectedRoutes = $('#route').val();
+        updateSelectedRouteIds(selectedRoutes);
+    });
+});
+
+
+
+
+
+
+
+
+
         $(document).ready(function () {
             $("#u_password").passwordValidation({
                 minLength: 6,

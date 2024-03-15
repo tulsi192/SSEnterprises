@@ -52,16 +52,7 @@
                                                 <hr>
                                                 <div id="customer_pass"></div>
                                                 <hr>
-                                            </div>{{trans('warehouses.warehouse')}}<select
-                                                id="s_warehouses"
-                                                class="form-control round mt-1">
-                                                <option value="0">{{trans('general.all')}}</option>
-                                                @foreach($warehouses as $warehouse)
-                                                    <option
-                                                        value="{{$warehouse->id}}" {{$warehouse->id==@$defaults[1][0]['feature_value'] ? 'selected' : ''}}>{{$warehouse->title}}</option>
-                                                @endforeach
-                                            </select>
-
+                                            </div>
 
                                             {{ Form::hidden('customer_id', '0',['id'=>'customer_id']) }}
                                         </div>
@@ -170,6 +161,17 @@
                                                     </div>
                                                 @endif
                                             </div>
+
+                                            
+                                             
+                                                <div class="form-group">
+                                                    {{ Form::label('s_warehouses', trans('warehouses.warehouse'), ['class' => 'col-lg-2 control-label']) }}
+                                                    <div class="col-lg-10">
+                                                        {{ Form::select('warehouse_id', $warehouses->pluck('title', 'id'), @$defaults[1][0]['feature_value'], ['id' => 's_warehouses', 'class' => 'form-control round mt-1']) }}
+                                                    </div>
+                                                </div>
+                                                
+                                           
 
                                             <div class="form-group row">
                                                 <div class="col-sm-6">

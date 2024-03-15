@@ -11,6 +11,7 @@
         <div class="row">
             <div class='col-lg-3'>
                 <select class="form-control" name="warehouse_id" id="warehouse">
+                    <option value="">Select Warehouse</option>
                     @foreach ($warehouses as $warehouse)
                         <option value="{{ $warehouse['id'] }}">{{ $warehouse['title'] }}</option>
                     @endforeach
@@ -19,52 +20,38 @@
             <div class='col-lg-2'>
                 <div class="radio-group">
                     <label>
-                        <input type="radio" name="allocationtype" value="current" id="Allocation type">
+                        <input type="radio" name="allocationtype" value="current" id="allocationCurrent">
                         Current Bill
                     </label>
                     <label>
-                        <input type="radio" name="allocationtype" value="past">
+                        <input type="radio" name="allocationtype" value="past" id="allocationPast">
                         Past Bill
                     </label>
                     <label>
-                        <input type="radio" name="allocationtype" value="both">
+                        <input type="radio" name="allocationtype" value="both" id="allocationBoth">
                         Both
                     </label>
                 </div>
             </div>
             <div class='col-lg-2'>
-                <p>selecting bills:</p>
-                <select class="form-control" name="bill_ids[]" id="Addition" multiple >
-
-                    @foreach ($bills as $bill)
-                        <option value="{{ $bill->id }}">{{ $bill->id }}{{ $bill->name }}</option>
-                    @endforeach
-
+                <p>Selecting bills:</p>
+                <select class="form-control" name="bill_ids[]" id="Addition" multiple>
+                    <!-- Options will be populated dynamically -->
                 </select>
-
                 <input type="hidden" name="bill_ids" id="billIdsInput" value="">
-
-
-
-
-
             </div>
 
 
             <div class='col-lg-2'>
                 <P>From:</P>
-                <select class="form-control" name="fbill_id" id="add bill">
-                    @foreach ($bills as $bill)
-                        <option value="{{ $bill->id }}">{{ $bill->id }}{{ $bill->name }}</option>
-                    @endforeach
+                <select class="form-control" name="fbill_id" id="addBill">
+                    <!-- Options will be populated dynamically -->
                 </select>
             </div>
             <div class='col-lg-2'>
-                <P>selecting salesman:</P>
-                <select class="form-control" name="sales_id" id="routebill">
-                    @foreach ($sellers as $seller)
-                        <option value="{{ $seller['id'] }}">{{ $seller['first_name'] }}</option>
-                    @endforeach
+                <p>Selecting salesman:</p>
+                <select class="form-control" name="sales_id" id="routebill" disabled>
+                    <option value="">Select Salesman</option>
                 </select>
             </div>
         </div>
@@ -98,24 +85,16 @@
                 </div>
                 <div class='col-lg-2'>
                     <P>To:</P>
-                    <select class="form-control" name="tobill_id" id="tobill">
-                        @foreach ($bills as $bill)
-                            <option value="{{ $bill->id }}">{{ $bill->id }}{{ $bill->name }}</option>
-                        @endforeach
+                    <select class="form-control" name="tobill_id" id="toBill">
+                        <!-- Options will be populated dynamically -->
                     </select>
                 </div>
+                
                 <div class='col-lg-2'>
-                    <P>Route Code:</P>
-                    <select class="form-control" name="route[]" id="routeSelect" multiple>
-                        <option value="">Select route</option>
-                        @foreach ($routes as $route)
-                            <option value="{{ $route->id }}">{{ $route->id }}{{ $route->Routecode }}</option>
-                        @endforeach
+                    <p>Route Code:</p>
+                    <select class="form-control" name="routeSelect" id="routeSelect" disabled>
+                        <!-- Options will be appended dynamically here -->
                     </select>
-
-
-                    <input type="hidden" name="selectedValues" id="selectedValuesInput">
-
                 </div>
 
 
@@ -245,7 +224,7 @@
             });
         </script>
 
-        <script>
+        {{-- <script>
             document.addEventListener('DOMContentLoaded', function() {
                 const selectElement = document.getElementById('routeSelect');
                 const selectedValuesContainer = document.getElementById('selectedValues');
@@ -302,7 +281,7 @@
                     updateSelectedValues();
                 });
             });
-        </script>
+        </script> --}}
 
 
 
@@ -365,4 +344,115 @@
                 });
             });
         </script>
+
+
+<script>
+    $(document).ready(function() {
+        $('#warehouse').change(function() {
+            var warehouseId = $(this).val();
+            if (warehouseId) {
+                $.ajax({
+                    type: "GET",
+                    url: "{{ route('getSalesmenByWarehouse') }}?warehouse_id=" + warehouseId,
+                    success: function(res) {
+                        if (res && res.length > 0) {
+                            $("#routebill").empty();
+                            $("#routebill").removeAttr('disabled');
+                            $.each(res, function(index, salesman) {
+                                $("#routebill").append('<option value="' + salesman.id + '">' + salesman.first_name + ' ' + salesman.last_name + '</option>');
+                            });
+                            // Trigger change event after populating salesman dropdown
+                            $('#routebill').trigger('change');
+                        } else {
+                            $("#routebill").empty();
+                            $("#routebill").attr('disabled', true);
+                        }
+                    }
+                });
+            } else {
+                $("#routebill").empty();
+                $("#routebill").attr('disabled', true);
+            }
+        });
+
+        $('#routebill').change(function() {
+            var salesmanId = $(this).val();
+            if (salesmanId) {
+                $.ajax({
+                    type: "GET",
+                    url: "{{ route('getRoutesBySalesman') }}?salesman_id=" + salesmanId,
+                    success: function(res) {
+
+                        console.log(res);
+                        if (res && res.length > 0) {
+                            $("#routeSelect").empty();
+                            $("#routeSelect").removeAttr('disabled');
+                            $.each(res, function(index, route) {
+    $("#routeSelect").append('<option value="' + route.id + '">' + route.Routename + '</option>');
+});
+                        } else {
+                            $("#routeSelect").empty();
+                            $("#routeSelect").attr('disabled', true);
+                        }
+                    }
+                });
+            } else {
+                $("#routeSelect").empty();
+                $("#routeSelect").attr('disabled', true);
+            }
+        });
+    });
+</script>
+<script>
+  $(document).ready(function() {
+    $('input[type=radio][name=allocationtype], #warehouse').change(function() {
+        var selectedAllocationType = $('input[type=radio][name=allocationtype]:checked').val();
+        var selectedWarehouseId = $('#warehouse').val();
+       
+        var filteredBills = {!! json_encode($filteredBills) !!};     
+
+        if (!Array.isArray(filteredBills)) {
+            console.error('Bills data is not an array:', filteredBills);
+            return;
+        }
+        
+        // Filter bills based on warehouse ID
+        filteredBills = filteredBills.filter(function(bill) {
+            return bill.warehouse_id == selectedWarehouseId;
+        });
+
+        if (selectedAllocationType === 'current') {
+            // Apply current month filter
+            filteredBills = filteredBills.filter(function(bill) {
+                var currentDate = new Date();
+                var invoiceDate = new Date(bill.invoicedate);
+                return invoiceDate.getMonth() === currentDate.getMonth() && 
+                       invoiceDate.getFullYear() === currentDate.getFullYear();
+            });
+        } else if (selectedAllocationType === 'past') {
+            // Apply past month filter
+            filteredBills = filteredBills.filter(function(bill) {
+                var currentDate = new Date();
+                var invoiceDate = new Date(bill.invoicedate);
+                return invoiceDate.getMonth() !== currentDate.getMonth() || 
+                       invoiceDate.getFullYear() !== currentDate.getFullYear();
+            });
+        }
+        
+        // Update the bill select options
+        updateBillSelectOptions(filteredBills);
+    });
+
+    // Function to update the bill select options
+    function updateBillSelectOptions(bills) {
+        $('#Addition, #addBill, #toBill').empty();
+        bills.forEach(function(bill) {
+            $('#Addition, #addBill, #toBill').append('<option value="' + bill.id + '">' + bill.id + ' ' + bill.name + '</option>');
+        });
+    }
+});
+
+</script>
+
+
     @endsection

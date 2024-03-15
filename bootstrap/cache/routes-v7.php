@@ -582,7 +582,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::77AGMObbCbgYMWY4',
+            '_route' => 'generated::11ZH2SRMYCqO8Owp',
           ),
           1 => NULL,
           2 => 
@@ -602,7 +602,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::P1WJpShMb7QAjwPY',
+            '_route' => 'generated::9gg9q86uyNx8K84e',
           ),
           1 => NULL,
           2 => 
@@ -623,6 +623,66 @@ app('router')->setCompiledRoutes(
           0 => 
           array (
             '_route' => 'biller.index',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/get-salesmen-by-warehouse' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'getSalesmenByWarehouse',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/get-bill-by-warehouse' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'getBillsByWarehouse',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/getRoutesBySalesman' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'getRoutesBySalesman',
           ),
           1 => NULL,
           2 => 
@@ -6203,7 +6263,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::2hWcXQTQoe74gzGl',
+            '_route' => 'generated::CJllbWwJIhZ3YIaf',
           ),
           1 => 
           array (
@@ -12192,7 +12252,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::77AGMObbCbgYMWY4' => 
+    'generated::11ZH2SRMYCqO8Owp' => 
     array (
       'methods' => 
       array (
@@ -12214,7 +12274,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::77AGMObbCbgYMWY4',
+        'as' => 'generated::11ZH2SRMYCqO8Owp',
       ),
       'fallback' => false,
       'defaults' => 
@@ -12230,7 +12290,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::P1WJpShMb7QAjwPY' => 
+    'generated::9gg9q86uyNx8K84e' => 
     array (
       'methods' => 
       array (
@@ -12253,7 +12313,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::P1WJpShMb7QAjwPY',
+        'as' => 'generated::9gg9q86uyNx8K84e',
       ),
       'fallback' => false,
       'defaults' => 
@@ -12380,7 +12440,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::2hWcXQTQoe74gzGl' => 
+    'generated::CJllbWwJIhZ3YIaf' => 
     array (
       'methods' => 
       array (
@@ -12401,7 +12461,118 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::2hWcXQTQoe74gzGl',
+        'as' => 'generated::CJllbWwJIhZ3YIaf',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'getSalesmenByWarehouse' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'get-salesmen-by-warehouse',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\Http\\Controllers\\Focus\\allocation\\AllocationController@getSalesmenByWarehouse',
+        'controller' => 'App\\Http\\Controllers\\Focus\\allocation\\AllocationController@getSalesmenByWarehouse',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'getSalesmenByWarehouse',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'getBillsByWarehouse' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'get-bill-by-warehouse',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\Http\\Controllers\\Focus\\allocation\\AllocationController@getBillByWarehouse',
+        'controller' => 'App\\Http\\Controllers\\Focus\\allocation\\AllocationController@getBillByWarehouse',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'getBillsByWarehouse',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'getRoutesBySalesman' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'getRoutesBySalesman',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\Http\\Controllers\\Focus\\allocation\\AllocationController@getRoutesBySalesman',
+        'controller' => 'App\\Http\\Controllers\\Focus\\allocation\\AllocationController@getRoutesBySalesman',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'getRoutesBySalesman',
       ),
       'fallback' => false,
       'defaults' => 

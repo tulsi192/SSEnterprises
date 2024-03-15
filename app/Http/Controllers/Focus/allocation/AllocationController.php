@@ -86,6 +86,9 @@ class AllocationController extends Controller
      */
     public function create(CreateAllocationRequest $request)
     {
+
+
+        
         return new CreateResponse('focus.allocations.openallocation.create');
     }
 
@@ -227,9 +230,8 @@ class AllocationController extends Controller
     public function filedstaff($id)
     {
         $allocationdata = Allocation::with('warehouse')->find($id);
-        $idsRoute = explode(',',  $allocationdata->route_id);
-                $route_name = DB::table('routes')->whereIn('id',  $idsRoute)->pluck('Routename');
-               
+        $idsRoute = explode(',', $allocationdata->route_id);
+        $route_name = DB::table('routes')->whereIn('id', $idsRoute)->pluck('Routename');
 
         $idsArray = explode(',', $allocationdata->user_id);
 
@@ -248,8 +250,6 @@ class AllocationController extends Controller
             $usernames = $filteredUsers->pluck('first_name');
         }
 
-
-
         $idsinvoice = explode(',', $allocationdata->invoice_id);
         if (empty($allocationdata->invoice_id) || count(array_filter($idsinvoice, 'strlen')) === 0) {
             return 0;
@@ -257,20 +257,47 @@ class AllocationController extends Controller
 
         $count = count($idsinvoice);
 
-
-
         $idsArrayamount = explode(',', $allocationdata->invoice_id);
-        if (empty($allocationdata->invoice_id) || count(array_filter( $idsArrayamount, 'strlen')) === 0) {
+        if (empty($allocationdata->invoice_id) || count(array_filter($idsArrayamount, 'strlen')) === 0) {
             return 0;
         }
-        $total = Invoice::whereIn('id',  $idsArrayamount)->sum('total');
+        $total = Invoice::whereIn('id', $idsArrayamount)->sum('total');
         $pamount = Invoice::whereIn('id', $idsArrayamount)->sum('pamnt');
         $amount = round($total - $pamount);
 
         $invoicebillsdata = Invoice::with('customer')->whereIn('id', $idsArrayamount)->get();
-      
-  
 
-        return view('focus.allocations.openallocation.fieldstaff', compact('allocationdata', 'usernames','route_name','count','amount','invoicebillsdata'));
+        return view('focus.allocations.openallocation.fieldstaff', compact('allocationdata', 'usernames', 'route_name', 'count', 'amount', 'invoicebillsdata'));
+    }
+
+    public function getSalesmenByWarehouse(Request $request)
+    {
+        $warehouseId = $request->input('warehouse_id');
+        $saleIds = DB::table('hrm_metas')->where('department_id', 2)->where('warehouse_id', $warehouseId)->pluck('user_id')->toArray();
+
+        $sellers = User::whereIn('id', $saleIds)->get();
+
+        return response()->json($sellers);
+    }
+    public function getRoutesBySalesman(Request $request)
+    {
+        $salesmanId = $request->input('salesman_id');
+
+        // Fetch route IDs associated with the salesman ID
+        $routeIdsJson = DB::table('hrm_metas')
+            ->where('user_id', $salesmanId)
+            ->pluck('route_id')
+            ->first(); // Assuming there's only one value, adjust if needed
+
+        // Decode the JSON data to an array
+        $routeIds = json_decode($routeIdsJson, true);
+
+        // Fetch routes based on the route IDs
+        $routes = DB::table('routes')
+            ->whereIn('id', $routeIds)
+            ->get();
+
+        // Return routes as JSON response
+        return response()->json($routes);
     }
 }

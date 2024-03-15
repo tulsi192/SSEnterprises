@@ -42,33 +42,39 @@
                     var invoiceId = button.getAttribute('data-invoice');
                     
                     // Get the cash amount from the corresponding input field
-                    var cashAmount = document.getElementById('cashAmount_' + invoiceId).value;
-                    
-                    // Perform any action with the cash amount here
-                  
-                    
-                    // Close the modal after updating the entered amount
-                 
+                    var cashAmount = parseFloat(document.getElementById('cashAmount_' + invoiceId).value.trim());
 
-                    // Get the <td> element where you want to display the status
+                    // Get the pending amount from the corresponding <td> element
+                    var pendingAmountCell = document.getElementById('pendingAmount_' + invoiceId);
+                    var pendingAmount = parseFloat(pendingAmountCell.textContent.trim());
+
+                    // Subtract the cash amount from the pending amount
+                    var updatedPendingAmount = pendingAmount - cashAmount;
+
+                    // Update the inner HTML of the <td> element to display the updated pending amount
+                    pendingAmountCell.textContent = updatedPendingAmount.toFixed(2);
+
+                    // Update the status
                     var statusCell = document.getElementById('statusCell_' + invoiceId);
-
-                    // Update the inner HTML of the <td> element to display the status
-                        if (statusCell) {
-                    // Check if the status cell already has content
-                    if (statusCell.innerHTML.trim() !== '') {
-                        // Append the status with a comma
-                        statusCell.innerHTML += ', Cash'; // Update this with your desired status
-                    } else {
-                        // Set the status
-                        statusCell.innerHTML = 'Cash'; // Update this with your desired status
+                    if (statusCell) {
+                        // Check if the status cell already has content
+                        if (statusCell.innerHTML.trim() !== '') {
+                            // Append the status with a comma
+                            statusCell.innerHTML += ', Cash'; // Update this with your desired status
+                        } else {
+                            // Set the status
+                            statusCell.innerHTML = 'Cash'; // Update this with your desired status
+                        }
                     }
-                }
+
+                    // Close the modal after updating the entered amount
                     var cashModal = document.getElementById('cashModal_' + invoiceId);
                     if (cashModal) {
                         var bootstrapModal = new bootstrap.Modal(cashModal);
                         bootstrapModal.hide();
                     }
+
+                    // Perform any further actions here
                 });
 
                 // Add a class to mark that the listener has been attached
@@ -79,57 +85,33 @@
 </script>
 
 
+
+
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        // Get all input fields with class 'cashAmountInput'
-        var cashAmountInputs = document.querySelectorAll('.cashAmountInput');
+        var saveCashButtons = document.querySelectorAll('.saveCashBtn');
 
-        // Loop through each input field
-        cashAmountInputs.forEach(function(input) {
-            // Add event listener for 'input' event
-            input.addEventListener('input', function() {
-                // Get the entered cash amount
-                var cashAmount = input.value;
+        saveCashButtons.forEach(function(button) {
+            button.addEventListener('click', function() {
+                var invoiceId = this.dataset.invoice;
+                var cashAmountInput = document.getElementById('cashAmount_' + invoiceId);
+                var displayElement = document.getElementById('displayAmount_' + invoiceId);
+                
+                if (cashAmountInput && displayElement && !button.clicked) {
+                    var newCashAmount = parseFloat(cashAmountInput.value.trim());
+                    var existingAmount = parseFloat(displayElement.textContent.trim()) || 0;
+                    var totalAmount = existingAmount + newCashAmount;
+                    displayElement.textContent = totalAmount.toFixed(2);
+                    button.clicked = true; // Mark the button as clicked
 
-                // Get the ID of the corresponding display element
-                var displayElementId = 'displayAmount_' + input.id.split('_')[1];
-
-                // Get the display element
-                var displayElement = document.getElementById(displayElementId);
-
-                // Update the display element with the entered cash amount
-                if (displayElement) {
-                    displayElement.textContent =cashAmount;
+                    console.log('Final Total amount:', totalAmount);
+                    // Perform further actions with the final total here
                 }
             });
         });
     });
 </script>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Get all input fields with class 'cashAmountInput'
-        var cashAmountInputs = document.querySelectorAll('.cashAmountInput');
 
-        // Loop through each input field
-        cashAmountInputs.forEach(function(input) {
-            // Add event listener for 'input' event
-            input.addEventListener('input', function() {
-                // Get all input values and calculate the sum
-                var totalCashAmount = 0;
-                cashAmountInputs.forEach(function(input) {
-                    var cashAmount = parseFloat(input.value) || 0;
-                    totalCashAmount += cashAmount;
-                });
-
-                // Display the total sum in a separate element
-                var totalDisplayElement = document.getElementById('totalCashAmount');
-                if (totalDisplayElement) {
-                    totalDisplayElement.textContent = totalCashAmount.toFixed(2);
-                }
-            });
-        });
-    });
-</script>
 
 
 

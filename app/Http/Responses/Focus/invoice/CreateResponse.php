@@ -6,6 +6,8 @@ use App\Models\hrm\Hrm;
 use App\Models\invoice\Invoice;
 use App\Models\market\SalesChannel;
 use Illuminate\Contracts\Support\Responsable;
+use App\Models\User;
+use Illuminate\Support\Facades\DB;
 
 class CreateResponse implements Responsable
 {
@@ -28,9 +30,12 @@ class CreateResponse implements Responsable
         }
         $employee='';
         $salesChannel=SalesChannel::all();
+        $saleIds =DB::table('hrm_metas')->where('department_id', 2)->pluck('user_id');
+
+        $sellers = User::whereIn('id', $saleIds)->get();
 
         if(feature(1)['value1']=='yes') $employee=Hrm::all();
 
-        return view('focus.invoices.create')->with(array('last_invoice' => $last_invoice,'sub'=>$input['sub'],'p'=>$request->p,'salesChannels'=>$salesChannel,'employees'=>$employee))->with(bill_helper(1, 2));
+        return view('focus.invoices.create')->with(array('last_invoice' => $last_invoice,'sub'=>$input['sub'],'p'=>$request->p,'salesChannels'=>$salesChannel,'employees'=>$employee,'sellers'=>$sellers))->with(bill_helper(1, 2));
     }
 }
